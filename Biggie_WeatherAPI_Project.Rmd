@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 In this document, we'll walk through how to connect to an API, using an example. The API we'll be connecting to is the [OpenWeather API](https://openweathermap.org/api). Specifically, we'll be looking at current and forecast weather data from the [One Call API](https://openweathermap.org/api/one-call-api#history), one of the many APIs that openweathermap.org offers.  
 
-# Preliminary Steps  
+## Preliminary Steps  
 
 1.  Many APIs require you to access the data using a unique API key. To acquire your free API key, register [here](https://home.openweathermap.org/users/sign_up).  
 
@@ -24,15 +24,17 @@ In this document, we'll walk through how to connect to an API, using an example.
 3. The following packages will be necessary in order to do some analyses after we load the data:
 
     + `tidyverse`  
+    + `anytime`  
 
 ```{r API packages, echo = FALSE, message=FALSE, warning=FALSE}
 library(httr)
 library(jsonlite)
 library(tidyverse)
+library(anytime)
 ```
 
 
-# Function to Access API  
+## Function to Access API  
 
 Here, I've written a function `weather.api` to be able to easily access the target API. The arguments are as follows:  
 
@@ -44,13 +46,18 @@ Here, I've written a function `weather.api` to be able to easily access the targ
     + `minutely`  
     + `hourly`  
     + `daily`  
-    
+* `units` (optional): The unit of measurement in which values are returned. Options are:
+    + `standard`  
+    + `imperial`  
+    + `metric`  
+
+
 Note: All parameters should be in character format i.e. `latitude = "-46.05"`.  
 
 
 
 ```{r}
-weather.api <- function(latitude, longitude, api.id, exclude = NULL) {
+weather.api <- function(latitude, longitude, api.id, exclude = NULL, units = "metric") {
   
   #assign the individual pieces of the required url to their respective objects  
   base <- "https://api.openweathermap.org/data/2.5/onecall"
@@ -62,18 +69,21 @@ weather.api <- function(latitude, longitude, api.id, exclude = NULL) {
   exc2 <- tolower(sub(" ", "", exclude)) #remove spaces and convert to lowercase  
   apid1 <- "appid="
   apid2 <- api.id
+  units1 <- "units="
+  units2 <- units
   
   #paste pieces together  
   lat <- paste(lat1, lat2, sep = "")
   lon <- paste(lon1, lon2, sep = "")  
   ifelse(!is.null(exc2), exc <- paste(exc1, exc2, sep = ""), exc <- "nullexclude")
   apid <- paste(apid1, apid2, sep = "")
+  units <- paste(units1, units2, sep = "")
   
   #paste base and latitude pieces together  
   first <- paste(base, lat, sep = "?")
   
   #create the entire url by pasting all pieces together using delimiter "&", conditioning on if any information is excluded  
-  ifelse(!is.null(exc2), my.url <- paste(first, lon, exc, apid, sep = "&"), my.url <- paste(first, lon, apid, sep = "&"))
+  ifelse(!is.null(exc2), my.url <- paste(first, lon, exc, apid, units, sep = "&"), my.url <- paste(first, lon, apid, units, sep = "&"))
   
   #access the Weather API using the URL assembled above
   weather.info <- GET(my.url)
@@ -86,13 +96,177 @@ return(final)
 ```
 
 
+## Exploratory Data Analysis  
+
+Now that we can easily access the API, let's do some exploratory data analysis.  
+
+I want to explore the weather data of five locations that lie roughly along the same line of longitude.   
+
+[insert picture here]  
+
+Locations:  
+
+* 44.19'N, 69.47'W (Augusta, Maine, US)  
+* 21.28'N, 71.08'W (Cockburn Town, Turks & Caicos Islands, UK)  
+* 7.54'N, 72.3'W (Cucata, Colombia)  
+* 55.05'S, 67.05'W (Puerto Toro, Chile)  
+* 51.38'S, 69.13'W (Rio Gallegos, Argentina)  
+
+```{r Maine API}
+Maine <- weather.api(latitude = "44.19", longitude = "-69.47", api.id = "27667529a1629f208f81fded8f7552af", exclude = "current, minutely, hourly")
+
+Maine.day <- Maine$daily
+
+Maine.day
+```
+
+### Data Cleaning  
+
+Let's convert all dates/times that are in unix form to a date/time stamp.  
+
 ```{r}
-#weather.api(latitude = "33.045", longitude = "-94.04", api.id = "27667529a1629f208f81fded8f7552af")
+Maine.day$dt <- anydate(Maine.day$dt)
+Maine.day$sunrise <- anytime(Maine.day$sunrise)
+Maine.day$sunset <- anytime(Maine.day$sunset)
+Maine.day$moonrise <- anytime(Maine.day$moonrise)
+Maine.day$moonset <- anytime(Maine.day$moonset)
+```
+
+Convert the `dt` variable into three variables, `Year`, `Month`, `Day`, and then change `sunrise`, `sunset`, `moonrise`, and `moonset` to only include timestamps.  
+
+
+```{r}
+Maine.day <- Maine.day %>% separate(dt, c("Year", "Month", "Day"), sep = "-", convert = TRUE, remove = TRUE)
+
+#change sunrise, sunset, moonrise, and moonset to only include timestamps
+
+Maine.day <- Maine.day %>% separate(sunrise, c("Date", "Sunrise"), sep = " ", remove = TRUE) %>% subset(select = -Date)
+
+Maine.day <- Maine.day %>% separate(sunset, c("Date", "Sunset"), sep = " ", remove = TRUE) %>% subset(select = -Date)
+
+Maine.day <- Maine.day %>% separate(moonrise, c("Date", "Moonrise"), sep = " ", remove = TRUE) %>% subset(select = -Date)
+
+Maine.day <- Maine.day %>% separate(moonset, c("Date", "Moonset"), sep = " ", remove = TRUE) %>% subset(select = -Date)
+
+```
+
+Lastly, combine the nested `temp` dataframe with `Maine.day` to create a new dataframe called `Maine.day1`, removing unwanted variables.  
+
+
+```{r}
+Maine.day1 <- data.frame(Maine.day, Maine.day$temp) %>% select(Year:moon_phase, pressure:wind_gust, clouds:rain, min, max) %>% rename(mintemp = min, maxtemp = max)
+
+Maine.day1
+```
+
+Awesome! Remember to clean the data returned from the other locations too.  
+
+```{r Turks & Caicos, echo=FALSE}
+Turks <- weather.api(latitude = "21.28", longitude = "-71.08", api.id = "27667529a1629f208f81fded8f7552af", exclude = "current, minutely, hourly")
+
+Turks.day <- Turks$daily
+
+Turks.day$dt <- anydate(Turks.day$dt)
+Turks.day$sunrise <- anytime(Turks.day$sunrise)
+Turks.day$sunset <- anytime(Turks.day$sunset)
+Turks.day$moonrise <- anytime(Turks.day$moonrise)
+Turks.day$moonset <- anytime(Turks.day$moonset)
+
+Turks.day <- Turks.day %>% separate(dt, c("Year", "Month", "Day"), sep = "-", convert = TRUE, remove = TRUE)
+
+Turks.day <- Turks.day %>% separate(sunrise, c("Date", "Sunrise"), sep = " ", remove = TRUE) %>% subset(select = -Date)
+
+Turks.day <- Turks.day %>% separate(sunset, c("Date", "Sunset"), sep = " ", remove = TRUE) %>% subset(select = -Date)
+
+Turks.day <- Turks.day %>% separate(moonrise, c("Date", "Moonrise"), sep = " ", remove = TRUE) %>% subset(select = -Date)
+
+Turks.day <- Turks.day %>% separate(moonset, c("Date", "Moonset"), sep = " ", remove = TRUE) %>% subset(select = -Date)
+
+Turks.day1 <- data.frame(Turks.day, Turks.day$temp) %>% select(Year:moon_phase, pressure:wind_gust, clouds:rain, min, max) %>% rename(mintemp = min, maxtemp = max)
+
+```
+
+```{r Colombia, echo=FALSE}
+Colombia <- weather.api(latitude = "7.54", longitude = "-72.3", api.id = "27667529a1629f208f81fded8f7552af", exclude = "current, minutely, hourly")
+
+Colombia.day <- Colombia$daily
+
+Colombia.day$dt <- anydate(Colombia.day$dt)
+Colombia.day$sunrise <- anytime(Colombia.day$sunrise)
+Colombia.day$sunset <- anytime(Colombia.day$sunset)
+Colombia.day$moonrise <- anytime(Colombia.day$moonrise)
+Colombia.day$moonset <- anytime(Colombia.day$moonset)
+
+Colombia.day <- Colombia.day %>% separate(dt, c("Year", "Month", "Day"), sep = "-", convert = TRUE, remove = TRUE)
+
+Colombia.day <- Colombia.day %>% separate(sunrise, c("Date", "Sunrise"), sep = " ", remove = TRUE) %>% subset(select = -Date)
+
+Colombia.day <- Colombia.day %>% separate(sunset, c("Date", "Sunset"), sep = " ", remove = TRUE) %>% subset(select = -Date)
+
+Colombia.day <- Colombia.day %>% separate(moonrise, c("Date", "Moonrise"), sep = " ", remove = TRUE) %>% subset(select = -Date)
+
+Colombia.day <- Colombia.day %>% separate(moonset, c("Date", "Moonset"), sep = " ", remove = TRUE) %>% subset(select = -Date)
+
+Colombia.day1 <- data.frame(Colombia.day, Colombia.day$temp) %>% select(Year:moon_phase, pressure:wind_gust, clouds:rain, min, max) %>% rename(mintemp = min, maxtemp = max)
+
 ```
 
 
+```{r Chile, echo=FALSE}
+Chile <- weather.api(latitude = "-55.05", longitude = "-67.05", api.id = "27667529a1629f208f81fded8f7552af", exclude = "current, minutely, hourly")
 
+Chile.day <- Chile$daily
 
+Chile.day$dt <- anydate(Chile.day$dt)
+Chile.day$sunrise <- anytime(Chile.day$sunrise)
+Chile.day$sunset <- anytime(Chile.day$sunset)
+Chile.day$moonrise <- anytime(Chile.day$moonrise)
+Chile.day$moonset <- anytime(Chile.day$moonset)
 
+Chile.day <- Chile.day %>% separate(dt, c("Year", "Month", "Day"), sep = "-", convert = TRUE, remove = TRUE)
+
+Chile.day <- Chile.day %>% separate(sunrise, c("Date", "Sunrise"), sep = " ", remove = TRUE) %>% subset(select = -Date)
+
+Chile.day <- Chile.day %>% separate(sunset, c("Date", "Sunset"), sep = " ", remove = TRUE) %>% subset(select = -Date)
+
+Chile.day <- Chile.day %>% separate(moonrise, c("Date", "Moonrise"), sep = " ", remove = TRUE) %>% subset(select = -Date)
+
+Chile.day <- Chile.day %>% separate(moonset, c("Date", "Moonset"), sep = " ", remove = TRUE) %>% subset(select = -Date)
+
+Chile.day1 <- data.frame(Chile.day, Chile.day$temp) %>% select(Year:moon_phase, pressure:wind_gust, clouds:uvi, min, max) %>% rename(mintemp = min, maxtemp = max)
+
+```
+
+```{r Argentina, echo=FALSE}
+Argentina <- weather.api(latitude = "-51.38", longitude = "-69.13", api.id = "27667529a1629f208f81fded8f7552af", exclude = "current, minutely, hourly")
+
+Argentina.day <- Argentina$daily
+
+Argentina.day$dt <- anydate(Argentina.day$dt)
+Argentina.day$sunrise <- anytime(Argentina.day$sunrise)
+Argentina.day$sunset <- anytime(Argentina.day$sunset)
+Argentina.day$moonrise <- anytime(Argentina.day$moonrise)
+Argentina.day$moonset <- anytime(Argentina.day$moonset)
+
+Argentina.day <- Argentina.day %>% separate(dt, c("Year", "Month", "Day"), sep = "-", convert = TRUE, remove = TRUE)
+
+Argentina.day <- Argentina.day %>% separate(sunrise, c("Date", "Sunrise"), sep = " ", remove = TRUE) %>% subset(select = -Date)
+
+Argentina.day <- Argentina.day %>% separate(sunset, c("Date", "Sunset"), sep = " ", remove = TRUE) %>% subset(select = -Date)
+
+Argentina.day <- Argentina.day %>% separate(moonrise, c("Date", "Moonrise"), sep = " ", remove = TRUE) %>% subset(select = -Date)
+
+Argentina.day <- Argentina.day %>% separate(moonset, c("Date", "Moonset"), sep = " ", remove = TRUE) %>% subset(select = -Date)
+
+Argentina.day1 <- data.frame(Argentina.day, Argentina.day$temp) %>% select(Year:moon_phase, pressure:wind_gust, clouds:uvi, min, max) %>% rename(mintemp = min, maxtemp = max)
+
+```
+
+```{r return all datasets}
+Turks.day1
+Colombia.day1
+Chile.day1
+Argentina.day1
+```
 
 
