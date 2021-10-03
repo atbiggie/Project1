@@ -1,0 +1,65 @@
+---
+title: "Biggie_WeatherProject"
+author: "Autumn Biggie"
+date: "10/3/2021"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Load API packages.  
+
+```{r API packages, message=FALSE, warning=FALSE}
+library(httr)
+library(jsonlite)
+```
+
+```{r other packages, message=FALSE, warning=FALSE}
+library(tidyverse)
+```
+
+
+Access the OpenWeather API.  
+
+```{r}
+weather.api <- function(latitude, longitude, exclude = NULL, api.id = "27667529a1629f208f81fded8f7552af") {
+  base <- "https://api.openweathermap.org/data/2.5/onecall"
+  lat1 <- "lat="
+  lat2 <- latitude
+  lon1 <- "lon="
+  lon2 <- longitude
+  exc1 <- "exclude="
+  exc2 <- tolower(sub(" ", "", exclude))
+  apid1 <- "appid="
+  apid2 <- api.id
+  
+  lat <- paste(lat1, lat2, sep = "")
+  lon <- paste(lon1, lon2, sep = "")
+  ifelse(!is.null(exc2), exc <- paste(exc1, exc2, sep = ""), exc <- "nullexclude")
+  apid <- paste(apid1, apid2, sep = "")
+  
+  first <- paste(base, lat, sep = "?")
+  ifelse(!is.null(exc2), my.url <- paste(first, lon, exc, apid, sep = "&"), my.url <- paste(first, lon, apid, sep = "&"))
+  
+  #access the Weather API using the URL assembled above
+  weather.info <- GET(my.url)
+  
+  #convert the content of the accessed data from raw to character, then present in readable data frame format
+  final <- weather.info$content %>% rawToChar() %>% fromJSON()
+
+return(final)
+}
+```
+
+```{r}
+weather.api(latitude = "33.045", longitude = "-94.04")
+```
+
+
+
+
+
+
+

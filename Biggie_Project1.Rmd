@@ -23,56 +23,46 @@ library(tidyverse)
 
 Accessing the COVID19API.  
 
-```{r}
-cov.summary <- GET("https://api.covid19api.com/summary")
-```
-
-Look at structure of object.  
-
-```{r}
-str(cov.summary, max.level = 1)
-```
-
-Converting the raw data from `content` into character data.  
-
-```{r}
-ready <- cov.summary$content %>% rawToChar() %>% fromJSON()
-ready
-```
-
-
 User-friendly function to access data from covid19 API.  
 
 ```{r}
-get.covid <- function(country, status = NULL) {
+get.covid <- function(country, status = NULL, from_date = NULL) {
   base <- "https://api.covid19api.com"
+  alt.base <- "https://api.covid19api.com/live"
   summary <- "summary"
   
   #if the country argument contains spaces, replace them with dashes. Either way, assign value to new_country
   ifelse(grepl(" ", country, fixed = TRUE) == TRUE, new_country <- sub(" ", "-", country, fixed = TRUE), new_country <- country)
   
+  new_country <- tolower(new_country)
+  
   #import summary data for all countries if country = all, otherwise arrange the next piece of the URL using the specified country
   ifelse(new_country == "all", piece1 <- summary, piece1 <- paste("country", new_country, sep = "/"))
   
   #if status is specified, include it in the next part of the URL
-  ifelse(!is.null(status), piece2 <- paste("status", status, sep = "/"), piece2 <- "nullstatus")
+  ifelse(!is.null(status), piece2 <- paste("status", tolower(status), sep = "/"), piece2 <- "nullstatus")
+  
+  #if starting date (from_date) is specified, include it in the next part of the URL
+  ifelse(!is.null(from_date), piece3 <- paste("date", paste(from_date, "T13:13:30Z", sep = ""), sep = "/"), piece3 <- "nulldate")
   
   #paste the appropriate url into an object called url
-ifelse(piece2 == "nullstatus", url <- paste(base, piece1, sep = "/"), url <- paste(base, piece1, piece2, sep = "/"))
+  ifelse(piece3 != "nulldate", url <- paste(alt.base, piece1, piece2, piece3, sep = "/"), ifelse(piece2 == "nullstatus", url <- paste(base, piece1, sep = "/"), url <- paste(base, piece1, piece2, sep = "/")))
 
-return(list(new_country, status, piece1, piece2, url))
+  #access the covid19 API using the URL assembled above
+  cov.info <- GET(url = url)
+  
+  #convert the content of the accessed data from raw to character, then present in readable data frame format
+  final <- cov.info$content %>% rawToChar() %>% fromJSON()
+
+return(final)
 }
 
 ```
 
 ```{r}
-get.covid("new zealand", "confirmed")
+get.covid("South Africa", "Confirmed", "2020-11-26")
 ```
 
-```{r}
-new_count <- NULL
-is.null(new_count)
-```
 
 
 
