@@ -1,5 +1,5 @@
 ---
-title: "Biggie_WeatherProject"
+title: "How to Access an API with an Example"
 author: "Autumn Biggie"
 date: "10/3/2021"
 output: github_document
@@ -9,38 +9,70 @@ output: github_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Load API packages.  
 
-```{r API packages, message=FALSE, warning=FALSE}
+In this document, we'll walk through how to connect to an API, using an example. The API we'll be connecting to is the [OpenWeather API](https://openweathermap.org/api). Specifically, we'll be looking at current and forecast weather data from the [One Call API](https://openweathermap.org/api/one-call-api#history), one of the many APIs that openweathermap.org offers.  
+
+# Preliminary Steps  
+
+1.  Many APIs require you to access the data using a unique API key. To acquire your free API key, register [here](https://home.openweathermap.org/users/sign_up).  
+
+2. The following packages will be necessary in order to connect with the API:  
+
+    + `httr`  
+    + `jsonlite`  
+
+3. The following packages will be necessary in order to do some analyses after we load the data:
+
+    + `tidyverse`  
+
+```{r API packages, echo = FALSE, message=FALSE, warning=FALSE}
 library(httr)
 library(jsonlite)
-```
-
-```{r other packages, message=FALSE, warning=FALSE}
 library(tidyverse)
 ```
 
 
-Access the OpenWeather API.  
+# Function to Access API  
+
+Here, I've written a function `weather.api` to be able to easily access the target API. The arguments are as follows:  
+
+* `latitude`(required): latitude of the geographic location desired  
+* `longitude`(required): longitude of the geographic location desired  
+* `api.id`(required): input your unique API key here  
+* `exclude`(optional): list any parts of the weather data you want to exclude from the results. This should be a comma-delimited list, with or without spaces. Case is unimportant. The options are:
+    + `current`  
+    + `minutely`  
+    + `hourly`  
+    + `daily`  
+    
+Note: All parameters should be in character format i.e. `latitude = "-46.05"`.  
+
+
 
 ```{r}
-weather.api <- function(latitude, longitude, exclude = NULL, api.id = "27667529a1629f208f81fded8f7552af") {
+weather.api <- function(latitude, longitude, api.id, exclude = NULL) {
+  
+  #assign the individual pieces of the required url to their respective objects  
   base <- "https://api.openweathermap.org/data/2.5/onecall"
   lat1 <- "lat="
   lat2 <- latitude
   lon1 <- "lon="
   lon2 <- longitude
   exc1 <- "exclude="
-  exc2 <- tolower(sub(" ", "", exclude))
+  exc2 <- tolower(sub(" ", "", exclude)) #remove spaces and convert to lowercase  
   apid1 <- "appid="
   apid2 <- api.id
   
+  #paste pieces together  
   lat <- paste(lat1, lat2, sep = "")
-  lon <- paste(lon1, lon2, sep = "")
+  lon <- paste(lon1, lon2, sep = "")  
   ifelse(!is.null(exc2), exc <- paste(exc1, exc2, sep = ""), exc <- "nullexclude")
   apid <- paste(apid1, apid2, sep = "")
   
+  #paste base and latitude pieces together  
   first <- paste(base, lat, sep = "?")
+  
+  #create the entire url by pasting all pieces together using delimiter "&", conditioning on if any information is excluded  
   ifelse(!is.null(exc2), my.url <- paste(first, lon, exc, apid, sep = "&"), my.url <- paste(first, lon, apid, sep = "&"))
   
   #access the Weather API using the URL assembled above
@@ -53,8 +85,9 @@ return(final)
 }
 ```
 
+
 ```{r}
-weather.api(latitude = "33.045", longitude = "-94.04")
+#weather.api(latitude = "33.045", longitude = "-94.04", api.id = "27667529a1629f208f81fded8f7552af")
 ```
 
 
