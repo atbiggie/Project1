@@ -1,0 +1,1551 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style type="text/css">
+@font-face {
+font-family: octicons-link;
+src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+body {
+-webkit-text-size-adjust: 100%;
+text-size-adjust: 100%;
+color: #333;
+font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+font-size: 16px;
+line-height: 1.6;
+word-wrap: break-word;
+}
+a {
+background-color: transparent;
+}
+a:active,
+a:hover {
+outline: 0;
+}
+strong {
+font-weight: bold;
+}
+h1 {
+font-size: 2em;
+margin: 0.67em 0;
+}
+img {
+border: 0;
+}
+hr {
+box-sizing: content-box;
+height: 0;
+}
+pre {
+overflow: auto;
+}
+code,
+kbd,
+pre {
+font-family: monospace, monospace;
+font-size: 1em;
+}
+input {
+color: inherit;
+font: inherit;
+margin: 0;
+}
+html input[disabled] {
+cursor: default;
+}
+input {
+line-height: normal;
+}
+input[type="checkbox"] {
+box-sizing: border-box;
+padding: 0;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+td,
+th {
+padding: 0;
+}
+* {
+box-sizing: border-box;
+}
+input {
+font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+a {
+color: #4078c0;
+text-decoration: none;
+}
+a:hover,
+a:active {
+text-decoration: underline;
+}
+hr {
+height: 0;
+margin: 15px 0;
+overflow: hidden;
+background: transparent;
+border: 0;
+border-bottom: 1px solid #ddd;
+}
+hr:before {
+display: table;
+content: "";
+}
+hr:after {
+display: table;
+clear: both;
+content: "";
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-top: 15px;
+margin-bottom: 15px;
+line-height: 1.1;
+}
+h1 {
+font-size: 30px;
+}
+h2 {
+font-size: 21px;
+}
+h3 {
+font-size: 16px;
+}
+h4 {
+font-size: 14px;
+}
+h5 {
+font-size: 12px;
+}
+h6 {
+font-size: 11px;
+}
+blockquote {
+margin: 0;
+}
+ul,
+ol {
+padding: 0;
+margin-top: 0;
+margin-bottom: 0;
+}
+ol ol,
+ul ol {
+list-style-type: lower-roman;
+}
+ul ul ol,
+ul ol ol,
+ol ul ol,
+ol ol ol {
+list-style-type: lower-alpha;
+}
+dd {
+margin-left: 0;
+}
+code {
+font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+font-size: 12px;
+}
+pre {
+margin-top: 0;
+margin-bottom: 0;
+font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+.select::-ms-expand {
+opacity: 0;
+}
+.octicon {
+font: normal normal normal 16px/1 octicons-link;
+display: inline-block;
+text-decoration: none;
+text-rendering: auto;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+.octicon-link:before {
+content: '\f05c';
+}
+.markdown-body:before {
+display: table;
+content: "";
+}
+.markdown-body:after {
+display: table;
+clear: both;
+content: "";
+}
+.markdown-body>*:first-child {
+margin-top: 0 !important;
+}
+.markdown-body>*:last-child {
+margin-bottom: 0 !important;
+}
+a:not([href]) {
+color: inherit;
+text-decoration: none;
+}
+.anchor {
+display: inline-block;
+padding-right: 2px;
+margin-left: -18px;
+}
+.anchor:focus {
+outline: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-top: 1em;
+margin-bottom: 16px;
+font-weight: bold;
+line-height: 1.4;
+}
+h1 .octicon-link,
+h2 .octicon-link,
+h3 .octicon-link,
+h4 .octicon-link,
+h5 .octicon-link,
+h6 .octicon-link {
+color: #000;
+vertical-align: middle;
+visibility: hidden;
+}
+h1:hover .anchor,
+h2:hover .anchor,
+h3:hover .anchor,
+h4:hover .anchor,
+h5:hover .anchor,
+h6:hover .anchor {
+text-decoration: none;
+}
+h1:hover .anchor .octicon-link,
+h2:hover .anchor .octicon-link,
+h3:hover .anchor .octicon-link,
+h4:hover .anchor .octicon-link,
+h5:hover .anchor .octicon-link,
+h6:hover .anchor .octicon-link {
+visibility: visible;
+}
+h1 {
+padding-bottom: 0.3em;
+font-size: 2.25em;
+line-height: 1.2;
+border-bottom: 1px solid #eee;
+}
+h1 .anchor {
+line-height: 1;
+}
+h2 {
+padding-bottom: 0.3em;
+font-size: 1.75em;
+line-height: 1.225;
+border-bottom: 1px solid #eee;
+}
+h2 .anchor {
+line-height: 1;
+}
+h3 {
+font-size: 1.5em;
+line-height: 1.43;
+}
+h3 .anchor {
+line-height: 1.2;
+}
+h4 {
+font-size: 1.25em;
+}
+h4 .anchor {
+line-height: 1.2;
+}
+h5 {
+font-size: 1em;
+}
+h5 .anchor {
+line-height: 1.1;
+}
+h6 {
+font-size: 1em;
+color: #777;
+}
+h6 .anchor {
+line-height: 1.1;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table,
+pre {
+margin-top: 0;
+margin-bottom: 16px;
+}
+hr {
+height: 4px;
+padding: 0;
+margin: 16px 0;
+background-color: #e7e7e7;
+border: 0 none;
+}
+ul,
+ol {
+padding-left: 2em;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+margin-top: 0;
+margin-bottom: 0;
+}
+li>p {
+margin-top: 16px;
+}
+dl {
+padding: 0;
+}
+dl dt {
+padding: 0;
+margin-top: 16px;
+font-size: 1em;
+font-style: italic;
+font-weight: bold;
+}
+dl dd {
+padding: 0 16px;
+margin-bottom: 16px;
+}
+blockquote {
+padding: 0 15px;
+color: #777;
+border-left: 4px solid #ddd;
+}
+blockquote>:first-child {
+margin-top: 0;
+}
+blockquote>:last-child {
+margin-bottom: 0;
+}
+table {
+display: block;
+width: 100%;
+overflow: auto;
+word-break: normal;
+word-break: keep-all;
+}
+table th {
+font-weight: bold;
+}
+table th,
+table td {
+padding: 6px 13px;
+border: 1px solid #ddd;
+}
+table tr {
+background-color: #fff;
+border-top: 1px solid #ccc;
+}
+table tr:nth-child(2n) {
+background-color: #f8f8f8;
+}
+img {
+max-width: 100%;
+box-sizing: content-box;
+background-color: #fff;
+}
+code {
+padding: 0;
+padding-top: 0.2em;
+padding-bottom: 0.2em;
+margin: 0;
+font-size: 85%;
+background-color: rgba(0,0,0,0.04);
+border-radius: 3px;
+}
+code:before,
+code:after {
+letter-spacing: -0.2em;
+content: "\00a0";
+}
+pre>code {
+padding: 0;
+margin: 0;
+font-size: 100%;
+word-break: normal;
+white-space: pre;
+background: transparent;
+border: 0;
+}
+.highlight {
+margin-bottom: 16px;
+}
+.highlight pre,
+pre {
+padding: 16px;
+overflow: auto;
+font-size: 85%;
+line-height: 1.45;
+background-color: #f7f7f7;
+border-radius: 3px;
+}
+.highlight pre {
+margin-bottom: 0;
+word-break: normal;
+}
+pre {
+word-wrap: normal;
+}
+pre code {
+display: inline;
+max-width: initial;
+padding: 0;
+margin: 0;
+overflow: initial;
+line-height: inherit;
+word-wrap: normal;
+background-color: transparent;
+border: 0;
+}
+pre code:before,
+pre code:after {
+content: normal;
+}
+kbd {
+display: inline-block;
+padding: 3px 5px;
+font-size: 11px;
+line-height: 10px;
+color: #555;
+vertical-align: middle;
+background-color: #fcfcfc;
+border: solid 1px #ccc;
+border-bottom-color: #bbb;
+border-radius: 3px;
+box-shadow: inset 0 -1px 0 #bbb;
+}
+.pl-c {
+color: #969896;
+}
+.pl-c1,
+.pl-s .pl-v {
+color: #0086b3;
+}
+.pl-e,
+.pl-en {
+color: #795da3;
+}
+.pl-s .pl-s1,
+.pl-smi {
+color: #333;
+}
+.pl-ent {
+color: #63a35c;
+}
+.pl-k {
+color: #a71d5d;
+}
+.pl-pds,
+.pl-s,
+.pl-s .pl-pse .pl-s1,
+.pl-sr,
+.pl-sr .pl-cce,
+.pl-sr .pl-sra,
+.pl-sr .pl-sre {
+color: #183691;
+}
+.pl-v {
+color: #ed6a43;
+}
+.pl-id {
+color: #b52a1d;
+}
+.pl-ii {
+background-color: #b52a1d;
+color: #f8f8f8;
+}
+.pl-sr .pl-cce {
+color: #63a35c;
+font-weight: bold;
+}
+.pl-ml {
+color: #693a17;
+}
+.pl-mh,
+.pl-mh .pl-en,
+.pl-ms {
+color: #1d3e81;
+font-weight: bold;
+}
+.pl-mq {
+color: #008080;
+}
+.pl-mi {
+color: #333;
+font-style: italic;
+}
+.pl-mb {
+color: #333;
+font-weight: bold;
+}
+.pl-md {
+background-color: #ffecec;
+color: #bd2c00;
+}
+.pl-mi1 {
+background-color: #eaffea;
+color: #55a532;
+}
+.pl-mdr {
+color: #795da3;
+font-weight: bold;
+}
+.pl-mo {
+color: #1d3e81;
+}
+kbd {
+display: inline-block;
+padding: 3px 5px;
+font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+line-height: 10px;
+color: #555;
+vertical-align: middle;
+background-color: #fcfcfc;
+border: solid 1px #ccc;
+border-bottom-color: #bbb;
+border-radius: 3px;
+box-shadow: inset 0 -1px 0 #bbb;
+}
+.task-list-item {
+list-style-type: none;
+}
+.task-list-item+.task-list-item {
+margin-top: 3px;
+}
+.task-list-item input {
+margin: 0 0.35em 0.25em -1.6em;
+vertical-align: middle;
+}
+:checked+.radio-label {
+z-index: 1;
+position: relative;
+border-color: #4078c0;
+}
+.sourceLine {
+display: inline-block;
+}
+code .kw { color: #000000; }
+code .dt { color: #ed6a43; }
+code .dv { color: #009999; }
+code .bn { color: #009999; }
+code .fl { color: #009999; }
+code .ch { color: #009999; }
+code .st { color: #183691; }
+code .co { color: #969896; }
+code .ot { color: #0086b3; }
+code .al { color: #a61717; }
+code .fu { color: #63a35c; }
+code .er { color: #a61717; background-color: #e3d2d2; }
+code .wa { color: #000000; }
+code .cn { color: #008080; }
+code .sc { color: #008080; }
+code .vs { color: #183691; }
+code .ss { color: #183691; }
+code .im { color: #000000; }
+code .va {color: #008080; }
+code .cf { color: #000000; }
+code .op { color: #000000; }
+code .bu { color: #000000; }
+code .ex { color: #000000; }
+code .pp { color: #999999; }
+code .at { color: #008080; }
+code .do { color: #969896; }
+code .an { color: #008080; }
+code .cv { color: #008080; }
+code .in { color: #008080; }
+</style>
+<style>
+body {
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 45px;
+  padding-top: 0px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1 id="how-to-access-an-api-with-an-example">How to Access an API with an Example</h1>
+<p>Autumn Biggie 10/3/2021</p>
+<ul>
+<li><a href="#preliminary-steps">Preliminary Steps</a></li>
+<li><a href="#function-to-access-api">Function to Access API</a></li>
+<li><a href="#exploratory-data-analysis">Exploratory Data Analysis</a>
+<ul>
+<li><a href="#data-cleaning">Data Cleaning</a></li>
+<li><a href="#create-new-variables">Create New Variables</a></li>
+<li><a href="#contingency-tables">Contingency Tables</a></li>
+<li><a href="#numerical-summaries">Numerical Summaries</a></li>
+<li><a href="#data-visualization">Data Visualization</a></li>
+</ul></li>
+<li><a href="#final-thoughts">Final Thoughts</a></li>
+</ul>
+<p>In this document, we’ll walk through how to connect to an API, using an example. The API we’ll be connecting to is the <a href="https://openweathermap.org/api">OpenWeather API</a>. Specifically, we’ll be looking at current and forecast weather data from the <a href="https://openweathermap.org/api/one-call-api#history">One Call API</a>, one of the many APIs that openweathermap.org offers.</p>
+<h2 id="preliminary-steps">Preliminary Steps</h2>
+<ol>
+<li><p>Many APIs require you to access the data using a unique API key. To acquire your free API key, register <a href="https://home.openweathermap.org/users/sign_up">here</a>.</p></li>
+<li><p>The following packages will be necessary in order to connect with the API:</p>
+<ul>
+<li><code>httr</code></li>
+<li><code>jsonlite</code></li>
+</ul></li>
+<li><p>The following packages will be necessary in order to do some analyses after we load the data:</p>
+<ul>
+<li><code>tidyverse</code></li>
+<li><code>anytime</code></li>
+<li><code>ggplot2</code></li>
+<li><code>chron</code></li>
+<li><code>leaflet</code></li>
+</ul></li>
+</ol>
+<h2 id="function-to-access-api">Function to Access API</h2>
+<p>Here, I’ve written a function <code>weather.api</code> to be able to easily access the target API. The arguments are as follows:</p>
+<ul>
+<li><code>latitude</code>(required): latitude of the geographic location desired</li>
+<li><code>longitude</code>(required): longitude of the geographic location desired</li>
+<li><code>api.id</code>(required): input your unique API key here</li>
+<li><code>exclude</code>(optional): list any parts of the weather data you want to exclude from the results. This should be a comma-delimited list, with or without spaces. Case is unimportant. The options are:
+<ul>
+<li><code>current</code></li>
+<li><code>minutely</code></li>
+<li><code>hourly</code></li>
+<li><code>daily</code></li>
+</ul></li>
+<li><code>units</code> (optional): The unit of measurement in which values are returned. Options are:
+<ul>
+<li><code>standard</code></li>
+<li><code>imperial</code></li>
+<li><code>metric</code></li>
+</ul></li>
+</ul>
+<p>Note: All parameters should be in character format i.e. <code>latitude = &quot;-46.05&quot;</code>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1">weather.api &lt;-<span class="st"> </span><span class="cf">function</span>(latitude, longitude, api.id, <span class="dt">exclude =</span> <span class="ot">NULL</span>, <span class="dt">units =</span> <span class="st">&quot;metric&quot;</span>) {</a>
+<a class="sourceLine" id="cb1-2" title="2">  </a>
+<a class="sourceLine" id="cb1-3" title="3">  <span class="co">#assign the individual pieces of the required url to their respective objects  </span></a>
+<a class="sourceLine" id="cb1-4" title="4">  base &lt;-<span class="st"> &quot;https://api.openweathermap.org/data/2.5/onecall&quot;</span></a>
+<a class="sourceLine" id="cb1-5" title="5">  lat1 &lt;-<span class="st"> &quot;lat=&quot;</span></a>
+<a class="sourceLine" id="cb1-6" title="6">  lat2 &lt;-<span class="st"> </span>latitude</a>
+<a class="sourceLine" id="cb1-7" title="7">  lon1 &lt;-<span class="st"> &quot;lon=&quot;</span></a>
+<a class="sourceLine" id="cb1-8" title="8">  lon2 &lt;-<span class="st"> </span>longitude</a>
+<a class="sourceLine" id="cb1-9" title="9">  exc1 &lt;-<span class="st"> &quot;exclude=&quot;</span></a>
+<a class="sourceLine" id="cb1-10" title="10">  exc2 &lt;-<span class="st"> </span><span class="kw">tolower</span>(<span class="kw">sub</span>(<span class="st">&quot; &quot;</span>, <span class="st">&quot;&quot;</span>, exclude)) <span class="co">#remove spaces and convert to lowercase  </span></a>
+<a class="sourceLine" id="cb1-11" title="11">  apid1 &lt;-<span class="st"> &quot;appid=&quot;</span></a>
+<a class="sourceLine" id="cb1-12" title="12">  apid2 &lt;-<span class="st"> </span>api.id</a>
+<a class="sourceLine" id="cb1-13" title="13">  units1 &lt;-<span class="st"> &quot;units=&quot;</span></a>
+<a class="sourceLine" id="cb1-14" title="14">  units2 &lt;-<span class="st"> </span>units</a>
+<a class="sourceLine" id="cb1-15" title="15">  </a>
+<a class="sourceLine" id="cb1-16" title="16">  <span class="co">#paste pieces together  </span></a>
+<a class="sourceLine" id="cb1-17" title="17">  lat &lt;-<span class="st"> </span><span class="kw">paste</span>(lat1, lat2, <span class="dt">sep =</span> <span class="st">&quot;&quot;</span>)</a>
+<a class="sourceLine" id="cb1-18" title="18">  lon &lt;-<span class="st"> </span><span class="kw">paste</span>(lon1, lon2, <span class="dt">sep =</span> <span class="st">&quot;&quot;</span>)  </a>
+<a class="sourceLine" id="cb1-19" title="19">  <span class="kw">ifelse</span>(<span class="op">!</span><span class="kw">is.null</span>(exc2), exc &lt;-<span class="st"> </span><span class="kw">paste</span>(exc1, exc2, <span class="dt">sep =</span> <span class="st">&quot;&quot;</span>), exc &lt;-<span class="st"> &quot;nullexclude&quot;</span>)</a>
+<a class="sourceLine" id="cb1-20" title="20">  apid &lt;-<span class="st"> </span><span class="kw">paste</span>(apid1, apid2, <span class="dt">sep =</span> <span class="st">&quot;&quot;</span>)</a>
+<a class="sourceLine" id="cb1-21" title="21">  units &lt;-<span class="st"> </span><span class="kw">paste</span>(units1, units2, <span class="dt">sep =</span> <span class="st">&quot;&quot;</span>)</a>
+<a class="sourceLine" id="cb1-22" title="22">  </a>
+<a class="sourceLine" id="cb1-23" title="23">  <span class="co">#paste base and latitude pieces together  </span></a>
+<a class="sourceLine" id="cb1-24" title="24">  first &lt;-<span class="st"> </span><span class="kw">paste</span>(base, lat, <span class="dt">sep =</span> <span class="st">&quot;?&quot;</span>)</a>
+<a class="sourceLine" id="cb1-25" title="25">  </a>
+<a class="sourceLine" id="cb1-26" title="26">  <span class="co">#create the entire url by pasting all pieces together using delimiter &quot;&amp;&quot;, conditioning on if any information is excluded  </span></a>
+<a class="sourceLine" id="cb1-27" title="27">  <span class="kw">ifelse</span>(<span class="op">!</span><span class="kw">is.null</span>(exc2), my.url &lt;-<span class="st"> </span><span class="kw">paste</span>(first, lon, exc, apid, units, <span class="dt">sep =</span> <span class="st">&quot;&amp;&quot;</span>), my.url &lt;-<span class="st"> </span><span class="kw">paste</span>(first, lon, apid, units, <span class="dt">sep =</span> <span class="st">&quot;&amp;&quot;</span>))</a>
+<a class="sourceLine" id="cb1-28" title="28">  </a>
+<a class="sourceLine" id="cb1-29" title="29">  <span class="co">#access the Weather API using the URL assembled above</span></a>
+<a class="sourceLine" id="cb1-30" title="30">  weather.info &lt;-<span class="st"> </span><span class="kw">GET</span>(my.url)</a>
+<a class="sourceLine" id="cb1-31" title="31">  </a>
+<a class="sourceLine" id="cb1-32" title="32">  <span class="co">#convert the content of the accessed data from raw to character, then present in readable data frame format</span></a>
+<a class="sourceLine" id="cb1-33" title="33">  final &lt;-<span class="st"> </span>weather.info<span class="op">$</span>content <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">rawToChar</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">fromJSON</span>()</a>
+<a class="sourceLine" id="cb1-34" title="34"></a>
+<a class="sourceLine" id="cb1-35" title="35"><span class="kw">return</span>(final)</a>
+<a class="sourceLine" id="cb1-36" title="36">}</a></code></pre></div>
+<h2 id="exploratory-data-analysis">Exploratory Data Analysis</h2>
+<p>Now that we can easily access the API, let’s do some exploratory data analysis.</p>
+<p>I want to explore the weather data of five locations that lie roughly along the same line of longitude.</p>
+<div id="htmlwidget-4585026625356e2b154d" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4585026625356e2b154d">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"setView":[[0,-80],1,[]],"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[44.19,21.28,7.54,-55.05,-51.38],[-69.47,-71.08,-72.3,-67.05,-69.13],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["Augusta, Maine, US","Cockburn Town, Turks & Caicos Islands","Cucata, Colombia","Puerto Toro, Chile","Rio Gallegos, Argentina"],null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-55.05,44.19],"lng":[-72.3,-67.05]}},"evals":[],"jsHooks":[]}</script>
+
+<p>Locations:</p>
+<ul>
+<li>44.19’N, 69.47’W (Augusta, Maine, US)</li>
+<li>21.28’N, 71.08’W (Cockburn Town, Turks &amp; Caicos Islands, UK)</li>
+<li>7.54’N, 72.3’W (Cucata, Colombia)</li>
+<li>51.38’S, 69.13’W (Rio Gallegos, Argentina)</li>
+<li>55.05’S, 67.05’W (Puerto Toro, Chile)</li>
+</ul>
+<!-- end list -->
+
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1">Maine &lt;-<span class="st"> </span><span class="kw">weather.api</span>(<span class="dt">latitude =</span> <span class="st">&quot;44.19&quot;</span>, <span class="dt">longitude =</span> <span class="st">&quot;-69.47&quot;</span>, <span class="dt">api.id =</span> <span class="st">&quot;input_your_key&quot;</span>, <span class="dt">exclude =</span> <span class="st">&quot;current, minutely, hourly&quot;</span>)</a>
+<a class="sourceLine" id="cb2-2" title="2"></a>
+<a class="sourceLine" id="cb2-3" title="3">Maine.day &lt;-<span class="st"> </span>Maine<span class="op">$</span>daily</a>
+<a class="sourceLine" id="cb2-4" title="4"></a>
+<a class="sourceLine" id="cb2-5" title="5">Maine.day</a></code></pre></div>
+<pre><code>##           dt    sunrise     sunset   moonrise    moonset moon_phase temp.day
+## 1 1633363200 1633343957 1633385611 1633334820 1633384140       0.93    15.84
+## 2 1633449600 1633430429 1633471902 1633425720 1633471920       0.97    13.19
+## 3 1633536000 1633516901 1633558193 1633516680 1633559760       0.00    19.88
+## 4 1633622400 1633603373 1633644485 1633607760 1633647660       0.05    19.16
+## 5 1633708800 1633689846 1633730778 1633698900 1633735860       0.08    20.14
+## 6 1633795200 1633776319 1633817071 1633790160 1633824300       0.12    11.79
+## 7 1633881600 1633862792 1633903365 1633881360 1633913280       0.16    14.30
+## 8 1633968000 1633949266 1633989660 1633972140 1634002920       0.20    16.49
+##   temp.min temp.max temp.night temp.eve temp.morn feels_like.day
+## 1     5.47    16.99       8.39    12.88      5.47          14.79
+## 2     8.09    16.60       8.70    12.20      9.62          12.37
+## 3     7.91    20.93      10.35    14.36      7.92          19.31
+## 4     9.69    21.76      11.54    19.26      9.72          18.52
+## 5    10.12    22.75      13.08    18.02     10.12          19.62
+## 6     9.63    12.82       9.99    11.95      9.81          10.67
+## 7     8.57    15.30       8.57    12.88     10.04          13.35
+## 8     8.85    17.69      13.43    15.48      9.06          15.97
+##   feels_like.night feels_like.eve feels_like.morn pressure humidity dew_point
+## 1             8.39          12.50            3.69     1021       50      5.14
+## 2             8.70          11.56            9.37     1026       69      7.40
+## 3             9.84          13.94            7.15     1027       53      9.79
+## 4            11.13          18.83            9.72     1024       53      9.11
+## 5            12.17          17.84            9.51     1019       54     10.29
+## 6             9.99          10.92            8.78     1031       63      4.80
+## 7             7.89          12.00            9.06     1031       60      6.36
+## 8            13.39          15.28            8.41     1024       68     10.37
+##   wind_speed wind_deg wind_gust                           weather clouds  pop
+## 1       2.52       36      8.33   803, Clouds, broken clouds, 04d     83 0.29
+## 2       1.41       20      1.70 804, Clouds, overcast clouds, 04d    100 0.11
+## 3       1.65      351      2.54        800, Clear, clear sky, 01d      7 0.00
+## 4       1.67      338      2.52        800, Clear, clear sky, 01d      0 0.00
+## 5       3.25       56      9.55        800, Clear, clear sky, 01d      7 0.00
+## 6       2.56       72      6.38 804, Clouds, overcast clouds, 04d    100 0.00
+## 7       3.22      186      5.36 804, Clouds, overcast clouds, 04d    100 0.00
+## 8       5.05      208     10.67 804, Clouds, overcast clouds, 04d    100 0.00
+##    uvi
+## 1 4.00
+## 2 3.41
+## 3 4.10
+## 4 3.91
+## 5 3.58
+## 6 0.13
+## 7 1.00
+## 8 1.00
+</code></pre>
+<h3 id="data-cleaning">Data Cleaning</h3>
+<p>Let’s convert all dates/times that are in unix form to a date/time stamp.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1">Maine.day<span class="op">$</span>dt &lt;-<span class="st"> </span><span class="kw">anydate</span>(Maine.day<span class="op">$</span>dt)</a>
+<a class="sourceLine" id="cb4-2" title="2">Maine.day<span class="op">$</span>sunrise &lt;-<span class="st"> </span><span class="kw">anytime</span>(Maine.day<span class="op">$</span>sunrise)</a>
+<a class="sourceLine" id="cb4-3" title="3">Maine.day<span class="op">$</span>sunset &lt;-<span class="st"> </span><span class="kw">anytime</span>(Maine.day<span class="op">$</span>sunset)</a>
+<a class="sourceLine" id="cb4-4" title="4">Maine.day<span class="op">$</span>moonrise &lt;-<span class="st"> </span><span class="kw">anytime</span>(Maine.day<span class="op">$</span>moonrise)</a>
+<a class="sourceLine" id="cb4-5" title="5">Maine.day<span class="op">$</span>moonset &lt;-<span class="st"> </span><span class="kw">anytime</span>(Maine.day<span class="op">$</span>moonset)</a></code></pre></div>
+<p>Convert the <code>dt</code> variable into three variables, <code>Year</code>, <code>Month</code>, <code>Day</code>, and then change <code>sunrise</code>, <code>sunset</code>, <code>moonrise</code>, and <code>moonset</code> to only include timestamps.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1">Maine.day &lt;-<span class="st"> </span>Maine.day <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">separate</span>(dt, <span class="kw">c</span>(<span class="st">&quot;Year&quot;</span>, <span class="st">&quot;Month&quot;</span>, <span class="st">&quot;Day&quot;</span>), <span class="dt">sep =</span> <span class="st">&quot;-&quot;</span>, <span class="dt">convert =</span> <span class="ot">TRUE</span>, <span class="dt">remove =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb5-2" title="2"></a>
+<a class="sourceLine" id="cb5-3" title="3"><span class="co">#change sunrise, sunset, moonrise, and moonset to only include timestamps</span></a>
+<a class="sourceLine" id="cb5-4" title="4"></a>
+<a class="sourceLine" id="cb5-5" title="5">Maine.day &lt;-<span class="st"> </span>Maine.day <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">separate</span>(sunrise, <span class="kw">c</span>(<span class="st">&quot;Date&quot;</span>, <span class="st">&quot;Sunrise&quot;</span>), <span class="dt">sep =</span> <span class="st">&quot; &quot;</span>, <span class="dt">remove =</span> <span class="ot">TRUE</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">subset</span>(<span class="dt">select =</span> <span class="op">-</span>Date)</a>
+<a class="sourceLine" id="cb5-6" title="6"></a>
+<a class="sourceLine" id="cb5-7" title="7">Maine.day &lt;-<span class="st"> </span>Maine.day <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">separate</span>(sunset, <span class="kw">c</span>(<span class="st">&quot;Date&quot;</span>, <span class="st">&quot;Sunset&quot;</span>), <span class="dt">sep =</span> <span class="st">&quot; &quot;</span>, <span class="dt">remove =</span> <span class="ot">TRUE</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">subset</span>(<span class="dt">select =</span> <span class="op">-</span>Date)</a>
+<a class="sourceLine" id="cb5-8" title="8"></a>
+<a class="sourceLine" id="cb5-9" title="9">Maine.day &lt;-<span class="st"> </span>Maine.day <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">separate</span>(moonrise, <span class="kw">c</span>(<span class="st">&quot;Date&quot;</span>, <span class="st">&quot;Moonrise&quot;</span>), <span class="dt">sep =</span> <span class="st">&quot; &quot;</span>, <span class="dt">remove =</span> <span class="ot">TRUE</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">subset</span>(<span class="dt">select =</span> <span class="op">-</span>Date)</a>
+<a class="sourceLine" id="cb5-10" title="10"></a>
+<a class="sourceLine" id="cb5-11" title="11">Maine.day &lt;-<span class="st"> </span>Maine.day <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">separate</span>(moonset, <span class="kw">c</span>(<span class="st">&quot;Date&quot;</span>, <span class="st">&quot;Moonset&quot;</span>), <span class="dt">sep =</span> <span class="st">&quot; &quot;</span>, <span class="dt">remove =</span> <span class="ot">TRUE</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">subset</span>(<span class="dt">select =</span> <span class="op">-</span>Date)</a></code></pre></div>
+<p>Lastly, combine the nested <code>temp</code> dataframe with <code>Maine.day</code> to create a new dataframe called <code>Maine.day1</code>, removing unwanted variables.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1">Maine.day1 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(Maine.day, Maine.day<span class="op">$</span>temp) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(Year<span class="op">:</span>moon_phase, pressure<span class="op">:</span>wind_gust, clouds, pop, min, max) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">rename</span>(<span class="dt">mintemp =</span> min, <span class="dt">maxtemp =</span> max)</a>
+<a class="sourceLine" id="cb6-2" title="2"></a>
+<a class="sourceLine" id="cb6-3" title="3">Maine.day1</a></code></pre></div>
+<pre><code>##   Year Month Day  Sunrise   Sunset Moonrise  Moonset moon_phase pressure
+## 1 2021    10   4 06:39:17 18:13:31 04:07:00 17:49:00       0.93     1021
+## 2 2021    10   5 06:40:29 18:11:42 05:22:00 18:12:00       0.97     1026
+## 3 2021    10   6 06:41:41 18:09:53 06:38:00 18:36:00       0.00     1027
+## 4 2021    10   7 06:42:53 18:08:05 07:56:00 19:01:00       0.05     1024
+## 5 2021    10   8 06:44:06 18:06:18 09:15:00 19:31:00       0.08     1019
+## 6 2021    10   9 06:45:19 18:04:31 10:36:00 20:05:00       0.12     1031
+## 7 2021    10  10 06:46:32 18:02:45 11:56:00 20:48:00       0.16     1031
+## 8 2021    10  11 06:47:46 18:01:00 13:09:00 21:42:00       0.20     1024
+##   humidity dew_point wind_speed wind_deg wind_gust clouds  pop mintemp maxtemp
+## 1       50      5.14       2.52       36      8.33     83 0.29    5.47   16.99
+## 2       69      7.40       1.41       20      1.70    100 0.11    8.09   16.60
+## 3       53      9.79       1.65      351      2.54      7 0.00    7.91   20.93
+## 4       53      9.11       1.67      338      2.52      0 0.00    9.69   21.76
+## 5       54     10.29       3.25       56      9.55      7 0.00   10.12   22.75
+## 6       63      4.80       2.56       72      6.38    100 0.00    9.63   12.82
+## 7       60      6.36       3.22      186      5.36    100 0.00    8.57   15.30
+## 8       68     10.37       5.05      208     10.67    100 0.00    8.85   17.69
+</code></pre>
+<p>Awesome! Remember to clean the data returned from the other locations too.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1">Turks.day1</a></code></pre></div>
+<pre><code>##   Year Month Day  Sunrise   Sunset Moonrise  Moonset moon_phase pressure
+## 1 2021    10   4 06:36:17 18:29:23 04:42:00 17:36:00       0.93     1014
+## 2 2021    10   5 06:36:35 18:28:29 05:41:00 18:15:00       0.97     1015
+## 3 2021    10   6 06:36:52 18:27:34 06:40:00 18:54:00       0.00     1016
+## 4 2021    10   7 06:37:11 18:26:40 07:42:00 19:35:00       0.05     1016
+## 5 2021    10   8 06:37:29 18:25:47 08:45:00 20:19:00       0.08     1014
+## 6 2021    10   9 06:37:48 18:24:55 09:51:00 21:09:00       0.12     1014
+## 7 2021    10  10 06:38:08 18:24:02 10:58:00 22:03:00       0.16     1014
+## 8 2021    10  11 06:38:27 18:23:11 12:03:00 23:02:00       0.20     1014
+##   humidity dew_point wind_speed wind_deg wind_gust clouds  pop mintemp maxtemp
+## 1       74     23.78      10.18      119     10.94    100 1.00   26.97   28.87
+## 2       72     23.15      11.44      100     12.42     75 1.00   28.37   28.82
+## 3       73     23.58      11.28       99     12.36      8 0.55   28.31   28.86
+## 4       73     23.30      10.03       92     10.91      6 0.79   27.95   28.72
+## 5       76     23.82       7.80       99      8.09      4 0.57   28.18   28.83
+## 6       77     24.25       8.30      119      8.74     99 0.97   28.58   28.95
+## 7       74     23.54       8.35      122      8.53    100 1.00   27.60   28.76
+## 8       73     23.21       7.99      130      8.15     96 0.52   28.52   28.65
+</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" title="1">Colombia.day1</a></code></pre></div>
+<pre><code>##   Year Month Day  Sunrise   Sunset Moonrise  Moonset moon_phase pressure
+## 1 2021    10   4 06:36:45 18:38:41 04:59:00 17:33:00       0.93     1013
+## 2 2021    10   5 06:36:38 18:38:10 05:51:00 18:18:00       0.97     1014
+## 3 2021    10   6 06:36:32 18:37:40 06:44:00 19:04:00       0.00     1016
+## 4 2021    10   7 06:36:26 18:37:10 07:38:00 19:52:00       0.05     1015
+## 5 2021    10   8 06:36:21 18:36:41 08:34:00 20:43:00       0.08     1014
+## 6 2021    10   9 06:36:16 18:36:12 09:34:00 21:38:00       0.12     1017
+## 7 2021    10  10 06:36:12 18:35:43 10:35:00 22:36:00       0.16     1016
+## 8 2021    10  11 06:36:08 18:35:16 11:39:00 23:38:00       0.20     1016
+##   humidity dew_point wind_speed wind_deg wind_gust clouds  pop mintemp maxtemp
+## 1       58     13.69       2.96      103      4.12     89 0.77   12.85   21.67
+## 2       74     15.74       2.72      110      4.23     92 1.00   12.82   19.49
+## 3       87     15.12       2.45      117      4.31    100 0.95   12.81   18.95
+## 4       58     13.00       3.38      106      4.79     74 0.80   11.97   22.82
+## 5       56     12.91       2.53      101      3.40     88 1.00   12.58   21.10
+## 6       83     14.25       1.59      246      2.24    100 0.99   13.13   21.39
+## 7       80     16.42       1.92       99      2.37     75 1.00   12.89   19.97
+## 8       79     15.49       1.68       90      2.27     97 1.00   13.35   18.80
+</code></pre>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" title="1">Chile.day1</a></code></pre></div>
+<pre><code>##   Year Month Day  Sunrise   Sunset Moonrise  Moonset moon_phase pressure
+## 1 2021    10   4 05:45:02 18:48:25 05:49:00 16:16:00       0.93      997
+## 2 2021    10   5 05:42:28 18:50:21 06:01:00 17:44:00       0.97     1017
+## 3 2021    10   6 05:39:55 18:52:17 06:13:00 19:14:00       0.00     1001
+## 4 2021    10   7 05:37:23 18:54:14 06:25:00 20:47:00       0.04     1008
+## 5 2021    10   8 05:34:51 18:56:11 06:40:00 22:21:00       0.08      993
+## 6 2021    10   9 05:32:20 18:58:09 06:58:00 19:00:00       0.12      987
+## 7 2021    10  10 05:29:49 19:00:07 07:24:00 23:56:00       0.16     1002
+## 8 2021    10  11 05:27:18 19:02:06 08:02:00 01:23:00       0.19      982
+##   humidity dew_point wind_speed wind_deg wind_gust clouds  pop mintemp maxtemp
+## 1       66     -0.99      12.76      258     23.26     45 0.84    2.21    5.49
+## 2       68     -0.82      10.20      236     17.31     38 0.92    1.96    6.54
+## 3       62      2.25      10.47      254     17.99     27 0.96    1.41   10.11
+## 4       54     -2.05       7.82      249     15.14     67 0.28    3.03    8.71
+## 5       73      3.32      10.68      247     17.47     99 0.68    4.49    8.40
+## 6       85      4.16       8.87      323     22.73    100 0.69    2.31   10.19
+## 7       60     -1.33       8.03      269     15.56    100 0.63    2.62    8.28
+## 8       86      2.08      11.01      250     19.60     98 0.96    3.50    5.37
+</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" title="1">Argentina.day1</a></code></pre></div>
+<pre><code>##   Year Month Day  Sunrise   Sunset Moonrise  Moonset moon_phase pressure
+## 1 2021    10   4 05:57:04 18:53:01 05:49:00 16:32:00       0.93     1007
+## 2 2021    10   5 05:54:48 18:54:39 06:06:00 17:54:00       0.97     1021
+## 3 2021    10   6 05:52:32 18:56:19 06:23:00 19:19:00       0.00     1012
+## 4 2021    10   7 05:50:17 18:57:58 06:40:00 20:46:00       0.04     1014
+## 5 2021    10   8 05:48:02 18:59:38 06:59:00 22:15:00       0.08     1004
+## 6 2021    10   9 05:45:48 19:01:19 07:22:00 19:00:00       0.12      996
+## 7 2021    10  10 05:43:34 19:03:00 07:54:00 23:43:00       0.16     1007
+## 8 2021    10  11 05:41:21 19:04:41 08:37:00 01:07:00       0.19      999
+##   humidity dew_point wind_speed wind_deg wind_gust clouds  pop mintemp maxtemp
+## 1       41     -3.51      15.58      249     23.00     58 0.00    3.57    9.31
+## 2       41     -4.90      13.76      234     19.32     36 0.00    1.90    9.31
+## 3       42     -2.99      12.69      239     19.06    100 0.07    4.51   11.70
+## 4       56      1.71      10.09      243     17.13    100 0.00    4.25   10.78
+## 5       53      3.44      12.36      237     14.92    100 0.00    6.90   12.70
+## 6       44      3.27      16.68      240     22.57    100 0.26    6.22   18.22
+## 7       65     -0.28      10.56      249     17.61    100 0.00    3.09    7.75
+## 8       43     -4.09      20.29      252     25.96     37 0.00    4.83    9.73
+</code></pre>
+<p>Now, let’s combine all datasets into one called <code>weather</code>, creating a new variable called <code>location</code>.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" title="1">Maine.day1 &lt;-<span class="st"> </span>Maine.day1 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">location =</span> <span class="st">&quot;Maine, US&quot;</span>)</a>
+<a class="sourceLine" id="cb16-2" title="2">Turks.day1 &lt;-<span class="st"> </span>Turks.day1 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">location =</span> <span class="st">&quot;Turks &amp; Caicos&quot;</span>)</a>
+<a class="sourceLine" id="cb16-3" title="3">Colombia.day1 &lt;-<span class="st"> </span>Colombia.day1 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">location =</span> <span class="st">&quot;Colombia&quot;</span>)</a>
+<a class="sourceLine" id="cb16-4" title="4">Chile.day1 &lt;-<span class="st"> </span>Chile.day1 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">location =</span> <span class="st">&quot;Chile&quot;</span>)</a>
+<a class="sourceLine" id="cb16-5" title="5">Argentina.day1 &lt;-<span class="st"> </span>Argentina.day1 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">location =</span> <span class="st">&quot;Argentina&quot;</span>)</a>
+<a class="sourceLine" id="cb16-6" title="6"></a>
+<a class="sourceLine" id="cb16-7" title="7">weather &lt;-<span class="st"> </span><span class="kw">rbind</span>(Maine.day1, Turks.day1, Colombia.day1, Argentina.day1, Chile.day1) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">relocate</span>(location, <span class="dt">.before =</span> Year)</a>
+<a class="sourceLine" id="cb16-8" title="8"></a>
+<a class="sourceLine" id="cb16-9" title="9">weather</a></code></pre></div>
+<pre><code>##          location Year Month Day  Sunrise   Sunset Moonrise  Moonset moon_phase
+## 1       Maine, US 2021    10   4 06:39:17 18:13:31 04:07:00 17:49:00       0.93
+## 2       Maine, US 2021    10   5 06:40:29 18:11:42 05:22:00 18:12:00       0.97
+## 3       Maine, US 2021    10   6 06:41:41 18:09:53 06:38:00 18:36:00       0.00
+## 4       Maine, US 2021    10   7 06:42:53 18:08:05 07:56:00 19:01:00       0.05
+## 5       Maine, US 2021    10   8 06:44:06 18:06:18 09:15:00 19:31:00       0.08
+## 6       Maine, US 2021    10   9 06:45:19 18:04:31 10:36:00 20:05:00       0.12
+## 7       Maine, US 2021    10  10 06:46:32 18:02:45 11:56:00 20:48:00       0.16
+## 8       Maine, US 2021    10  11 06:47:46 18:01:00 13:09:00 21:42:00       0.20
+## 9  Turks &amp; Caicos 2021    10   4 06:36:17 18:29:23 04:42:00 17:36:00       0.93
+## 10 Turks &amp; Caicos 2021    10   5 06:36:35 18:28:29 05:41:00 18:15:00       0.97
+## 11 Turks &amp; Caicos 2021    10   6 06:36:52 18:27:34 06:40:00 18:54:00       0.00
+## 12 Turks &amp; Caicos 2021    10   7 06:37:11 18:26:40 07:42:00 19:35:00       0.05
+## 13 Turks &amp; Caicos 2021    10   8 06:37:29 18:25:47 08:45:00 20:19:00       0.08
+## 14 Turks &amp; Caicos 2021    10   9 06:37:48 18:24:55 09:51:00 21:09:00       0.12
+## 15 Turks &amp; Caicos 2021    10  10 06:38:08 18:24:02 10:58:00 22:03:00       0.16
+## 16 Turks &amp; Caicos 2021    10  11 06:38:27 18:23:11 12:03:00 23:02:00       0.20
+## 17       Colombia 2021    10   4 06:36:45 18:38:41 04:59:00 17:33:00       0.93
+## 18       Colombia 2021    10   5 06:36:38 18:38:10 05:51:00 18:18:00       0.97
+## 19       Colombia 2021    10   6 06:36:32 18:37:40 06:44:00 19:04:00       0.00
+## 20       Colombia 2021    10   7 06:36:26 18:37:10 07:38:00 19:52:00       0.05
+## 21       Colombia 2021    10   8 06:36:21 18:36:41 08:34:00 20:43:00       0.08
+## 22       Colombia 2021    10   9 06:36:16 18:36:12 09:34:00 21:38:00       0.12
+## 23       Colombia 2021    10  10 06:36:12 18:35:43 10:35:00 22:36:00       0.16
+## 24       Colombia 2021    10  11 06:36:08 18:35:16 11:39:00 23:38:00       0.20
+## 25      Argentina 2021    10   4 05:57:04 18:53:01 05:49:00 16:32:00       0.93
+## 26      Argentina 2021    10   5 05:54:48 18:54:39 06:06:00 17:54:00       0.97
+## 27      Argentina 2021    10   6 05:52:32 18:56:19 06:23:00 19:19:00       0.00
+## 28      Argentina 2021    10   7 05:50:17 18:57:58 06:40:00 20:46:00       0.04
+## 29      Argentina 2021    10   8 05:48:02 18:59:38 06:59:00 22:15:00       0.08
+## 30      Argentina 2021    10   9 05:45:48 19:01:19 07:22:00 19:00:00       0.12
+## 31      Argentina 2021    10  10 05:43:34 19:03:00 07:54:00 23:43:00       0.16
+## 32      Argentina 2021    10  11 05:41:21 19:04:41 08:37:00 01:07:00       0.19
+## 33          Chile 2021    10   4 05:45:02 18:48:25 05:49:00 16:16:00       0.93
+## 34          Chile 2021    10   5 05:42:28 18:50:21 06:01:00 17:44:00       0.97
+## 35          Chile 2021    10   6 05:39:55 18:52:17 06:13:00 19:14:00       0.00
+## 36          Chile 2021    10   7 05:37:23 18:54:14 06:25:00 20:47:00       0.04
+## 37          Chile 2021    10   8 05:34:51 18:56:11 06:40:00 22:21:00       0.08
+## 38          Chile 2021    10   9 05:32:20 18:58:09 06:58:00 19:00:00       0.12
+## 39          Chile 2021    10  10 05:29:49 19:00:07 07:24:00 23:56:00       0.16
+## 40          Chile 2021    10  11 05:27:18 19:02:06 08:02:00 01:23:00       0.19
+##    pressure humidity dew_point wind_speed wind_deg wind_gust clouds  pop
+## 1      1021       50      5.14       2.52       36      8.33     83 0.29
+## 2      1026       69      7.40       1.41       20      1.70    100 0.11
+## 3      1027       53      9.79       1.65      351      2.54      7 0.00
+## 4      1024       53      9.11       1.67      338      2.52      0 0.00
+## 5      1019       54     10.29       3.25       56      9.55      7 0.00
+## 6      1031       63      4.80       2.56       72      6.38    100 0.00
+## 7      1031       60      6.36       3.22      186      5.36    100 0.00
+## 8      1024       68     10.37       5.05      208     10.67    100 0.00
+## 9      1014       74     23.78      10.18      119     10.94    100 1.00
+## 10     1015       72     23.15      11.44      100     12.42     75 1.00
+## 11     1016       73     23.58      11.28       99     12.36      8 0.55
+## 12     1016       73     23.30      10.03       92     10.91      6 0.79
+## 13     1014       76     23.82       7.80       99      8.09      4 0.57
+## 14     1014       77     24.25       8.30      119      8.74     99 0.97
+## 15     1014       74     23.54       8.35      122      8.53    100 1.00
+## 16     1014       73     23.21       7.99      130      8.15     96 0.52
+## 17     1013       58     13.69       2.96      103      4.12     89 0.77
+## 18     1014       74     15.74       2.72      110      4.23     92 1.00
+## 19     1016       87     15.12       2.45      117      4.31    100 0.95
+## 20     1015       58     13.00       3.38      106      4.79     74 0.80
+## 21     1014       56     12.91       2.53      101      3.40     88 1.00
+## 22     1017       83     14.25       1.59      246      2.24    100 0.99
+## 23     1016       80     16.42       1.92       99      2.37     75 1.00
+## 24     1016       79     15.49       1.68       90      2.27     97 1.00
+## 25     1007       41     -3.51      15.58      249     23.00     58 0.00
+## 26     1021       41     -4.90      13.76      234     19.32     36 0.00
+## 27     1012       42     -2.99      12.69      239     19.06    100 0.07
+## 28     1014       56      1.71      10.09      243     17.13    100 0.00
+## 29     1004       53      3.44      12.36      237     14.92    100 0.00
+## 30      996       44      3.27      16.68      240     22.57    100 0.26
+## 31     1007       65     -0.28      10.56      249     17.61    100 0.00
+## 32      999       43     -4.09      20.29      252     25.96     37 0.00
+## 33      997       66     -0.99      12.76      258     23.26     45 0.84
+## 34     1017       68     -0.82      10.20      236     17.31     38 0.92
+## 35     1001       62      2.25      10.47      254     17.99     27 0.96
+## 36     1008       54     -2.05       7.82      249     15.14     67 0.28
+## 37      993       73      3.32      10.68      247     17.47     99 0.68
+## 38      987       85      4.16       8.87      323     22.73    100 0.69
+## 39     1002       60     -1.33       8.03      269     15.56    100 0.63
+## 40      982       86      2.08      11.01      250     19.60     98 0.96
+##    mintemp maxtemp
+## 1     5.47   16.99
+## 2     8.09   16.60
+## 3     7.91   20.93
+## 4     9.69   21.76
+## 5    10.12   22.75
+## 6     9.63   12.82
+## 7     8.57   15.30
+## 8     8.85   17.69
+## 9    26.97   28.87
+## 10   28.37   28.82
+## 11   28.31   28.86
+## 12   27.95   28.72
+## 13   28.18   28.83
+## 14   28.58   28.95
+## 15   27.60   28.76
+## 16   28.52   28.65
+## 17   12.85   21.67
+## 18   12.82   19.49
+## 19   12.81   18.95
+## 20   11.97   22.82
+## 21   12.58   21.10
+## 22   13.13   21.39
+## 23   12.89   19.97
+## 24   13.35   18.80
+## 25    3.57    9.31
+## 26    1.90    9.31
+## 27    4.51   11.70
+## 28    4.25   10.78
+## 29    6.90   12.70
+## 30    6.22   18.22
+## 31    3.09    7.75
+## 32    4.83    9.73
+## 33    2.21    5.49
+## 34    1.96    6.54
+## 35    1.41   10.11
+## 36    3.03    8.71
+## 37    4.49    8.40
+## 38    2.31   10.19
+## 39    2.62    8.28
+## 40    3.50    5.37
+</code></pre>
+<h3 id="create-new-variables">Create New Variables</h3>
+<p>I’m interested in converting <code>humidity</code> and <code>clouds</code> into categorical variables with different levels.</p>
+<p>I’ll begin with humidity. Lets say that if (humidity \le 60), there is low humidity, if (60 &lt; humidity \le 80), there is medium humidity, and if (humidity &gt; 80), there is high humidity.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" title="1">weather &lt;-<span class="st"> </span>weather <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">humidity.status =</span> <span class="kw">as.factor</span>(<span class="kw">ifelse</span>(humidity <span class="op">&gt;</span><span class="st"> </span><span class="dv">80</span>, <span class="st">&quot;High&quot;</span>, <span class="kw">ifelse</span>(humidity <span class="op">&gt;</span><span class="dv">60</span>, <span class="st">&quot;Medium&quot;</span>, <span class="st">&quot;Low&quot;</span>))))</a>
+<a class="sourceLine" id="cb18-2" title="2"></a>
+<a class="sourceLine" id="cb18-3" title="3">weather<span class="op">$</span>humidity.status &lt;-<span class="st"> </span><span class="kw">ordered</span>(weather<span class="op">$</span>humidity.status, <span class="dt">levels =</span> <span class="kw">c</span>(<span class="st">&quot;Low&quot;</span>, <span class="st">&quot;Medium&quot;</span>, <span class="st">&quot;High&quot;</span>))</a>
+<a class="sourceLine" id="cb18-4" title="4"></a>
+<a class="sourceLine" id="cb18-5" title="5">weather</a></code></pre></div>
+<pre><code>##          location Year Month Day  Sunrise   Sunset Moonrise  Moonset moon_phase
+## 1       Maine, US 2021    10   4 06:39:17 18:13:31 04:07:00 17:49:00       0.93
+## 2       Maine, US 2021    10   5 06:40:29 18:11:42 05:22:00 18:12:00       0.97
+## 3       Maine, US 2021    10   6 06:41:41 18:09:53 06:38:00 18:36:00       0.00
+## 4       Maine, US 2021    10   7 06:42:53 18:08:05 07:56:00 19:01:00       0.05
+## 5       Maine, US 2021    10   8 06:44:06 18:06:18 09:15:00 19:31:00       0.08
+## 6       Maine, US 2021    10   9 06:45:19 18:04:31 10:36:00 20:05:00       0.12
+## 7       Maine, US 2021    10  10 06:46:32 18:02:45 11:56:00 20:48:00       0.16
+## 8       Maine, US 2021    10  11 06:47:46 18:01:00 13:09:00 21:42:00       0.20
+## 9  Turks &amp; Caicos 2021    10   4 06:36:17 18:29:23 04:42:00 17:36:00       0.93
+## 10 Turks &amp; Caicos 2021    10   5 06:36:35 18:28:29 05:41:00 18:15:00       0.97
+## 11 Turks &amp; Caicos 2021    10   6 06:36:52 18:27:34 06:40:00 18:54:00       0.00
+## 12 Turks &amp; Caicos 2021    10   7 06:37:11 18:26:40 07:42:00 19:35:00       0.05
+## 13 Turks &amp; Caicos 2021    10   8 06:37:29 18:25:47 08:45:00 20:19:00       0.08
+## 14 Turks &amp; Caicos 2021    10   9 06:37:48 18:24:55 09:51:00 21:09:00       0.12
+## 15 Turks &amp; Caicos 2021    10  10 06:38:08 18:24:02 10:58:00 22:03:00       0.16
+## 16 Turks &amp; Caicos 2021    10  11 06:38:27 18:23:11 12:03:00 23:02:00       0.20
+## 17       Colombia 2021    10   4 06:36:45 18:38:41 04:59:00 17:33:00       0.93
+## 18       Colombia 2021    10   5 06:36:38 18:38:10 05:51:00 18:18:00       0.97
+## 19       Colombia 2021    10   6 06:36:32 18:37:40 06:44:00 19:04:00       0.00
+## 20       Colombia 2021    10   7 06:36:26 18:37:10 07:38:00 19:52:00       0.05
+## 21       Colombia 2021    10   8 06:36:21 18:36:41 08:34:00 20:43:00       0.08
+## 22       Colombia 2021    10   9 06:36:16 18:36:12 09:34:00 21:38:00       0.12
+## 23       Colombia 2021    10  10 06:36:12 18:35:43 10:35:00 22:36:00       0.16
+## 24       Colombia 2021    10  11 06:36:08 18:35:16 11:39:00 23:38:00       0.20
+## 25      Argentina 2021    10   4 05:57:04 18:53:01 05:49:00 16:32:00       0.93
+## 26      Argentina 2021    10   5 05:54:48 18:54:39 06:06:00 17:54:00       0.97
+## 27      Argentina 2021    10   6 05:52:32 18:56:19 06:23:00 19:19:00       0.00
+## 28      Argentina 2021    10   7 05:50:17 18:57:58 06:40:00 20:46:00       0.04
+## 29      Argentina 2021    10   8 05:48:02 18:59:38 06:59:00 22:15:00       0.08
+## 30      Argentina 2021    10   9 05:45:48 19:01:19 07:22:00 19:00:00       0.12
+## 31      Argentina 2021    10  10 05:43:34 19:03:00 07:54:00 23:43:00       0.16
+## 32      Argentina 2021    10  11 05:41:21 19:04:41 08:37:00 01:07:00       0.19
+## 33          Chile 2021    10   4 05:45:02 18:48:25 05:49:00 16:16:00       0.93
+## 34          Chile 2021    10   5 05:42:28 18:50:21 06:01:00 17:44:00       0.97
+## 35          Chile 2021    10   6 05:39:55 18:52:17 06:13:00 19:14:00       0.00
+## 36          Chile 2021    10   7 05:37:23 18:54:14 06:25:00 20:47:00       0.04
+## 37          Chile 2021    10   8 05:34:51 18:56:11 06:40:00 22:21:00       0.08
+## 38          Chile 2021    10   9 05:32:20 18:58:09 06:58:00 19:00:00       0.12
+## 39          Chile 2021    10  10 05:29:49 19:00:07 07:24:00 23:56:00       0.16
+## 40          Chile 2021    10  11 05:27:18 19:02:06 08:02:00 01:23:00       0.19
+##    pressure humidity dew_point wind_speed wind_deg wind_gust clouds  pop
+## 1      1021       50      5.14       2.52       36      8.33     83 0.29
+## 2      1026       69      7.40       1.41       20      1.70    100 0.11
+## 3      1027       53      9.79       1.65      351      2.54      7 0.00
+## 4      1024       53      9.11       1.67      338      2.52      0 0.00
+## 5      1019       54     10.29       3.25       56      9.55      7 0.00
+## 6      1031       63      4.80       2.56       72      6.38    100 0.00
+## 7      1031       60      6.36       3.22      186      5.36    100 0.00
+## 8      1024       68     10.37       5.05      208     10.67    100 0.00
+## 9      1014       74     23.78      10.18      119     10.94    100 1.00
+## 10     1015       72     23.15      11.44      100     12.42     75 1.00
+## 11     1016       73     23.58      11.28       99     12.36      8 0.55
+## 12     1016       73     23.30      10.03       92     10.91      6 0.79
+## 13     1014       76     23.82       7.80       99      8.09      4 0.57
+## 14     1014       77     24.25       8.30      119      8.74     99 0.97
+## 15     1014       74     23.54       8.35      122      8.53    100 1.00
+## 16     1014       73     23.21       7.99      130      8.15     96 0.52
+## 17     1013       58     13.69       2.96      103      4.12     89 0.77
+## 18     1014       74     15.74       2.72      110      4.23     92 1.00
+## 19     1016       87     15.12       2.45      117      4.31    100 0.95
+## 20     1015       58     13.00       3.38      106      4.79     74 0.80
+## 21     1014       56     12.91       2.53      101      3.40     88 1.00
+## 22     1017       83     14.25       1.59      246      2.24    100 0.99
+## 23     1016       80     16.42       1.92       99      2.37     75 1.00
+## 24     1016       79     15.49       1.68       90      2.27     97 1.00
+## 25     1007       41     -3.51      15.58      249     23.00     58 0.00
+## 26     1021       41     -4.90      13.76      234     19.32     36 0.00
+## 27     1012       42     -2.99      12.69      239     19.06    100 0.07
+## 28     1014       56      1.71      10.09      243     17.13    100 0.00
+## 29     1004       53      3.44      12.36      237     14.92    100 0.00
+## 30      996       44      3.27      16.68      240     22.57    100 0.26
+## 31     1007       65     -0.28      10.56      249     17.61    100 0.00
+## 32      999       43     -4.09      20.29      252     25.96     37 0.00
+## 33      997       66     -0.99      12.76      258     23.26     45 0.84
+## 34     1017       68     -0.82      10.20      236     17.31     38 0.92
+## 35     1001       62      2.25      10.47      254     17.99     27 0.96
+## 36     1008       54     -2.05       7.82      249     15.14     67 0.28
+## 37      993       73      3.32      10.68      247     17.47     99 0.68
+## 38      987       85      4.16       8.87      323     22.73    100 0.69
+## 39     1002       60     -1.33       8.03      269     15.56    100 0.63
+## 40      982       86      2.08      11.01      250     19.60     98 0.96
+##    mintemp maxtemp humidity.status
+## 1     5.47   16.99             Low
+## 2     8.09   16.60          Medium
+## 3     7.91   20.93             Low
+## 4     9.69   21.76             Low
+## 5    10.12   22.75             Low
+## 6     9.63   12.82          Medium
+## 7     8.57   15.30             Low
+## 8     8.85   17.69          Medium
+## 9    26.97   28.87          Medium
+## 10   28.37   28.82          Medium
+## 11   28.31   28.86          Medium
+## 12   27.95   28.72          Medium
+## 13   28.18   28.83          Medium
+## 14   28.58   28.95          Medium
+## 15   27.60   28.76          Medium
+## 16   28.52   28.65          Medium
+## 17   12.85   21.67             Low
+## 18   12.82   19.49          Medium
+## 19   12.81   18.95            High
+## 20   11.97   22.82             Low
+## 21   12.58   21.10             Low
+## 22   13.13   21.39            High
+## 23   12.89   19.97          Medium
+## 24   13.35   18.80          Medium
+## 25    3.57    9.31             Low
+## 26    1.90    9.31             Low
+## 27    4.51   11.70             Low
+## 28    4.25   10.78             Low
+## 29    6.90   12.70             Low
+## 30    6.22   18.22             Low
+## 31    3.09    7.75          Medium
+## 32    4.83    9.73             Low
+## 33    2.21    5.49          Medium
+## 34    1.96    6.54          Medium
+## 35    1.41   10.11          Medium
+## 36    3.03    8.71             Low
+## 37    4.49    8.40          Medium
+## 38    2.31   10.19            High
+## 39    2.62    8.28             Low
+## 40    3.50    5.37            High
+</code></pre>
+<p>Great! Now let’s look at <code>clouds</code>. If (clouds \le 25), then cloud coverage is low. If (clouds &gt; 75) then cloud coverage is high, and anything in between is medium.</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" title="1">weather &lt;-<span class="st"> </span>weather <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">cloud.coverage =</span> <span class="kw">as.factor</span>(<span class="kw">ifelse</span>(clouds <span class="op">&gt;</span><span class="st"> </span><span class="dv">75</span>, <span class="st">&quot;High&quot;</span>, <span class="kw">ifelse</span>(clouds <span class="op">&gt;</span><span class="st"> </span><span class="dv">25</span>, <span class="st">&quot;Medium&quot;</span>, <span class="st">&quot;Low&quot;</span>))))</a>
+<a class="sourceLine" id="cb20-2" title="2"></a>
+<a class="sourceLine" id="cb20-3" title="3">weather<span class="op">$</span>cloud.coverage &lt;-<span class="st"> </span><span class="kw">ordered</span>(weather<span class="op">$</span>cloud.coverage, <span class="dt">levels =</span> <span class="kw">c</span>(<span class="st">&quot;Low&quot;</span>, <span class="st">&quot;Medium&quot;</span>, <span class="st">&quot;High&quot;</span>))</a>
+<a class="sourceLine" id="cb20-4" title="4"></a>
+<a class="sourceLine" id="cb20-5" title="5">weather</a></code></pre></div>
+<pre><code>##          location Year Month Day  Sunrise   Sunset Moonrise  Moonset moon_phase
+## 1       Maine, US 2021    10   4 06:39:17 18:13:31 04:07:00 17:49:00       0.93
+## 2       Maine, US 2021    10   5 06:40:29 18:11:42 05:22:00 18:12:00       0.97
+## 3       Maine, US 2021    10   6 06:41:41 18:09:53 06:38:00 18:36:00       0.00
+## 4       Maine, US 2021    10   7 06:42:53 18:08:05 07:56:00 19:01:00       0.05
+## 5       Maine, US 2021    10   8 06:44:06 18:06:18 09:15:00 19:31:00       0.08
+## 6       Maine, US 2021    10   9 06:45:19 18:04:31 10:36:00 20:05:00       0.12
+## 7       Maine, US 2021    10  10 06:46:32 18:02:45 11:56:00 20:48:00       0.16
+## 8       Maine, US 2021    10  11 06:47:46 18:01:00 13:09:00 21:42:00       0.20
+## 9  Turks &amp; Caicos 2021    10   4 06:36:17 18:29:23 04:42:00 17:36:00       0.93
+## 10 Turks &amp; Caicos 2021    10   5 06:36:35 18:28:29 05:41:00 18:15:00       0.97
+## 11 Turks &amp; Caicos 2021    10   6 06:36:52 18:27:34 06:40:00 18:54:00       0.00
+## 12 Turks &amp; Caicos 2021    10   7 06:37:11 18:26:40 07:42:00 19:35:00       0.05
+## 13 Turks &amp; Caicos 2021    10   8 06:37:29 18:25:47 08:45:00 20:19:00       0.08
+## 14 Turks &amp; Caicos 2021    10   9 06:37:48 18:24:55 09:51:00 21:09:00       0.12
+## 15 Turks &amp; Caicos 2021    10  10 06:38:08 18:24:02 10:58:00 22:03:00       0.16
+## 16 Turks &amp; Caicos 2021    10  11 06:38:27 18:23:11 12:03:00 23:02:00       0.20
+## 17       Colombia 2021    10   4 06:36:45 18:38:41 04:59:00 17:33:00       0.93
+## 18       Colombia 2021    10   5 06:36:38 18:38:10 05:51:00 18:18:00       0.97
+## 19       Colombia 2021    10   6 06:36:32 18:37:40 06:44:00 19:04:00       0.00
+## 20       Colombia 2021    10   7 06:36:26 18:37:10 07:38:00 19:52:00       0.05
+## 21       Colombia 2021    10   8 06:36:21 18:36:41 08:34:00 20:43:00       0.08
+## 22       Colombia 2021    10   9 06:36:16 18:36:12 09:34:00 21:38:00       0.12
+## 23       Colombia 2021    10  10 06:36:12 18:35:43 10:35:00 22:36:00       0.16
+## 24       Colombia 2021    10  11 06:36:08 18:35:16 11:39:00 23:38:00       0.20
+## 25      Argentina 2021    10   4 05:57:04 18:53:01 05:49:00 16:32:00       0.93
+## 26      Argentina 2021    10   5 05:54:48 18:54:39 06:06:00 17:54:00       0.97
+## 27      Argentina 2021    10   6 05:52:32 18:56:19 06:23:00 19:19:00       0.00
+## 28      Argentina 2021    10   7 05:50:17 18:57:58 06:40:00 20:46:00       0.04
+## 29      Argentina 2021    10   8 05:48:02 18:59:38 06:59:00 22:15:00       0.08
+## 30      Argentina 2021    10   9 05:45:48 19:01:19 07:22:00 19:00:00       0.12
+## 31      Argentina 2021    10  10 05:43:34 19:03:00 07:54:00 23:43:00       0.16
+## 32      Argentina 2021    10  11 05:41:21 19:04:41 08:37:00 01:07:00       0.19
+## 33          Chile 2021    10   4 05:45:02 18:48:25 05:49:00 16:16:00       0.93
+## 34          Chile 2021    10   5 05:42:28 18:50:21 06:01:00 17:44:00       0.97
+## 35          Chile 2021    10   6 05:39:55 18:52:17 06:13:00 19:14:00       0.00
+## 36          Chile 2021    10   7 05:37:23 18:54:14 06:25:00 20:47:00       0.04
+## 37          Chile 2021    10   8 05:34:51 18:56:11 06:40:00 22:21:00       0.08
+## 38          Chile 2021    10   9 05:32:20 18:58:09 06:58:00 19:00:00       0.12
+## 39          Chile 2021    10  10 05:29:49 19:00:07 07:24:00 23:56:00       0.16
+## 40          Chile 2021    10  11 05:27:18 19:02:06 08:02:00 01:23:00       0.19
+##    pressure humidity dew_point wind_speed wind_deg wind_gust clouds  pop
+## 1      1021       50      5.14       2.52       36      8.33     83 0.29
+## 2      1026       69      7.40       1.41       20      1.70    100 0.11
+## 3      1027       53      9.79       1.65      351      2.54      7 0.00
+## 4      1024       53      9.11       1.67      338      2.52      0 0.00
+## 5      1019       54     10.29       3.25       56      9.55      7 0.00
+## 6      1031       63      4.80       2.56       72      6.38    100 0.00
+## 7      1031       60      6.36       3.22      186      5.36    100 0.00
+## 8      1024       68     10.37       5.05      208     10.67    100 0.00
+## 9      1014       74     23.78      10.18      119     10.94    100 1.00
+## 10     1015       72     23.15      11.44      100     12.42     75 1.00
+## 11     1016       73     23.58      11.28       99     12.36      8 0.55
+## 12     1016       73     23.30      10.03       92     10.91      6 0.79
+## 13     1014       76     23.82       7.80       99      8.09      4 0.57
+## 14     1014       77     24.25       8.30      119      8.74     99 0.97
+## 15     1014       74     23.54       8.35      122      8.53    100 1.00
+## 16     1014       73     23.21       7.99      130      8.15     96 0.52
+## 17     1013       58     13.69       2.96      103      4.12     89 0.77
+## 18     1014       74     15.74       2.72      110      4.23     92 1.00
+## 19     1016       87     15.12       2.45      117      4.31    100 0.95
+## 20     1015       58     13.00       3.38      106      4.79     74 0.80
+## 21     1014       56     12.91       2.53      101      3.40     88 1.00
+## 22     1017       83     14.25       1.59      246      2.24    100 0.99
+## 23     1016       80     16.42       1.92       99      2.37     75 1.00
+## 24     1016       79     15.49       1.68       90      2.27     97 1.00
+## 25     1007       41     -3.51      15.58      249     23.00     58 0.00
+## 26     1021       41     -4.90      13.76      234     19.32     36 0.00
+## 27     1012       42     -2.99      12.69      239     19.06    100 0.07
+## 28     1014       56      1.71      10.09      243     17.13    100 0.00
+## 29     1004       53      3.44      12.36      237     14.92    100 0.00
+## 30      996       44      3.27      16.68      240     22.57    100 0.26
+## 31     1007       65     -0.28      10.56      249     17.61    100 0.00
+## 32      999       43     -4.09      20.29      252     25.96     37 0.00
+## 33      997       66     -0.99      12.76      258     23.26     45 0.84
+## 34     1017       68     -0.82      10.20      236     17.31     38 0.92
+## 35     1001       62      2.25      10.47      254     17.99     27 0.96
+## 36     1008       54     -2.05       7.82      249     15.14     67 0.28
+## 37      993       73      3.32      10.68      247     17.47     99 0.68
+## 38      987       85      4.16       8.87      323     22.73    100 0.69
+## 39     1002       60     -1.33       8.03      269     15.56    100 0.63
+## 40      982       86      2.08      11.01      250     19.60     98 0.96
+##    mintemp maxtemp humidity.status cloud.coverage
+## 1     5.47   16.99             Low           High
+## 2     8.09   16.60          Medium           High
+## 3     7.91   20.93             Low            Low
+## 4     9.69   21.76             Low            Low
+## 5    10.12   22.75             Low            Low
+## 6     9.63   12.82          Medium           High
+## 7     8.57   15.30             Low           High
+## 8     8.85   17.69          Medium           High
+## 9    26.97   28.87          Medium           High
+## 10   28.37   28.82          Medium         Medium
+## 11   28.31   28.86          Medium            Low
+## 12   27.95   28.72          Medium            Low
+## 13   28.18   28.83          Medium            Low
+## 14   28.58   28.95          Medium           High
+## 15   27.60   28.76          Medium           High
+## 16   28.52   28.65          Medium           High
+## 17   12.85   21.67             Low           High
+## 18   12.82   19.49          Medium           High
+## 19   12.81   18.95            High           High
+## 20   11.97   22.82             Low         Medium
+## 21   12.58   21.10             Low           High
+## 22   13.13   21.39            High           High
+## 23   12.89   19.97          Medium         Medium
+## 24   13.35   18.80          Medium           High
+## 25    3.57    9.31             Low         Medium
+## 26    1.90    9.31             Low         Medium
+## 27    4.51   11.70             Low           High
+## 28    4.25   10.78             Low           High
+## 29    6.90   12.70             Low           High
+## 30    6.22   18.22             Low           High
+## 31    3.09    7.75          Medium           High
+## 32    4.83    9.73             Low         Medium
+## 33    2.21    5.49          Medium         Medium
+## 34    1.96    6.54          Medium         Medium
+## 35    1.41   10.11          Medium         Medium
+## 36    3.03    8.71             Low         Medium
+## 37    4.49    8.40          Medium           High
+## 38    2.31   10.19            High           High
+## 39    2.62    8.28             Low           High
+## 40    3.50    5.37            High           High
+</code></pre>
+<h3 id="contingency-tables">Contingency Tables</h3>
+<p>With the new categorical variables I’ve created, let’s create some contingency tables. <code>tabz1</code> will show the counts of observations within each level combination of <code>cloud.coverage</code> and <code>humidity.status</code>.</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" title="1">tabz1 &lt;-<span class="st"> </span><span class="kw">table</span>(weather<span class="op">$</span>humidity.status, weather<span class="op">$</span>cloud.coverage, <span class="dt">deparse.level =</span> <span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb22-2" title="2"></a>
+<a class="sourceLine" id="cb22-3" title="3">tabz1</a></code></pre></div>
+<pre><code>##                        weather$cloud.coverage
+## weather$humidity.status Low Medium High
+##                  Low      3      5    9
+##                  Medium   3      5   11
+##                  High     0      0    4
+</code></pre>
+<p>It looks like there were 10 forecast observations that predicted high cloud coverage and low humidity, and 12 observations that predicted high cloud coverage and medium humidity. There weren’t many observations that predicted high humidity, but it appears that when high humidity was predicted, it was most often coupled with high cloud coverage.</p>
+<p><code>tabz2</code> will show the counts of days within each level combination of <code>cloud.coverage</code> and <code>humidity.status</code>, separated by <code>location</code>.</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" title="1">tabz2 &lt;-<span class="st"> </span><span class="kw">table</span>(weather<span class="op">$</span>humidity.status, weather<span class="op">$</span>cloud.coverage, weather<span class="op">$</span>location, <span class="dt">deparse.level =</span> <span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb24-2" title="2"></a>
+<a class="sourceLine" id="cb24-3" title="3">tabz2</a></code></pre></div>
+<pre><code>## , , weather$location = Argentina
+## 
+##                        weather$cloud.coverage
+## weather$humidity.status Low Medium High
+##                  Low      0      3    4
+##                  Medium   0      0    1
+##                  High     0      0    0
+## 
+## , , weather$location = Chile
+## 
+##                        weather$cloud.coverage
+## weather$humidity.status Low Medium High
+##                  Low      0      1    1
+##                  Medium   0      3    1
+##                  High     0      0    2
+## 
+## , , weather$location = Colombia
+## 
+##                        weather$cloud.coverage
+## weather$humidity.status Low Medium High
+##                  Low      0      1    2
+##                  Medium   0      1    2
+##                  High     0      0    2
+## 
+## , , weather$location = Maine, US
+## 
+##                        weather$cloud.coverage
+## weather$humidity.status Low Medium High
+##                  Low      3      0    2
+##                  Medium   0      0    3
+##                  High     0      0    0
+## 
+## , , weather$location = Turks &amp; Caicos
+## 
+##                        weather$cloud.coverage
+## weather$humidity.status Low Medium High
+##                  Low      0      0    0
+##                  Medium   3      1    4
+##                  High     0      0    0
+</code></pre>
+<p>This table gives us an idea of how the relationship between humidity status and cloud coverage can change based on location. An observation to note is that Maine and Argentina, locations close to the poles, most often have low humidity in this dataset. However, the low humidity is more frequently coupled with high cloud coverage in Argentina and low cloud coverage in Maine. I’d be interested to find out why this is the case, or if the data only appears this way because we’re not working with many observations. Also, it’s interesting that Chile, the location closest to the south pole, has a range of humidity although it’s close to the Argentina location.</p>
+<h3 id="numerical-summaries">Numerical Summaries</h3>
+<p>Now that we’ve explored our categorical variables, let’s take a look at some numeric summaries.</p>
+<p>The table below lists the average maximum temperature, average minimum temperature, their respective standard deviations, and the interquartile range for each location.</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" title="1">weather<span class="op">$</span>location &lt;-<span class="st"> </span><span class="kw">ordered</span>(weather<span class="op">$</span>location, <span class="dt">levels =</span> <span class="kw">c</span>(<span class="st">&quot;Chile&quot;</span>, <span class="st">&quot;Argentina&quot;</span>, <span class="st">&quot;Colombia&quot;</span>, <span class="st">&quot;Turks &amp; Caicos&quot;</span>, <span class="st">&quot;Maine, US&quot;</span>)) <span class="co">#convert location into an ordered variable</span></a>
+<a class="sourceLine" id="cb26-2" title="2"></a>
+<a class="sourceLine" id="cb26-3" title="3">weather <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(location) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarise</span>(<span class="dt">avghigh =</span> <span class="kw">mean</span>(maxtemp), <span class="dt">avglow =</span> <span class="kw">mean</span>(mintemp), <span class="dt">sdhigh =</span> <span class="kw">sd</span>(maxtemp), <span class="dt">sdlow =</span> <span class="kw">sd</span>(mintemp), <span class="dt">IQR =</span> <span class="kw">IQR</span>(maxtemp))</a></code></pre></div>
+<pre><code>## # A tibble: 5 x 6
+##   location       avghigh avglow sdhigh sdlow   IQR
+##   &lt;ord&gt;            &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1 Chile             7.89   2.69 1.90   0.968 2.78 
+## 2 Argentina        11.2    4.41 3.23   1.62  2.64 
+## 3 Colombia         20.5   12.8  1.44   0.407 2.11 
+## 4 Turks &amp; Caicos   28.8   28.1  0.0944 0.543 0.113
+## 5 Maine, US        18.1    8.54 3.43   1.47  4.86
+</code></pre>
+<p>It’s clear that the average high and average low peak near the middle of the globe, with greater variation near the poles. These numbers could not only be affected by latitude, but also by elevation.</p>
+<p>Now we’ll look at the average humidity forecasted for each location, as well as their standard deviations.</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" title="1">weather <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(location) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarise</span>(<span class="dt">avg_humidity =</span> <span class="kw">mean</span>(humidity), <span class="dt">sd.humidity =</span> <span class="kw">sd</span>(humidity))</a></code></pre></div>
+<pre><code>## # A tibble: 5 x 3
+##   location       avg_humidity sd.humidity
+##   &lt;ord&gt;                 &lt;dbl&gt;       &lt;dbl&gt;
+## 1 Chile                  69.2       11.5 
+## 2 Argentina              48.1        8.89
+## 3 Colombia               71.9       12.6 
+## 4 Turks &amp; Caicos         74          1.69
+## 5 Maine, US              58.8        7.32
+</code></pre>
+<p>Here we see a clear relationship between location (organized by latitude) and humidity. The locations nearest to the poles generally have the lowest humidity, but the Turks and Caicos Islands as well as the Chile location have the highest humidity, most likely because they are close to or in the ocean.</p>
+<h3 id="data-visualization">Data Visualization</h3>
+<p>Now I’ll use some tools for visualizing the data we’ve collected from the API.</p>
+<p>Let’s visualize the second contingency table we made above using a bar graph with <code>humidity.status</code> and <code>cloud.coverage</code>, separating the results by <code>location</code>.</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb30-1" title="1">sum.tab &lt;-<span class="st"> </span>weather <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(location, humidity.status, cloud.coverage) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarise</span>(<span class="dt">count =</span> <span class="kw">n</span>())</a>
+<a class="sourceLine" id="cb30-2" title="2"></a>
+<a class="sourceLine" id="cb30-3" title="3">g6 &lt;-<span class="st"> </span><span class="kw">ggplot</span>(sum.tab, <span class="kw">aes</span>(<span class="dt">x =</span> humidity.status, <span class="dt">y =</span> count))</a>
+<a class="sourceLine" id="cb30-4" title="4"></a>
+<a class="sourceLine" id="cb30-5" title="5">g6 <span class="op">+</span><span class="st"> </span><span class="kw">geom_bar</span>(<span class="kw">aes</span>(<span class="dt">fill =</span> cloud.coverage), <span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="dt">position =</span> <span class="st">&quot;dodge&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">facet_wrap</span>(<span class="op">~</span><span class="st"> </span>location) <span class="op">+</span><span class="st"> </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">&quot;8 Day Forecast: Humidity Status vs. Cloud Coverage by Location&quot;</span>, <span class="dt">x =</span> <span class="st">&quot;Humidity Status&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">scale_fill_discrete</span>(<span class="dt">name =</span> <span class="st">&quot;Cloud Coverage&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">theme</span>(<span class="dt">axis.text.x =</span> <span class="kw">element_text</span>(<span class="dt">angle =</span> <span class="dv">45</span>, <span class="dt">vjust =</span> <span class="fl">.8</span>, <span class="dt">hjust =</span> <span class="dv">1</span>))</a></code></pre></div>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAqAAAAHgCAMAAABNUi8GAAACT1BMVEUAAAAAADoAAGYAOjoAOmYAOpAAZpAAZrYAujgZGT8ZGWIZP2IZP4EZYoEZYp8aGhozMzM6AAA6ADo6AGY6OgA6Ojo6OmY6OpA6ZmY6ZpA6ZrY6kJA6kLY6kNs/GRk/GT8/GWI/Pxk/Pz8/P2I/P4E/YoE/Yp8/gYE/gb1NTU1NTW5NTY5Nbm5NbqtNjshhnP9iGRliGT9iGWJiPxliPz9iP4FiYhliYj9iYmJiYp9in9lmAABmADpmAGZmOgBmOjpmOmZmZgBmZjpmZmZmZrZmkJBmkLZmkNtmtpBmtrZmtttmtv9uTU1uTW5uTY5ubo5ubqtuq6tuq+SBPxmBPz+BP2KBYhmBYoGBgWKBgZ+Bn4GBvZ+BvdmOTU2OTW6OTY6Obk2Obm6OjsiOyP+QOgCQOjqQOmaQZgCQZjqQZmaQZpCQkDqQkGaQkLaQtpCQtraQttuQ27aQ2/+fYhmfYj+fYmKfn2KfvYGf2b2f2dmrbk2rbm6rbo6rjm6rjqurq26rq46rq8iryKur5Mir5OSr5P+2ZgC2Zjq2kDq2kGa2tma2tpC2ttu225C229u22/+2/7a2/9u2//+9gT+9gWK92Z+92dnIjk3Ijm7Iq47Iq6vIyI7I5P/I/8jI/+TI///Zn2LZvYHZ2Z/Z2b3Z2dnbkDrbkGbbtmbbtpDb25Db27bb29vb2//b/7bb/9vb///kq27kq47k5Mjk5OTk5P/k///r6+vy8vL4dm3/tmb/yI7/25D/27b/29v/5Kv/5Mj//7b//8j//9v//+T///8pzoAEAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAgAElEQVR4nO2djX8cR3nHT0mMSEijKqaFpFVCS1p8NjEhgTa1SGhLoSVS3mRDKVgkIKWlbUrBpoU4Ce9WaCkE7NYCApFlSwnlJVIgbjgpHJJu/7DOM7Ozbzc7N7M7uzer+/0+iXx3u8/Ob2a+98zM7t1eK4Agj9UatgEI0gmAQl4LgEJeC4BCXguAQl4LgEJeC4BCXguAQl7LHNDte1uta56Vz9ZbXL/7rC4k3Kl11bmC7rb/PBW5Hh5oZ3oqN2Rv8cCGfDQunmWOIjb+xxtbras/sNFfiGpvQ4mD3pdyofY4rohxo53pcfWGdbNeoOrr3dcrY0C3Jwm1sVPhU8lea0YTUxrQTKMWBFTRNXuLwhntm1OIvUQTtVo3WwCaiHGjsoDSbo0EdKl1X7D3jZYkQ1R374XJCFmFive1+gAmgMaKMFDY6LQOsNz/2iK9v1wBujPduvlnQfC/97KDmgKajHEjF4D6JHNAqcXj2st6dDiyL7Jhauyv6Rm1c8RPsrKvhTME1jnrraue5c/FBOHFydY1nHJ5lGDvU+zBfSLNTYUHTR6PChAIUFdvT069OMniOpOtmzbC1+mY3xYZ9CV+lKwz8b5i9QkLkYWLp/HBpZekAWqF1MvhxvDduz15YEMcIK5zdLjIWX9MvH9cTNRMstmiNqIDjX2AHyhuShHFGoKOkt8Zr0WztWzbJ6ufcP/NN4aF1i9jQNdZBo3aM66uGEPlaC8A7sismmiTjpwh7C1ePclG1njG0JEPoqOE4++MMaBvZgcb+zQdcTxh6Jp7E4BmnHWiioSFyMKzgEovYuftyRkePJN+OTyQrO1Pw2ZJ1DkCNHLWHxPvHxUTT6zCZovaSBoez06+dqavnhRPczujk9/2ieon3A+ezFUnY0D3nklNlaLqLl11jjXzs9RO4/xZmGz5TtEUlFWS8025hdjYW6T08+NJIoC1wYstIk4eZXvy5g1xuOzoKye+rTSg7Ngv0msyd+1Mj32Gxu/kHDTtLHimNfbmf/1ZVJVEFeJJmDi49MIbgb/ODpV+mSs1ttKOyTrLw8XOVDHp/XnLxs0kmk3aTFZR7hMesvX7G2wu1t8Zsi2T5fS1fVT9VI+N03s+Z+pQsYwBpYQvFhVcSUDZ359+8x8nqQYdnkajNBsBGvbl0tgpkTTYsBweJXzEFR5le/Lq9387XUrqeH2AjlO/HNgIG5bSMx1zezIJaNpZEPzkU5PhIB0WIquQBVR6EQ7CzJR5mdQHaLLOielI6Kw/Jt4/UYxspijXhjbFECDeznKf8JCiLPY00xmyLeNyFG0fVT/bY7lz24plCih7s32GpizZOSgHNFyKjotqdOKlfsSXGLRok+isTggaNdJMtI88yhL9e9Oz/YDmzUFl+y0JQMWkIL2KTzsTdfrxe6mb18U7RhaeBjT2EnoMpxzpl4WpPkDTdabDxc76Y+L9o2LiZgpXXZFNMYkWh5T7RG0TxO8kRWfE5ajaPga03/0wZApo+GZbkrVMzkHZqPLmf/mvnwtErjq31J9mTQBNHuXH94rE6xDQtLNQ0eZE4RlAIy9RgGiD1Mtik3z2wk3PGgKaikkAKovJAhrbNAE0pzMUgCqq31BA17NT7g6f+s0EcuTotD4Yj6NJQNPDXfK9OyUfxEdh+sk/sL7UnWZaknmxH1BxTL7YjgFNOhPjYCAOss7HgKjweMYa5TfuJbQw9tko6yVe5pvChdfONI3IyUEy4zV5MiQRk9hfFhM3U7LZaMfkEJ9avYhjC/LVnaEY4jPVz5ugDEOmgPJJORvi01PuvRcmxQRzg+aooh6/E4+jMV/9CwY63GuLfB3AhrRp3iLhUTpsmh/sfSOciyWUBrTFz4qoAGVm7xPbBKBhtkk4W+LD8x6vzzofU6MqiNwjDx57EdqefB9RmX1ZuJLnNKcyy4z4cLEzVUy0vywm2UziZWkztUgK95FHnArEIimnMzKLpHTb8+rnLfGGIeNFUid9riF5JSl5WYZtiLOe+jQT360jFzvho5nEUcJH4nRR3mkmEUcnbPoBjbfJk05TGWesG6NxcZ2fWGllyowOEFeNxJ7TUeKXY3fRVaHx7Gmm+HCJR30xif1lMXEzSUqSNsO4uClFzeikW1jVVGe05H4ZX6m2D1sj5yTZEGR+LZ4mXdfE70fRv2KZwE/pfkbMzZLnXpIj9HbqpLV4Li5B0xnn+1JH4WfBb6Y5172t8Y0cQIMXJls3vaScg3Kz13xXzkH5UdLOxCVwYZ9vjgsXe8uDx16iivOjRC8nAA1eozMDiWvx8ccXosNFzvpjkvtHZ3VkM4XNlmhpara/4bWOm1K0DUPrTeIoqc6IAE2U09/2VP2XUu6bAqihOkM6oTtY/jorrEHXfPdBlV0D+tq9/nzOIC1/nRXR9uTr2CR4SQ/gfqiyW0BpamfyOY765a+zYsrOjRXaH1V2CyhrNmefG3Mrf50VVHZurNhjX1QZn6iHvBYAhbwWAIW8FgCFvBYAhbwWAIW8limga34LLt3JNWLlBEBrVKNceiIAWqMa5dITAdAa1SiXngiA1qhGufREALRGNcqlJwKgNapRLj0RAK1RjXLpiQBojWqUS09UH6AXJyYmrr+wtvqWJ+gZ+yd85EQlXV5650nNVmdey7kMGzA2pdjn9LH8baZyjVg51Qbo+etYo52+/kLceB4BevHuQ5qtzoyWcikbUGtKAFpOrhErp7oAFTnq8vFjq2/5k4mJYzIrXbpj4rrh56bLJz72bpbb33rXdU8wQ29418nQ1+ptH2Ze6fHnmV3+hJFxC/+nbpdRA0pvUetdPvGRiYlDLL+yN9npu8PGLWHTNWLlVBegF+Vbf/WWQ/QkBPT0obXzN5Q99lpZQFdvu8BSz+otrEOZoYvXngx9pbyGTwiUoim1jMuoAblFMRKJR5ePk9MbuKvT0m0Jm64RK6faAJUY8ne36HHRjJfudJBCy7k8f4j88Zx0J2Wkk6GvlNfwCe1f1HIZl1EDUuHMH7WeeMT8kmeeY2mIP32snE3XiJVTXYCyJBU+SAF6B5v4X6tboBiqlMvLx5mL6wSBzCYBKnypAT09UXRaUsZlqgGZxdARe5QE9HMnI0AL23SNWDkNYQ6aBNRF9iSVcsn7XnSrzKB3ylMNfYBeuuPYUIb4qAEHZVDRxiVsukasnIayio97XMyiSh98rZTL87SYuHiDyDvRHPRixmv8ZG311mJJv5xLuYrvm4MmAb0h0bgFbbpGrJyGch40bkM2lroY4dfKuLz8IUo0l975UQKUGfqtEydDX6HXy8f5Kj4c4s9PTLzhrlLr40Kx8XnQ/lV8AtC7pe/iNl0jVk64ktQnl+dn02pUW3oiAJoSrZecpHSlGtWWngiA1qhGufREALRGNcqlJwKgNapRLj0RAK1RjXLpiUwB/T+tBmx2EDAgohqXruvVKJeeCIA6jdhHLj0RAHUasY9ceiIA6jRiH7n0RFpAe2cW5MNam8g+ohqXAHT40gK62QagLgMa5dIT6QDtPvgoAHUZ0CiXnkgDaO/Jr4sh/reZ6vJTpd6h1LBdQVppAN2c22dzUDWgTm0ig7pWPqDdh64A0CG4BKAp5QO62SbNhc9qbSL7CCOXANQooErc7DVKp5kAqFFAVagVEwB1ahOAutYoXUkCoEYBFVBWQgDUqU0A6loA1KlNAOpaANSpTQDqWgDUqU0A6loA1KlNAOpaANSpTQDqWgDUqU0A6loA1KlNAOpaANSpTQDqWgDUqU0A6loA1KlNAOpapoDuB6kBHbYrSCtkUKc2kUFdC4A6tQlAXQuAOrUJQF0LgDq1CUBdC4A6tQlAXQuAOrUJQF0LgDq1CUBdC4A6tQlAXQuAOrUJQF0LgDq1CUBdC4A6tQlAXQuAOrUJQF0LgDq1CUBdC4A6tQlAXQuAOrUJQF1LA+hWu31kRT6ptYnsI4xcAlCjgOpgKyLNDWwfWAk2j8pntTaRfYSRSwBqFFAhbQWkH+IJUqFam8g+wsglADUKqAq1YtIDKjJoqR9ReL1ShQ9XplA1oBVbgcpJ+zM0s4fPyseF35I5gNq+6e1ykw2gxQst69JRmaOcQXc/LgktXGMAmuvSUZmjDGiwLO8BXrjGADTXpaMyRxXQrduvIINW6tJRmaMKKP0ODeagVbp0VObIAppS4RoD0FyXjsoEoKTCNQaguS4dlQlASYVrDEBzXToqE4CSCtcYgOa6dFQmACUVrjEAzXXpqEwASipcYwCa69JRmQCUVLjGADTXpaMyASipcI0BaK5LR2UCUFLhGgPQXJeOygSgpMI1BqC5Lh2VCUBJhWsMQHNdOioTgJIK1xiA5rp0VCYALaUcQIdRqBrQiq1A5YQMWrzQsi4dlYkMSipcYwCa69JRmQCUVLjGADTXpaMyASipcI0BaK5LR2UCUFLhGgPQXJeOygSgpMI1BqC5Lh2VCUBJhWsMQHNdOioTgJIK1xiA5rp0VCYAJRWuMQDNdemoTABKKlxjAJrr0lGZAJRUuMYANNelozIBKKlwjQForktHZQJQUuEaA9Bcl47KBKCkwjUGoLkuHZU5soB2Z9tteXM7AFqBS0dljiqgdGe77v24u111Lh2VOaqAbtHtv3F/0ApdOipzVAElifuD1nyPejVHalkVanWIocnepSbCpi29awkuLaC9M3PyYeG3pH0GtWnTzLteX6j+EJb1KhJg1Jb2LjURNm0py6gKtWLSAbo7H/EJQM0EQF1Lu4pfiJ8U7hcAmthq0pb2LjURNm3ZNEBTfAJQMwFQ18oHdLNNGsIqvkCbAtCcCJu2bBqgaRXuFwCa2GrSlvYuNRE2bQlAAahJW9q71ETYtCUABaAmbWnvUhNh05YAFICatKW9S02ETVsCUABq0pb2LjURNm0JQAGoSVvau9RE2LQlAAWgJm1p71ITYdOWABSAmrSlvUtNhE1bAlAAatKW9i41ETZtCUABqElb2rvURNi0JQAFoCZtae9SE2HTlgAUgJq0pb1LTYRNWzYb0MLKAVQjmza1KtTqEEOTvUtNhE1betcSXMigBetVJMCoLe1daiJs2rLZGbRwvwDQxFaTtrR3qYmwaUsACkBN2tLepSbCpi0BKAA1aUt7l5oIm7YEoADUpC3tXWoibNoSgAJQk7a0d6mJsGlLAApATdrS3qUmwqYtASgANWlLe5eaCJu2BKAA1KQt7V1qImzaEoACUJO2tHepibBpSwAKQE3a0t6lJsKmLQEoADVpS3uXmgibtgSgANSkLe1daiJs2hKAAlCTtrR3qYmwacsGAtp9YEU+LNwvADSx1aQt7V1qImzasnmAbrWPAFA7AVDX0gC6fPiryKCWAqCuZTLEJ+5Rr+553WfVbQLsPwWeY9zapU2Zzj557qgtvauXU1nOQa2aSBOR00TW7/qc3GTt0qZMXTazyqCO2tJ1vapCrZgAKADN1Ksq1IoJgALQTL2qQq2YACgAzdSrKtSKCYAC0Ey9qkKtmCyvJAHQdwDQWgVAAWimXhVQVkIAFIBm6lUBZSUEQAFopl4VUFZCABSAZupVAWUlBEABaKZeFVBWQgAUgGbqVQFlJQRAAWimXhVQVkIAFIBm6lUBZSUEQAFopl4VUFZCABSAZupVAWUlBEABaKZeuQyst1qtsVNBsH3jKeX2zlXnMns6EAAFoJl65RCwt3hgg9CbGQhovKcDWf6IglUTaSJymohH2LSplU1HZY7oVz6WiDrG3YGNQYDGezpoJGRQZNBMvdQA7ExHCZEA3VtstcbD0Z7+7Ey3xh4XgCb2DHfbW5xij9evOkdP2U7bB/+Z/bM9ySYCUwEP/fTBc0G4EYCWLXM0AU2kTfZwb5GwG48A3ZmeYqAJvBJ7yt0omTJK6SFPwZPjIccMWhkqNwLQsmWOKKAHo+TGCOSjOfsjAeXP10NA4z2Tu8m9GJjbk4zNX28EqVC5EYCWLXNEAU1l0A5lOvavBJRnvpDMxJ5yNxrj2S60uKdhPdyjw9f6MlRuBKBlyxxNQGVu23nPqQGAJvaUuzFSXxKMxrDvTI+dSobmrKkAKADN1CuHgBCgdT5gd+gsZ3aIl6v4eE+5G4OVlkGd8Nwoj+LwsldkaEd94hSAAtBMvXIISJ0HlasfWuHsLY6xRdJ4tEhK7Cl3C4IlWvPzDQxEASgl0MmxU/EiSWwEoGXLHFFACbL4SlJ4mimgc0UffE/qNFNiz2g3Nt+cCZ+KgV3sNPZZNh2QoeFGAFq2zJEFtEJ1ck/qA1AAmqlXOdSsRaO6mAYoBUABaKZepXArIDq/lMsnAAWg2XqVgc29ACgAzdSrAspKCIAC0Ey9KqCshDSA7s63b78inwDQ/kIBaA3KB7R3ZiHYPCqfAdD+QgFoDcoHdPeRlcT9FwFof6EjBeirarniMFf5gHYfuhLsfvxskPoRBWhU9eqvVBomoFu3S0BJ2szg+uda7COqcTmUn6HxxWVG/gEaZ1BSrU1kH1GNSwAayz9AlXPQeprIPqIalwA0ln+A9s7M9a/i62ki+4hqXALQWD4AGn4UWn7uVHUetJ4mso+oxiUAjeUhoCnV2kT2EdW4BKCxhg9o+KUl7UdLoOplf0bPOqLIScPhA6r6zidUvxoJaOKrxo5leesbqHIB0JRSgPKbkajuPwLVp0YDujPdoq+/zYTfNXZwc6YkoJoP3kOjLjNAl6YIy/Up/p3O9exNGIoIc1DISEaA7txzjt/Z4U0bzzw+vveYizuEpjMoAIVyZAQo/cO43LnnO/d86+B37nExVUzNQZVnQIXW/FajXDZSNhk0WHr/zXuPPe5kwpge4lu5i6Rh9+0ANcplI2UzBw06ram677A87L4doEa5bKQGADoprvDwVXx4vzA3J4MAaI1y0WHDkh9XkjDEV6rKe7NC+QCoEE1y+zXsvh2gRrlspPwBVH0BYNh9O0CNctlI+QQohviKVGE/Vi6PvtW5hAxakSrsx8rlA6DhIkl5K2aT9r98fIJ0/YXESydOZnY6PXHdE+HDi6mdV9/yxFphWbjMavWWG8hW5CrHh3iZ/l66YyKuQxGXevWeWhm8U/16VfmV/GF+Jykt097O9G4foBevv3D+BvHwPPXy6STOxWXnMqXVW//owtqldw16e0SAXrrjGPNeyLZRS/e+d3TwTkntzrcX7CKKaD8BSn/Y/6tvveu6L5w4efn49RcuRjknBvTSO4ndy8ePsRw2MXFMJqdrT9Jf2vuiRaKyc5mx/Kcn11bvJs/Sx+ptH6ZH0khcM76RHgjztjJr6vi73kbqnVnYsiB0a4GItkfaD0DXVb9Uw2Xc2wlAbzlGGfT0obVLdz6xFmJ5+fgfxqiKGOps0fFEK3uZRbC/iSDjrrehJbb878fW/vujLDVGPlZv4Q7WmJHIQQQoveGKlLNmAmjvTDt5RywT7X4yCLqzpsBRAcsLgQ3SQl4Aui5+7EtFqHFvJwBl/1w+8QeHUvmGZalj4tHFJHyMRpmcOM4swipJ2bnMWP78H1/+0OfFEB/7WBXEkpm4ZuIvS+3XFkmga4p2zar74KOHv2aRQlk2PLJiQyhjkwKsCfUBUN23Oo17OwPo8be9+wLHUnQpe+3itR/j6K3eFiWi0zSY86H1QngMmrtGQeZdb0NLbPkLf/s/f8aNRz5CQNlqKLKQAJT+vbWKIb73ShAsL3Rn2+YpdHmhd4a+HB7fYmNgIWc4m7aE7ldAT5w8f4hvESM6jZjnJ3jujOagtOoIh9ZkBo2DzLveCpfY8uc+cihc/cQ+6IU7E1PgS/JdJTL/6WMFihrUGcssuRFpmw8Z0tY7w7KhINRUjM8CM1A/AHU1xFNfnr9OAsr+I84Ea/TaxfDcklzFcxxuPRnOQdk/Yg4aB5l3fQFoRFI/KbG89WQM6JowEu53+gZ6O7EJNa3iq1okbbWPbs6Z917vZWLNhlC66ytL0faEegGoo0USy5ETb7tTAsqRi1fx9Oj0IfmYs8p2f8Ndx/pW8afrWsXLpBn5kIAKO3JYZ34myDiN/FXMQWlxffuVzfZh4xlo78mzfKTu/eCHBntv8ZGdzwcKEKoHlP/AdrCUGnv3FmccfNkTH7cbrH8rcQUhJW0LU27jufAXr5h23m++f/is8VwyMVcNp6FWGgDojTdtBDvvPZgB1LYQhQDoQF3+O1dH0rYw3e6SU2qjLWNCt46s8IMvH6UbFz53xPZy1QBAD/7lqWD7fQzQ8CPL7J9r7qUMSkmU/b/32ONsbO7kjM8apQCln/XO+e6xqz6qSI1yqZZYh5vNQGm0ZuN7wAk1CQiCXy4feZ5mrHyRNCeCbTQI0P+cCV6gXzRemgrWx8V3P1pJQBlWNA+wHvRTgC4Rm2pCh923A9Qolzmi3BYsm6RDPlrT+E4BxlPW5SMrYsb6xSsWZ6WkBgH6rZv3/v5bB8/Rp4l37jlH354Tc9Aog56i73vmfNpYI8enmYalRrlMa0vmTJ7bjM6A0p4LInv2nnredMranQ0JDV7+svM56MHv/tPP/4qByD9wNHaKJ8olABqpUS5T6j09G43q3ftNs+GWILT98LwJ0Vu0U3d2Lsyh3U/YnDgNNQjQc888PkWA3hN9/9h9BtWdB631DpX2EdW4rOfOm91ZizOfQvJsu2Hocwxjvuuy9doo0kBAOyJvhl88juagRCTjyg2g7Jh550Fr7Uj7iGpc1gNoiNmuUTLkouX4ls31oN35twuUlwvkTqGBgIbZko3x9IHivcVwFU/n1n/vHleA5qvWjrSPqMZlTYByQnfnzfMoP9tuSajlh0z75MeVpHzV2pH2EdW4rAtQRujDFnyGa3Dz9XvggFAvAU2cNq61I+0jqnFZG6C281AaqS3W76SyhHoJ6GYbgLoMcNFhdMX+KFskma3fU4HWa7GkfAS0++CjANRlgIP+okGNULP8Xkh5+fCtzox6T35dDPEV/phs5vd2Kyplf4hf1ew+dGV3fsHmI3mO5CGgm3PVz0Er+qHrIodwElFhBmXDOiO0+8CP5hfEVdF69aryF7yH/GOyANRtQLmu2n3kS4zQZVoXGF2xdyv/AN1sk+RYUlFHAlALbc5tHj5rfsXerfwDNKjjNBMAtdDuIyuMUP4z1PULgALQfIVXjdjaaNPm7LxLeQloQhV1JAA1Ue/p2Yfp/jaUOzcLX00vJwAKQDXqzs7RLZiGcHpJCoACUJ3E50naxT8uV1YAFIBqxa/W737F5vK7U+kBFV81Cj9xl3yptACo04gKV/EFPtfsUoaAxgEANLW1EpdeATpkQi0yKH3l+L2ntg/+RcvBb3kBUKcR1X+aaViyAJS+7jF2antyysUPcgNQpxEjC+hk+Atb4ffm9h47FX5brmy5ANRpxMgCmsig22/aAKB9WytxCUBjmQOKDKraWolLABrLfg4KQJNbK3EJQGPZreJfhwya2VqJSwAay+5KkqOToIE5oBUpU9/hmoE0Mgd0bzHnx+AKCRnUaQQyqGsBUKcRANS1AKjTiH0MqH/f6kypoo4EoJBeANRpBAB1LQDqNAKAuhYAdRoBQF0LgDqNAKCuBUCdRgBQ1wKgTiMAqGsBUKcRANS1AKjTCADqWgDUaQQAdS0A6jQCgLqWBtCtduJGFhV1JACF9NLcwPaBlWAzuhFlRR0JQCG99EN8/KO4FXUkAIX00gMqMmipH1H4VVqZrRlAC5eiL1RdtsaHXq5cQgbS/gzNbHy31MKJIwNJJqCiDJoDaH68FaBlXUIW0mfQ+Nd4tA0PQK1cQhYacJop+jkJbcMDUCuXkIXyAaWf1EUGBaBDlu6HvNptzEEB6JBV+ZUkANrnErIQAFX5AKDeCICqfABQbwRAVT4AqDcCoCofANQbAVCVDwDqjQCoygcA9UYAVOUDgHojAKryAUC9EQBV+QCg3giAqnwAUG8EQFU+AKg3qvwe9VlI0sp0fUWFqsvW+NDLlUvIQMigKh/IoN4IgKp8AFBvBEBVPgCoNwKgKh8A1BsBUJUPAOqNAKjKBwD1RgBU5QOAeiMAqvIBQL0RAFX5AKDeCICqfABQbwRAVT4AqDcCoCofANQbAVCVDwDqjQCoygcA9UYaQLuz7ba8uR0ABaDDUT6gdGe77v24ux0AHao0t1+k23/j/qAAdLgyucPyfrlHvRo3lQ+9XLmEDKQFtHdmTj7UZoaGZFBNPrQCtKxLyEI6QHfnIz4BKAAdjrSr+IX4ibbhAaiVS8hCml+aS/IJQAHocJQP6GabtJ9W8QC0gRqlK0kAtIECoCofANQbAVCVDwDqjQCoygcA9UYAVOUDgHojAKryAUC9EQBV+QCg3giAqnwAUG8EQFU+AKg3AqAqHwDUGwFQlQ8A6o0AqMoHAPVGo3SPejVuKh96uXIJGQgZVOVDr7IuIQsBUJUPAOqNAKjKBwD1RgBU5QOAeiMAqvIBQL0RAFX5AKDeCICqfABQbwRAVT4AqDcCoCofANQbAVCVDwDqjQCoygcA9UYAVOUDgHojAKryAUC9EQBV+QCg3giAqnwAUG+kBbT7wIp8qG14AGrlErKQDtCt9hEACkCHKw2gy4e/igwKQIcskyHe5Y8ovD6tTNcXLkVfqBZQHmAFqCuXkIHqnoPqAS2bm3IKRQZtrgAoDwCgvgqA8gAA6qsAKA8AoL4KgPIAAOqr6r6SBEAhKwFQHgBAfRUA5QEA1FcBUB4AQH0VAOUBANRXAVAeAEB9FQDlAQDUVwFQHgBAfRUA5QEA1FcBUB4AQH0VAOUBANRXAVAeAEB9Vd0/oqAHtKJCtYDyACtAXbmEDIQMygOsAC3rErIQAOUBANRXAVAeAEB9FQDlAQDUVwFQHgBAfRUA5QEA1FcBUB4AQH0VAOUBANRXAVAeAEB9FQDlAQDUVwFQHgBAfRUA5QEA1FcBUB4AQH0VAOUBANRXaQDdnW/ffkU+0TY8ALVyCVkoH9DemYVg86h8pm14AGrlErJQPqC7j0nPhCkAAAXWSURBVKwkbm+nbXgAauUSslA+oN2HrgS7Hz8blLxHPQSVUT6gW7dLQEnazDAgcbgIsMug9RRqHVB5b+5DmWRQUq0daR9RjUsAOnxVPgd1FABAR1S6Vfyci1W8owAAOqKq/DyoowAAOqKq/EqSowAAOqJyc+MG67NQ9qetHJzoqqFQnI5zLQDqNAKAuhYAdRoBQF0LgDqNAKCuVfnNwyCojAAo5LUAKOS1ACjktQAo5LUAKOS1ACjktQAo5LUAKOS1ACjktQAo5LUAKOS13ADae2pl8E5DVzNcQik5AvR7RwfvlNTufHvBSck2aoZLKCVHQ3z8/WQj9c4sbJn3/dYCoeKAlWa4hJJyAGjvTDt5FycT7X4yCLqzhn1Jx19eCCxYyTuK/y6hrFxk0O6Djx7+mkVyYonmyIpF37Nep/1L9n0zXEIZlQa090oQLC90Z9vmyWl5oXeGvtAc3xZiUBlneK+X6PtmuIT6VRrQZZY3qA83HzLuR5ZoRN8bivV82bldM1xC/XIwxG+1j27Ome/ee5m60aLv6UalLPeV7PtmuISyKgkorVtvv7LZPmw8t+s9eZYPgr0f/HDwzlt8zOQDbZm+b4ZLSKVygFLa4FnmF6+Yhvzm+4fPmk7TEpPAcIK3j11CSpUDlG7RyPvfRlumfb91ZIUfe/ko3WvvuSNFrwM1wyWkVElA+QrXbG5HAyEbOQPe90ZH/+XykedpKsiXH3Midv+6hJQqOQeltBEsmyQaPhDSyEkBppPB5SMrYir4xSvmp3ua6hJSqRigWzIb8bRhdG6R9lwQean31POGk8HubNj3wctftp/dNcMlpFUhQHtPz0bjZfd+0zFtS/R9++F5A1a2aJ/u7FyYnbqfsDgj2SiXkF4Fh/jurMU5RSF5Itss9DnGB99zucSqoxkuIZ2KzkFFB+6apBkhWuluWVxq2Z1/u2BkuURWaoZLSKPCiyTq+9158wzFT2Tb9b3lpzdVaoZLKF/FV/Hd2Yctej5c3hqvjANnhDbBJZSrEqeZLGd4NAiar4xJznKohYbkEspTLV+ao2vhR9nyw2hlnIqzXuSUUDNcjprqAJRWHtSLlt+4qFnNcDlyqhhQfr2w+9CV3fkFmw+71axmuBxNVQsoGzBZ33cf+NH8grje6KWa4XJEVXEG3X3kS6zvl+m0jdG18OGoGS5HU1XPQTfnNg+fNb8WPiQ1w+VIqmpAdx9ZYX3PfzrZYzXD5UiqOkDD6zFs1bFpcd67bjXD5QirMkB7T88+THeOoay06e2F6ma4HGVVOMR3Z+fo5kaen7hphsvRVZVzUPFJjbbnn0RrhsuRVaWLJH4dfPcrFhe2h6FmuBxVVbuKL/CJ4SGoGS5HVBWfZmpG3zfD5WgKtwCHvBYAhbzWCAG6Mz1D/3SuOqfcvH3jqSDcTg9feza9eb3Vao3RHskN2Z0g5wKgWYntElepdXq105pJbcjuBLkXAM1KCejeIo9dOrABQOvVSALKwWJ/tm/89GSrNbXN/ojUuDPdGnuctvPXl8bZ7uv0hwE6JQ5C+07xvyJuSh5LvDYztNrtV402oJMHNtjkkv7wF3emp9he/CHtQrk0TJ1sdG8JRAXHM0EYEsSw07+TINSxRgrQFlcS0JkQKkEYH93XI0CJw+2DckJAq6RxAeivN4IIyuhYB/UzB6iYRgrQ/iE+HJ7DJ+sslxKSchMb3sUIHx1BzkE7fE2fBDRY4vxCjgVANYBuH/zuYmrMjlLr2KlsBuUFtAYswCBrAdDEEz7Ed6Ihnk1A3x8O3OF6XU5OCeTOWBbQqAjInUYSUFoM7S2O9QG6Mz0uF0li5/Vo1F4a48CO86N0KIFOjvGd5LE43Djv5FwjCSg/JfTB9/QBGp9moinleGpVTmskvpCnDWy+OfZZdjh6HB4rnJYOrXb7VSMEaAFhaT50AVCd1qeG7WDkBUDzxc/jQ8MVAIW8FgCFvBYAhbwWAIW8FgCFvBYAhbwWAIW81v8DipWmIOTwNN4AAAAASUVORK5CYII=" /><!-- --></p>
+<p>Here we can see the observation we made earlier about Maine and Argentina having low humidity, but most often low or high cloud coverage, respectively. In addition, it’s also easier to see that the forecast for Chile is mostly medium humidity and high cloud coverage. A puzzling observation is that Turks and Caicos always has medium humidity, but either low or high cloud coverage.</p>
+<p>Next, I’ll look at how location affects minimum and maximum daily temperature using boxplots.</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb31-1" title="1">max.means &lt;-<span class="st"> </span>weather <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(location) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarise</span>(<span class="dt">average =</span> <span class="kw">mean</span>(maxtemp)) </a>
+<a class="sourceLine" id="cb31-2" title="2"></a>
+<a class="sourceLine" id="cb31-3" title="3">g &lt;-<span class="st"> </span><span class="kw">ggplot</span>(weather, <span class="kw">aes</span>(<span class="dt">x =</span> location, <span class="dt">y =</span> maxtemp))</a>
+<a class="sourceLine" id="cb31-4" title="4"></a>
+<a class="sourceLine" id="cb31-5" title="5">g <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>(<span class="dt">fill =</span> <span class="st">&quot;grey&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(max.means, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> location, <span class="dt">y =</span> average), <span class="dt">color =</span> <span class="st">&quot;purple&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">geom_line</span>(max.means, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> location, <span class="dt">y =</span> average, <span class="dt">group =</span> <span class="dv">1</span>), <span class="dt">color =</span> <span class="st">&quot;purple&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">&quot;8 Day Forecast: Maximum Daily Temperature&quot;</span>,<span class="dt">x =</span> <span class="st">&quot;Location (highest to lowest latitude)&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Maximum Daily Temperature (C)&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">coord_flip</span>()</a></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb32-1" title="1">min.means &lt;-<span class="st"> </span>weather <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(location) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarise</span>(<span class="dt">average =</span> <span class="kw">mean</span>(mintemp))</a>
+<a class="sourceLine" id="cb32-2" title="2"></a>
+<a class="sourceLine" id="cb32-3" title="3">g1 &lt;-<span class="st"> </span><span class="kw">ggplot</span>(weather, <span class="kw">aes</span>(<span class="dt">x =</span> location, <span class="dt">y =</span> mintemp))</a>
+<a class="sourceLine" id="cb32-4" title="4"></a>
+<a class="sourceLine" id="cb32-5" title="5">g1 <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>(<span class="dt">fill =</span> <span class="st">&quot;grey&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(min.means, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> location, <span class="dt">y =</span> average), <span class="dt">color =</span> <span class="st">&quot;green&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">geom_line</span>(min.means, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> location, <span class="dt">y =</span> average, <span class="dt">group =</span> <span class="dv">1</span>), <span class="dt">color =</span> <span class="st">&quot;green&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">&quot;8 Day Forecast: Minimum Daily Temperature&quot;</span>, <span class="dt">x =</span> <span class="st">&quot;Location (highest to lowest latitude)&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Minimum Daily Temperature (C)&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">coord_flip</span>()</a></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<p>Both boxplots are fairly consistent with each other, showing Turks and Caicos as having the highest minimum and maximum temperature, and locations at the highest and lowest latitudes as having the lowest minimum and maximum temperatures. Although Cucata, Colombia is closer to the equator than Turks and Caicos Islands, a possible reason as to why it may not be warmer is its elevation at 320 meters (1,050 ft).</p>
+<p>Now we’ll turn to exploring <code>humidity</code> as a quantitative variable, creating a histogram with density plots of <code>humidity</code> facetted by <code>location</code>. We’ll also create a boxplot of the same information.</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb33-1" title="1">g2 &lt;-<span class="st"> </span><span class="kw">ggplot</span>(weather, <span class="kw">aes</span>(<span class="dt">x =</span> humidity))</a>
+<a class="sourceLine" id="cb33-2" title="2"></a>
+<a class="sourceLine" id="cb33-3" title="3">g2 <span class="op">+</span><span class="st"> </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">20</span>, <span class="kw">aes</span>(<span class="dt">y =</span> ..density..)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_density</span>(<span class="dt">color =</span> <span class="st">&quot;aquamarine&quot;</span>, <span class="dt">fill =</span> <span class="st">&quot;aquamarine&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">facet_wrap</span>(<span class="op">~</span>location) <span class="op">+</span><span class="st"> </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">&quot;8 Day Forecast: Histogram of Humidity by Location&quot;</span>, <span class="dt">x =</span> <span class="st">&quot;Humidity (%)&quot;</span>)</a></code></pre></div>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAqAAAAHgCAMAAABNUi8GAAAB2lBMVEUAAAAAADoAAGYAOjoAOmYAOpAAZpAAZrYZGT8ZGWIZP2IZP4EZYoEZYp8aGhozMzM6AAA6ADo6AGY6OgA6Ojo6OmY6OpA6ZmY6ZpA6ZrY6kLY6kNs/GRk/GT8/GWI/Pxk/Pz8/P2I/P4E/YoE/Yp8/gYE/gb1NTU1NTW5NTY5NbqtNjshZWVliGRliGT9iGWJiPxliPz9iP4FiYhliYj9iYmJiYp9in9lmAABmADpmAGZmOgBmOmZmOpBmkJBmkLZmkNtmtpBmtrZmtttmtv9uTU1uTW5uTY5ubo5ubqtuq8huq+R//9SBPxmBPz+BP2KBYhmBYoGBgWKBgZ+Bn4GBvZ+BvdmOTU2OTW6OTY6Obk2ObquOyP+QOgCQZgCQZjqQZmaQkGaQkLaQtpCQttuQ2/+fYhmfYj+fYmKfn2KfvYGf2b2f2dmrbk2rbm6rbo6rjk2ryKur5OSr5P+2ZgC2Zjq2kDq2tpC2ttu229u22/+2/9u2//+9gT+9gWK92Z+92dnIjk3I///Zn2LZvYHZ2Z/Z2b3Z2dnbkDrbkGbbtmbbtpDb27bb29vb/7bb/9vb///kq27k///r6+v/tmb/yI7/25D/27b/5Kv//7b//8j//9v//+T///99AFSbAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAgAElEQVR4nO2di39cR3XH105cxaSWBbSQVIlb0uK1jUMCbWrRtLQldorROlAKSgJSX2DRQhweFlCC3fohS5vQgu1Iil77v3Ye97n3NffszJnZq9/vk8hXs3PP/Z2Z787jaqXbG0FQwOr5NgBBdQKgUNACoFDQAqBQ0AKgUNACoFDQAqBQ0AKgUNCiALrzaq/35Hvxd8Oe0h++V3dKVKl3/Bbheuqaf507cxgF2luYHx2snHhYWZGqn/d6Mw/Hr1Sl1MHByoz+rmhjb2Gm/OyhWaPIiPlUj4QIgO7MSdSOXY++jdnrXa45Z2JAx3qxGlDD7m7QlvA6U7hSlUoALdqYFFBZDYCaaK332ujgF724v3T7Hrw/lyBboomxqQHU8pWUtpK3mwmgqSSgFTZsAHoERQFUvovT5o4bbksh+8EnxeD6d3EPJ72abd2PohWC6Mxh7/h76nu9QPhgrvekojyOMjr4F3Eg3g8rYkSbr8BGDSv5isk1VMxjf6vGNX21OPTO3PwHc+Jga673zMNxa2vpYF8cqyWE+bN1uXT/Kz2C/k7ZyLeBaDFRW0avbpuc7VxT6MT0hdIGPPHLT+p26q4IgA7FCCq+5EfQaJ4bxrO9BngrHlUznbAVrxAOVp6Y6514mK4YtuKDJIrqFnHQCOh4xbmxUDPx1ZLQO3OfFpWOfW8umcwz1gwAzZ6dpv7kqxlA822wt/DEnI5e2TZb1U2RATTTgM1rq6kXAdCDn8tWeTb+NmnfteO3DlbEGCV6b0Z9Fw22qlKyBBWtqvhWUM3L7hYD3+g3c7JjRaN/0JMcxFF25p59qMONT/HxwrensclXTK+xt3Ds+6OPVhRE+mppaFHnA3n+zlzkMj0t+1YYu1IMaPZsWZ69UrwGzbXB3kLvjx6KpVGxbeLUsk1TaIpkDZprwBn5xqhYOnRDBEDlDNPrJav1LKDi6//98l/nZJNtqWE0GWYTQFVji8rHrovGv6Wm2ihKdKQURdmZe+LLv8pfJRcvA2i2YnoNve7YUfhHEZLQMxKaE/EEHVXTpxkAmj1bO0ivFAOaawNVW9sYa5s4tfT6JU2RADregJVr226oPaDi3f19uUYaX4MqQPV83ZvR7baVbvUTvnbmVNdvyfaVPbYVdb/slctJnTiKnGt7z7zXvIvPVUyvMVQOkr11JrRiQHfuWgJofFrdancUrUEzZ8tyfUZ+F59rg4jIYTTHl7RNev2ypkgBzTdgsi/rptoDGr271+Jmza5BxTT26X//r9/qjjt+a604zJoAmo3ym1f1wNt4mylbsRrQNDQHoLk2yABa0TYlgGaaAoAaKp6Tx9f4W2pBdnkUT1Vbva+kd2aygKYzlGzf7GAxHx+kUYT+959F35vcB00qlk/x6dX0GrQE0LIpPnubaS0eF4uAaveyKANotg10bT0tl7dNyRSfaYqyKR6AlkjtBsQUn1/jH7w/p8l4KNeouuH+IL0zmvKVXePrajLcRytyhyXq7yyoLoiibIl9xejgF6J8mL/LOg5ovmL5JkkDGocuAbR8k5QDtKdu+JQBKq70mn5NAxoN3WkbiMFwfqQ3SRVtM7ZJyjdFlFh+kwRAy7SVv7mR/UlSfOND9fgw83Oj8ttMqtpWvAWJji5nokRH+iaOwW2mpGLZbSbdm3HoEkBzt3lKAVUO5a2kIqDpa/FNp/l8G+wtyDtT0fe5tkk2YWO3mXJNoSKO32YCoKWSy70n0wFALyGfUfeX1T3k7+v1aTJHj/J7nJ30PvPD+PsnXpNH8qb6a7ko6v77s3Lx+Gpv5mHTjfqkYubjAjLm3y8km6QkdBmg6WlVP0l6f673zO9K16CqWZ78dbwG1TaybSACCLQ+pT+ykGubBNAx2/mmkBF/p6eBXAMCUKq2grmDbPZjSheqaoNw2iZ0uQP0o1cD+GDDztzvidF1zRcOVW0QRNtMh1wBKrYEPV/DVkbp2tSDqtogkLaZDrkCVJDxbGMlBiVrUx/XrmiDUNpmKoRP1ENBC4BCQQuAQkELgEJBC4BCQQuAQkGrPaCbHVFH8/Ftw5YAaEfz8W3DlgBoR/PxbcOWAGhH8/Ftw5YAaEfz8W3DlgBoR/PxbcOWAGhH8/Ftw5YAaEfz8W3DlgBoR/PxbcOWggP0/uzs7NN3NtfPvCO/E/9ER87kIp8Hn1+qedVtUvbTibokUrn11UvVr02k0AC9fVKkuPr0nTTVaQT0/itna151m5H1dOIuib6tA9SBAgNUDz0b1y6tn/nz2dlL8WDz4MXZk6461UE+G298+4tiEvjMyyffEc4/9oWlKIH1F74hkpLHPxR5qW9Ehz+n/rEm2+kkXRInkfTHxhvfnJ09K8ZX8W5cfSXqLtv5BAbo/fiNuv7cWflNBOjq2c3bp5xc0Amg6y/cESPK+nOin4Tz+08tRQnkkoq+kf1vdUi1nU7SJSoXPbfpo41rMqVTyv5qnJbtfEIDNMZQvRd1R+qkH7zkaAh1kM/tszIRNdS8JAeapSiBXFLRN7K+1dysAxp3iXQpEpH9oY9EYjI5NcbKKX71koN8AgNUjD3RQQ7QF8Uy/am6fccEsp/PxjVh96QmUOQjAdUJlAO6Omt1/WI7nVyXiFwi6+IoC+gPlhJA7eYTGKCZNWgWUFejp5T9fFSX6t6KR9CX4nsSBUAfvHgp7Ck+6ZKmEVT3mu18AgM0t4tPO1Kvedxc0X4+t+Ue4f4pPZwka9D7Y0ml32yuP29xdrCfTryLL6xBs4CeynSXzXxCAzR7HzTNWEyRrmZ4+4BufF2OHw8+/y0JqHD++28sRQlESW1cU7v4aIq/PTv7sZftb3vtBUzugxZ38RlAX4kTtJxPcICyy3k+rm/kjqmj3QNAnQSX+yVnY3+5Oto9ANS3D1vqZjoAtGv5+LZhSwC0o/n4tmFLALSj+fi2YUt0QD+MlR5NXGQxlHF0Wj4+nJoVdbR7AKiNWLaKAGhSBEABKIstanQACkBZbFGjA1AAymKLGh2AAlAWW9ToBoDuv9m/8Fgdbff75+8BUMu2AGhdpWZAD28sjx59Th7t/sO96KiLLWAjlq0iAJoUNQO6//Y9haZWesTn0W10AMpiixq9GdDdq49H+2/djL7TI+hpocoTIMi+qgHdvpACunvlXExq596iNmLZKsIImhQ1A5ofQdMjPo9uowNQFlvU6M2A5tego7vLHW0BG7FsFQHQpKgZ0MMbi9HKMzvZd68FbMSyVQRAk6JmQKP7oOoeU7+PNah1WwC0rpIBoBXi8+g2OgBlsUWNDkABKIstanQACkBZbFGjA1AAymKLGh2AAlAWW9ToABSAstiiRgegAJTFFjU6AAWgLLao0QEoAGWxRY0OQAEoiy1qdAAKQFlsUaMDUADKYosaHYACUBZb1OgAFICy2KJGB6AAlMUWNToABaAstqjRASgAZbFFjQ5AASiLLWp0AApAWWxRowNQAMpiixqdDigEMQojqI1YtoowgiZFABSAstiiRgegAJTFFjU6AAWgLLao0QEoAGWxRY0OQAEoiy1qdAAKQFlsUaMDUADKYosaHYACUBZb1OgAFICy2KJGB6AAlMUWNToABaAstqjRASgAZbFFjQ5AASiLLWp0AApAWWxRowNQAMpiixodgAJQFlvU6AAUgLLYokYHoACUxRY1OgAFoCy2qNEBKABlsUWNDkABKIstanQDQPWzOqV2r/T78cOOO9cCNmLZKgKgSVEzoIc3lqOnHcsnHe++frOjLWAjlq0iAJoUNQOaPi9+W2KK58XbtgVA6yo1A7p7NfuUeH10WqjyBAiyr2pAty9kAD28sRiX872J3Ean5YMRlCl6M6DZEXT/zYTPzrWAjVi2igBoUtQMaLoGFbv45bScz6Pb6ACUxRY1ejOgclbXu/gcn51rARuxbBUB0KSoGdDoPqgYRB/1pbCLt2wLgNZVMgC0Qnwe3UYHoCy2qNEBKABlsUWNDkABKIstanQACkBZbFGjA1AAymKLGh2AAlAWW9ToABSAstiiRgegAJTFFjU6AAWgLLao0QEoAGWxRY0OQAEoiy1qdAAKQFlsUaMDUADKYosaHYACUBZb1OgAFICy2KJGB6AAlMUWNToABaAstqjRASgAZbFFjQ5AC/lcjBWaU7OijnYPAE3KAKgLW9TodEA7qwRQ30agjDCCJmUYQV3YokYHoACUxRY1OgAFoCy2qNEBKABlsUWNDkABKIstanQACkBZbFGjA1AAymKLGh2AAlAWW9ToABSAstiiRgegAJTFFjU6AAWgLLao0QEoAGWxRY0OQAEoiy1qdAAKQFlsUaMDUADKYosaHYACUBZb1OgAFICy2KJGB6AAlMUWNToABaAstqjRASgAZbFFjQ5AASiLLWp0AApAWWxRowNQAMpiixrdAFD9MFmt6LncXWyBpAyAurBFjd4M6OGN5ehx3KPRdv/8EQI0JTUMp2ZFtrsn8361lGHJCFB9XjOg+2/fiwfOu+d+epRGUAAqFTygu1cfj/bfuhl9owE9LVR5wrSrCKhvR15lvxVIEasB3b5QBFRqojdRRRFG0MlD2e6eqRxBASgApUd3twYFoF6dmhUdOUAPbywmu3gA6tOpWdGRAzS6D6rRBKAenZoVHT1AKzSRx4oiADp5KAAKQD05NSsCoADUk1OzIgAKQD05NSsCoADUk1OzIgAKQD05NSsCoADUk1OzIgAKQD05NSsCoADUk1OzIgAKQD05NSsCoADUk1OzIgAKQD05NSsCoADUk1OzIgAKQD05NSsCoADUk1OzIgAKQD05NSsCoADUk1OzIgAKQD05NSsCoADUk1OzIgA6WQvU5Fsko4SVOFRJUY2H8kAWAK0KXN4O5V0TJKBliU1E48WSotxLow8LDTQRoEQlFmpeqlFJ5VZXNTirTd2Wf4aklWe/apeYSRyT0NUXwwiarztIdBEjaFWHmYQqaZiKNrM9ghJboCbfKijHU2EAdJAXAC3tMJNQJQ1T0WYAtIQjQ0AHg8Z0iv1QYqu0EgAFoJMDOs4oADUMVdIwFW0GQEs4agNoDlEAahiqpGEq2gyAlnDUDtAMogDUMFRJw1S0GQAt4agtoAmjANQwVEnDVLQZAC3hiACoRhSAGoYqaZiKNpseQCu4CAZQiSgANQzVLUAbuIiGL/+ADpLVKABtKOoMoAZs5uDwDWjBBgAtLRprmNKGDB7QNnCmWXkHNG8DgJYWxWc3t2SogJLozOJh4sEdoKkPAFpW1LIxAwO0LQelMvHgGtBM89a1w5EDdMJW9AsoEYIK1XtgAnTcy9QD2tjOVaEmaL0gRtAJ/Deo3AMvoImVaQXUvK0LoSZvNv+ATp6DixZInNp+A2UaYQoAtZk5TX4B9Z29Ei+gkeLQ4QLqIGmKPALqO/VIzCNo9dUrW4sfUIcJt5UnQH2nnZFfQLXqW4sXUOfJtpMHQH2nPKYQANWqakA2QJnybCVeQH1nW6ZwANXyAyhrim3UGlD9rM78kUEL+M6zWqEBqsUHqIfk2qgtoIc3lqOnHadHdS3gO79mhQloJHeA+supndoCmj4vPvfk+HwL+E6qlYIGNCtrgPpOpJXaArp79fFo/62buaPTQpUnQJZk2qO+fbIoC+jewrHr6XfbF2Is0yOp9u/t5iKLoYyjj0j5+HBqVtTR7smPoGu93omH0XHZCNrFFrARy1YRAE2KygGVo2ivN6+OjNagTj26jQ5AWWxRo1cBqhE9fkvu3ReTXfyiwS7evke30QEoiy1q9CpAh73ejJjq5USv737KobPVfVB7Ht1GB6AstqjRSwE9WOn1LsuDLTmEVojPo9voAJTFFjV6GaB7CzVcAlDbtgBoXaVyQBuHT2hqZHbD2qiWxVCtLwhAu6rOASq2R5FmjK4Eha3OAZqMoFAn1EFAISg4JYCK4VPeopfCGhQKRhhBoaDVHtDNjqir+XRMOUD1NN8ww/vuCFvqaj5S8ncg8j+gLupRv98/f6+h1uGN/rmbTaFkpH5/uemCu1fk9RpqFSrlAF2bGQ2P3xrW32by3RG21NV8NDLLY7+oU9TdZfm1oZaotH3hcVOo0ciglvzA5qOmWvtvLo9VGrvNdLAy03Sj3ndH2FJX8xHa/ep3lsc+JFnQ4bvqA771teSrjZVUDUFfQy31qeK379XXij56nKk0BujewjwAnU6lPXT47s/ECJT/mHkRqTfVtFxfa/fqT+QU3xBKSA53TRfUI2jTBdWrmUpZQA9W5reOXZcTfZ18d4QtdTUfQcuinCLzv6hTROH1m3IUra+1e0Uh3BBKw9d0wWhdWV9LTfHnsq5ya9Cdud6M/ixojXx3hC11NR9J1GHzCKp0d7ntgFYuCVTTBeU7Yvv8vaZaV/pfe7dqBDWT746wpa7mE22qF5sXjhLQhjXod8eXhBVxFkeNK9VoVDRYz+YWqgDUtw9byvaRHEHzv6hTysvhj+811Lq7rAfk2krRhquhVjSC1tdSC9XPZUONT/HNP+okt+DGtVmpp+9kit5YGqu0Onvynejwfq7y+pl3Nq1q4nzGtP7cKfF1NbFfYVgXy68PXpxNk51cOWLM7oM23+IUrzbfu4xn44Za2yYXFJXkq+X3QeU9pmZN0ojjnVYA9P7Td26f0oe3ZeetZnG2Kxv5ZLX+/J/e2Xzwhab3UQLogxcviSTt5WfQddOo9h+3m6QRVe/IL+L/9c+8fPJHbyxtXHv6zv1kKEkBffB5ye7GtUtiaJqdvRSPOU8tya+y9v0Jxx8b+WS1fuYvljbXX5HJxYbXX/iGPIodR9UiQNWBztKK7LMRhPIjKCugz12SI+jq2c0HL72zGWG5ce1PUlT1ObIPdX9KWkWxOEN8zZw0WYdOkk9W62f+89Lmf39LDI2J4fXnlNVN4TixmgAq35m2ri1lHY0wlFuDGv2yxySNmANU/LPxxh+fzQ0jYvC5pI/uZ+ETNMZjjsJZnDHx2GMjn6zWz/zwzza+/kM9xaeG1zWx0nVULV6DyjngKWsD6FEA1OzzoJM0YgHQa5/94h2Fpe4pUXb/qW8r9NZfSMaXVTmZqxnzThRDrl2Tkybs0EnyyWr9zI/+8X/+UmWYGI4AFbuhxGsGUPnv85ji68V7m6k4gi7dPqte0TO6nAhvz6qxM1mDys1ENGNmR9D0pAk7dJJ8shLufvDNs9HuJzUsC17KrJUfxG8/PUWsXrJ1fatYhCMPgMouun0yBlT8JznTrMmy+9G9pXgXr3r5+aVoDSr+0WvQ9KQJO3SSfLJSo/9SjOXzSymgm9pxVG/1lHzfiZW33MVjk9SkPKDDXu/y0OGPOvUYeHt29rMvxYAq5NJdvDxaPRsfK1ZF9Y+9fKmwi18NbhcfD5qJ4RhQ7Tue1oXxWZmhnPmxBm1S/vOgJ36rP3FXJ2st6ln8+fyH5R815OUIEN8qfNzuMj5u50gb/+Q0vDNE/AqA+vZhS84Q8avcFD+UU7z8zHKdfHeELXU1n44pv0nakrdB6/nsXIf69mFLTvDwL3zczrcPW7KKRThie1484U9Euo1Oyyf4vw/aNWX+9E3y1+3qN0mhdQw1Oi0fAMqs/CZJotn0obvQOoYanZYPAGVW+z9gG1rHUKPT8gGgzAKgNmLZKgKgBZVN8fX3mULrGGp0Wj4AlFkl90HjJWj6i0vb6s9MRQqtY6jRafkAUGaZPC9e/oYynjRn3RYANZHJ8+KlQntW52Di6CNSPgCUWSbPi5fSI2g4z4s/Ik9Lh6oBzf6Vp90r55K/phPGyDEYTBqdlg9GUGaZjqCBPS9+AEDHixxC4lOma9DoD/KOAKjLIgBaUN0uPv4DTvk/6RhExwDQQpFbTryp5tNM6fPio78zpRVExwDQQpFbTrxpSj9uB0ALRVaxCEcA1LFTtuhWsQhHANSxU7boVrEIR9ML6GDC6LR8ACizAKhjp2zRrWIRjgCoY6ds0a1iEY4AqGOnbNGtYhGOAKhjp2zRrWIRjqYT0AEALRRZxSIcAVC3TvmiW8UiHAFQt075olvFIhwBULdO+aJbxSIcAVC3TvmiW8UiHAFQt075olvFIhwBULdO+aJbxSIcAVC3TvmiW8UiHAFQt075olvFIhwBULdO+aJbxSIcAVC3TvmiW8UiHE0xoIPJotPyAaDMag9oCNKA+nYBMQgjqFunfNGtYhGOAKhbp3zRrWIRjgCoW6d80a1iEY4AqFunfNGtYhGOAKhbp3zRrWIRjgCoW6d80a1iEY4AqFunfNGtYhGOAKhbp3zRrWIRjgCoW6d80a1iEY6mEtABAC0WWcUiHAFQp05bFgHQggCoU6ctiwBoQQDUqdOWRQC0IADq1GnLIgBaEAB16rRlEQAtCIA6ddqyCIAWBECdOm1ZBEALAqBOnbYsAqAFAVCnTlsWAdCCAKhTpy2LAGhBANSp05ZFALSgaQZ0AEAzRVaxCEeNz+qU2r3S78cPO/YN6EUhAFpS5BASn6p72vFy9LRj+aTj3dcDedoxAAWgWunz4rclpqE8Lx6AAlCt3avZp8Tro9NCLLaqlQXUsxWIQdWAbl/IAHp4YzEu9zxyZPjECJotcgiJT5mNoPtvJnwCUIdFALQgkzWo2MUvp+WeOwaAAlAtOavrXXyOTwDqsAiAFtR4H1QMoo/6UuHs4gFoWZFjUHxp6n6SBEABaL08dwwABaD18twxABSA1stzxwBQAFovzx0DQAFovTx3DAAFoPXy3DEAFIDWy3PHAFAAWi/PHQNAAWi9PHcMAAWg9fLcMQAUgNbLc8cAUABaL88dA0ABaL08dwwABaD18twxABSA1stzx2QBHQDQtMgqFuEIgDpzSigCoAUBUGdOCUUAtKDpBvSiEi06LZ+45GIsAOpWAJTmFIAyqT2gnpXlMwLUj42L/i5+lDSFI2gBUFp0Wj4YQZkFQGlOASiTACjNKQBlEgClOQWgTAKgNKcAlEkAlOYUgDIJgNKcAlAmAVCaUwDKJABKcwpAmQRAaU4BKJMAKM0pAGUSAKU5BaBMAqA0pwCUSQCU5hSAMgmA0pwCUCYBUJpTAMokAEpzCkCZNN2ADgBoUmQVi3AEQGlOASiTugCo/BMj7aPT8gGgzAKgNKcAlEkdAHQAQAFoRlZak35ejs8Y0EHtiQB0itX4MFmt6LncUlZak34eAAWgWoc3lqPHcY9G2/3zADRXQgQ0cxoANVI1oPtv34sHzrvnfooRNF8CQJlUDeju1cej/bduRt9oQE8LsdiqVgFQ9S+/jVgspx1hVQO6faEIqJSVtzv9vHJACdFp+WAEZVa7EVTKSmvSzysHdFB3IgCdYhmtQQFooQSAMqluF7+Y7OIB6HgJAGVS431QjSYAHSsBoEya/p8kAdAPAWhWVlqTfh4ABaD1stKa9PPygA7ib9tHp+UDQJkFQGlOASiTACjNKQBlEgClOQWgTAKgNKcAlEldAXRQcyIAnWJNO6ADABoVWcUiHE0doBV8AlCrWIQjAEpzCkCZBEBpTgEokwAozSkAZRIApTkFoEwCoDSnAJRJAJTmFIAyCYDSnAJQJgFQmlMAyqTOADqoPhGATrG6A2jU624BvVhQsVKxzsUPAShV7QH1rDpA3V+9yJ5JnYvF19xb7YgwgrYykaUuXlpgBHUpANrKxBic4+vfXB0AakMAtJWJUjzHGAWgNjVtgFbyyQdopYNMHQBqSwC0lYkaPBNGAahNAdBWJhr4jI0AUGsCoK1MGPBZBumHAJQqANrChCmeVQKg7dUdQAfOAZ2Uz8QnADUXADU2YYlP7XXSdqjOp2MCoKYmbPI5UPt9AGogAGpmwjKeSgDUQADUyIQLPgdjPyJt1Q7V+XRMANTEhCM+C4gC0IKmDNC6vnYHqDs+xxAFoAUB0EYTTvHMIwpAC+oQoAM3gDrnc1D36yoAtPUZ7ZuuuShcQDnwlGrZDjX5dEwAtK4aE51KrdqhJp+OCYDWVGNCMxYALdF0AVrfwZYB5aEyJwBaUJcAHbSKXp8PC4+VORCa5ggCqp/VmT8aHQ1AWVCsT6Nt0xw9QA9vLEdPO06PpNo3XXOR4XlGXTspoAwEGqht0xxBQNPnxeeeHO8RULN+nQhQ5+C1FQCtfGX36uPR/ls3c0enhXKVeHurMZtJzw9OHUuHoGpAty/EWKZHUi2HPbu3mSxGH5Hy8eHUrMgxKL7UbgSVCq1jqNFHpHwAKLOmaQ0KQOuKHIPiS3W7+MVkF78Yxi7eanRaPgCUWY33QeXQGcx9UJvRafkAUGZN10+SbEan5QNAmQVAbcSyVQRAC5rgLyyfbq5iWstiKPoFp8cptdY0CoBOfqLTWgCUrEB7AYB2SgB08hOd1gKgEBSwACgUtAAoFLQAKBS0ACgUtIiAyt8Cyf+IvqhH/X7//L2GWoc3+uduNoWSkfr95aYL7l6R12uoVV7JIB+jdGzmY5SOYa3pFRHQR6J587+qVNTdZfm1oZaotH3hcVOo0ciglvzI6qOmWvtvLpdVMsjHKB2L+RilU5VPd0QDdPer31ke+5hoQYfvqo8419eSrzZWUjVEdzXUUp+rfvtefa3ow9djlQzyMUrHZj5G6VTk0yGRAD1892fiHZv/oH1BYtKR01h9rd2rP5FTYkMoITk8NF1QDzlNF1Sv5iuZ5GOUjs18jNIpz6dLIgH6aFFOKflfVSpo9/Wbctipr7V7RfV5QyjdW00XjNZh9bXUlHhuzJVJPkbpWM3HJJ3yfLokCqCiBw6bR1Clu8uEAa1EsgMaRy+B0Pb5e021rvS/9m7+gub5NKVjMx+zdMry6ZQogOpN6KLJuufucsMa9LtmS6i7i6PGlV00ihis/8ZWdub5NKVjMx/jdAxWqlOsCW4z5X9VqSDZwIc/vtdQ6+6yHsBqK0U7lIZa0ZBTX0ut7D5XCNWcj1k6FvMxSqcqn+7I7X3Q5luC4lWD23jR7NVQa9vkgqKSfJV0H7Q5us18jNKpyKc7wqBSHl0AAAHlSURBVE+SoKAFQKGgBUChoAVAoaAFQKGgBUChoAVA6dpbuCz/2Tp+q/TlnY9fH0Wvy8OP3su/fLByebTV683LGjMy2peuO/Q6tQKgdDUAGku/HuOaaDgjA8jivb9SAbZOPHTjc6oFQOmaCFA5YO584pYcR4fzqkQeQuMCoHSlgCr6xJedj39vTszaO+LLZYXk3kLv2L/J11X5mpzKhzPq5KEYLzWg0QCKIbRUAJSuEkDnBGPDnvyiCvcW5kUtdSiryLE0GicPVuZH0RQfDaAlqwAIgE4iMTwqZQEV9OkvCkk1uw8TQCXRYtTU50pO5SZJDKBrvWPXkzIoJwBKV9kUfz0aCPU3ch6XSMYviek9muFTGIfzooKa3dWoCuUFQOlqD+jOJ34d7YQSQPf+5qGopV4FoCUCoHQ1A6qm+K1kih8drHxZz/ApoGuXRzGgmOJLBEDpSgGVm6GDlWMFQPcWZuJNkq487M1EJ6/p0XLnU2ozr6Z4bJJKBEDpytwHlTeWvvKlAqDpbabrozXJptpAKel7SnpPP9SbpCFuMxUFQFkV7eFHZT/ZxI36MgFQVg3TbdBwZuw13KcvEwBllLqPH2t8wMSHRUoFQKGgBUChoAVAoaAFQKGgBUChoAVAoaAFQKGg9f+qAVMA2AJxDgAAAABJRU5ErkJggg==" /><!-- --></p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb34-1" title="1">hum.means &lt;-<span class="st"> </span>weather <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(location) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarise</span>(<span class="dt">average =</span> <span class="kw">mean</span>(humidity))</a>
+<a class="sourceLine" id="cb34-2" title="2"></a>
+<a class="sourceLine" id="cb34-3" title="3">g3 &lt;-<span class="st"> </span><span class="kw">ggplot</span>(weather, <span class="kw">aes</span>(<span class="dt">x =</span> location, <span class="dt">y =</span> humidity))</a>
+<a class="sourceLine" id="cb34-4" title="4"></a>
+<a class="sourceLine" id="cb34-5" title="5">g3 <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>(<span class="dt">fill =</span> <span class="st">&quot;grey&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(hum.means, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> location, <span class="dt">y =</span> average), <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">geom_line</span>(hum.means, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> location, <span class="dt">y =</span> average, <span class="dt">group =</span> <span class="dv">1</span>), <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">&quot;8 Day Forecast: Average Daily Humidity by Location&quot;</span>, <span class="dt">x =</span> <span class="st">&quot;Location (highest to lowest latitude)&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Average Daily Humidity (C)&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">coord_flip</span>()</a></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<p>This histogram and boxplot are very helpful in displaying how humidity varies by location. While Argentina and Maine consistently show lower humidity levels, Turks and Caicos is vary consistent in showing high humidity, while Colombia and Chile’s humidities are less consistent.</p>
+<p>To prepare for the next plot, I’ll convert all variables with timestamps to numeric variables of time since 00:00:00, calculated in minutes.</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb35-1" title="1">weather<span class="op">$</span>Sunrise &lt;-<span class="st"> </span><span class="kw">round</span>(<span class="dv">60</span> <span class="op">*</span><span class="st"> </span><span class="dv">24</span> <span class="op">*</span><span class="st"> </span><span class="kw">as.numeric</span>(<span class="kw">times</span>(weather<span class="op">$</span>Sunrise)),<span class="dt">digits =</span> <span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb35-2" title="2"></a>
+<a class="sourceLine" id="cb35-3" title="3">weather<span class="op">$</span>Sunset &lt;-<span class="st"> </span><span class="kw">round</span>(<span class="dv">60</span> <span class="op">*</span><span class="st"> </span><span class="dv">24</span> <span class="op">*</span><span class="st"> </span><span class="kw">as.numeric</span>(<span class="kw">times</span>(weather<span class="op">$</span>Sunset)),<span class="dt">digits =</span> <span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb35-4" title="4"></a>
+<a class="sourceLine" id="cb35-5" title="5">weather<span class="op">$</span>Moonrise &lt;-<span class="st"> </span><span class="kw">round</span>(<span class="dv">60</span> <span class="op">*</span><span class="st"> </span><span class="dv">24</span> <span class="op">*</span><span class="st"> </span><span class="kw">as.numeric</span>(<span class="kw">times</span>(weather<span class="op">$</span>Moonrise)), <span class="dt">digits =</span> <span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb35-6" title="6"></a>
+<a class="sourceLine" id="cb35-7" title="7">weather<span class="op">$</span>Moonset &lt;-<span class="st"> </span><span class="kw">round</span>(<span class="dv">60</span> <span class="op">*</span><span class="st"> </span><span class="dv">24</span> <span class="op">*</span><span class="st"> </span><span class="kw">as.numeric</span>(<span class="kw">times</span>(weather<span class="op">$</span>Moonset)), <span class="dt">digits =</span> <span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb35-8" title="8"></a>
+<a class="sourceLine" id="cb35-9" title="9">weather</a></code></pre></div>
+<pre><code>##          location Year Month Day Sunrise  Sunset Moonrise Moonset moon_phase
+## 1       Maine, US 2021    10   4  399.28 1093.52      247    1069       0.93
+## 2       Maine, US 2021    10   5  400.48 1091.70      322    1092       0.97
+## 3       Maine, US 2021    10   6  401.68 1089.88      398    1116       0.00
+## 4       Maine, US 2021    10   7  402.88 1088.08      476    1141       0.05
+## 5       Maine, US 2021    10   8  404.10 1086.30      555    1171       0.08
+## 6       Maine, US 2021    10   9  405.32 1084.52      636    1205       0.12
+## 7       Maine, US 2021    10  10  406.53 1082.75      716    1248       0.16
+## 8       Maine, US 2021    10  11  407.77 1081.00      789    1302       0.20
+## 9  Turks &amp; Caicos 2021    10   4  396.28 1109.38      282    1056       0.93
+## 10 Turks &amp; Caicos 2021    10   5  396.58 1108.48      341    1095       0.97
+## 11 Turks &amp; Caicos 2021    10   6  396.87 1107.57      400    1134       0.00
+## 12 Turks &amp; Caicos 2021    10   7  397.18 1106.67      462    1175       0.05
+## 13 Turks &amp; Caicos 2021    10   8  397.48 1105.78      525    1219       0.08
+## 14 Turks &amp; Caicos 2021    10   9  397.80 1104.92      591    1269       0.12
+## 15 Turks &amp; Caicos 2021    10  10  398.13 1104.03      658    1323       0.16
+## 16 Turks &amp; Caicos 2021    10  11  398.45 1103.18      723    1382       0.20
+## 17       Colombia 2021    10   4  396.75 1118.68      299    1053       0.93
+## 18       Colombia 2021    10   5  396.63 1118.17      351    1098       0.97
+## 19       Colombia 2021    10   6  396.53 1117.67      404    1144       0.00
+## 20       Colombia 2021    10   7  396.43 1117.17      458    1192       0.05
+## 21       Colombia 2021    10   8  396.35 1116.68      514    1243       0.08
+## 22       Colombia 2021    10   9  396.27 1116.20      574    1298       0.12
+## 23       Colombia 2021    10  10  396.20 1115.72      635    1356       0.16
+## 24       Colombia 2021    10  11  396.13 1115.27      699    1418       0.20
+## 25      Argentina 2021    10   4  357.07 1133.02      349     992       0.93
+## 26      Argentina 2021    10   5  354.80 1134.65      366    1074       0.97
+## 27      Argentina 2021    10   6  352.53 1136.32      383    1159       0.00
+## 28      Argentina 2021    10   7  350.28 1137.97      400    1246       0.04
+## 29      Argentina 2021    10   8  348.03 1139.63      419    1335       0.08
+## 30      Argentina 2021    10   9  345.80 1141.32      442    1140       0.12
+## 31      Argentina 2021    10  10  343.57 1143.00      474    1423       0.16
+## 32      Argentina 2021    10  11  341.35 1144.68      517      67       0.19
+## 33          Chile 2021    10   4  345.03 1128.42      349     976       0.93
+## 34          Chile 2021    10   5  342.47 1130.35      361    1064       0.97
+## 35          Chile 2021    10   6  339.92 1132.28      373    1154       0.00
+## 36          Chile 2021    10   7  337.38 1134.23      385    1247       0.04
+## 37          Chile 2021    10   8  334.85 1136.18      400    1341       0.08
+## 38          Chile 2021    10   9  332.33 1138.15      418    1140       0.12
+## 39          Chile 2021    10  10  329.82 1140.12      444    1436       0.16
+## 40          Chile 2021    10  11  327.30 1142.10      482      83       0.19
+##    pressure humidity dew_point wind_speed wind_deg wind_gust clouds  pop
+## 1      1021       50      5.14       2.52       36      8.33     83 0.29
+## 2      1026       69      7.40       1.41       20      1.70    100 0.11
+## 3      1027       53      9.79       1.65      351      2.54      7 0.00
+## 4      1024       53      9.11       1.67      338      2.52      0 0.00
+## 5      1019       54     10.29       3.25       56      9.55      7 0.00
+## 6      1031       63      4.80       2.56       72      6.38    100 0.00
+## 7      1031       60      6.36       3.22      186      5.36    100 0.00
+## 8      1024       68     10.37       5.05      208     10.67    100 0.00
+## 9      1014       74     23.78      10.18      119     10.94    100 1.00
+## 10     1015       72     23.15      11.44      100     12.42     75 1.00
+## 11     1016       73     23.58      11.28       99     12.36      8 0.55
+## 12     1016       73     23.30      10.03       92     10.91      6 0.79
+## 13     1014       76     23.82       7.80       99      8.09      4 0.57
+## 14     1014       77     24.25       8.30      119      8.74     99 0.97
+## 15     1014       74     23.54       8.35      122      8.53    100 1.00
+## 16     1014       73     23.21       7.99      130      8.15     96 0.52
+## 17     1013       58     13.69       2.96      103      4.12     89 0.77
+## 18     1014       74     15.74       2.72      110      4.23     92 1.00
+## 19     1016       87     15.12       2.45      117      4.31    100 0.95
+## 20     1015       58     13.00       3.38      106      4.79     74 0.80
+## 21     1014       56     12.91       2.53      101      3.40     88 1.00
+## 22     1017       83     14.25       1.59      246      2.24    100 0.99
+## 23     1016       80     16.42       1.92       99      2.37     75 1.00
+## 24     1016       79     15.49       1.68       90      2.27     97 1.00
+## 25     1007       41     -3.51      15.58      249     23.00     58 0.00
+## 26     1021       41     -4.90      13.76      234     19.32     36 0.00
+## 27     1012       42     -2.99      12.69      239     19.06    100 0.07
+## 28     1014       56      1.71      10.09      243     17.13    100 0.00
+## 29     1004       53      3.44      12.36      237     14.92    100 0.00
+## 30      996       44      3.27      16.68      240     22.57    100 0.26
+## 31     1007       65     -0.28      10.56      249     17.61    100 0.00
+## 32      999       43     -4.09      20.29      252     25.96     37 0.00
+## 33      997       66     -0.99      12.76      258     23.26     45 0.84
+## 34     1017       68     -0.82      10.20      236     17.31     38 0.92
+## 35     1001       62      2.25      10.47      254     17.99     27 0.96
+## 36     1008       54     -2.05       7.82      249     15.14     67 0.28
+## 37      993       73      3.32      10.68      247     17.47     99 0.68
+## 38      987       85      4.16       8.87      323     22.73    100 0.69
+## 39     1002       60     -1.33       8.03      269     15.56    100 0.63
+## 40      982       86      2.08      11.01      250     19.60     98 0.96
+##    mintemp maxtemp humidity.status cloud.coverage
+## 1     5.47   16.99             Low           High
+## 2     8.09   16.60          Medium           High
+## 3     7.91   20.93             Low            Low
+## 4     9.69   21.76             Low            Low
+## 5    10.12   22.75             Low            Low
+## 6     9.63   12.82          Medium           High
+## 7     8.57   15.30             Low           High
+## 8     8.85   17.69          Medium           High
+## 9    26.97   28.87          Medium           High
+## 10   28.37   28.82          Medium         Medium
+## 11   28.31   28.86          Medium            Low
+## 12   27.95   28.72          Medium            Low
+## 13   28.18   28.83          Medium            Low
+## 14   28.58   28.95          Medium           High
+## 15   27.60   28.76          Medium           High
+## 16   28.52   28.65          Medium           High
+## 17   12.85   21.67             Low           High
+## 18   12.82   19.49          Medium           High
+## 19   12.81   18.95            High           High
+## 20   11.97   22.82             Low         Medium
+## 21   12.58   21.10             Low           High
+## 22   13.13   21.39            High           High
+## 23   12.89   19.97          Medium         Medium
+## 24   13.35   18.80          Medium           High
+## 25    3.57    9.31             Low         Medium
+## 26    1.90    9.31             Low         Medium
+## 27    4.51   11.70             Low           High
+## 28    4.25   10.78             Low           High
+## 29    6.90   12.70             Low           High
+## 30    6.22   18.22             Low           High
+## 31    3.09    7.75          Medium           High
+## 32    4.83    9.73             Low         Medium
+## 33    2.21    5.49          Medium         Medium
+## 34    1.96    6.54          Medium         Medium
+## 35    1.41   10.11          Medium         Medium
+## 36    3.03    8.71             Low         Medium
+## 37    4.49    8.40          Medium           High
+## 38    2.31   10.19            High           High
+## 39    2.62    8.28             Low           High
+## 40    3.50    5.37            High           High
+</code></pre>
+<p>The scatterplot below allows us to look at how sunrise time changes over the course of 8 days in each location.</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb37-1" title="1">g4 &lt;-<span class="st"> </span><span class="kw">ggplot</span>(weather, <span class="kw">aes</span>(<span class="dt">x =</span> Day, <span class="dt">y =</span> Sunrise))</a>
+<a class="sourceLine" id="cb37-2" title="2"></a>
+<a class="sourceLine" id="cb37-3" title="3">g4 <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">color =</span> location)) <span class="op">+</span><span class="st"> </span><span class="kw">scale_color_discrete</span>(<span class="dt">name =</span> <span class="st">&quot;Location&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">&quot;8 Day Forecast for Sunrise Time by Location&quot;</span>, <span class="dt">x =</span> <span class="st">&quot;Day of the Month&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Sunrise Time (minutes after 12am)&quot;</span>)</a></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<p>I think this plot is especially cool to look at, since one can clearly distinguish which locations are in the southern hemisphere, and which are in the northern hemisphere. While the sun is rising increasingly later in the northern hemisphere, it’s rising increasingly earlier in the southern hemisphere.</p>
+<p>Lastly, we’ll explore the relationship between maximum daily temperature and daily pressure in the scatterplot below.</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb38-1" title="1">g5 &lt;-<span class="st"> </span><span class="kw">ggplot</span>(weather, <span class="kw">aes</span>(<span class="dt">x =</span> maxtemp, <span class="dt">y =</span> pressure))</a>
+<a class="sourceLine" id="cb38-2" title="2"></a>
+<a class="sourceLine" id="cb38-3" title="3">g5 <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">color =</span> location)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> lm, <span class="dt">formula =</span> y<span class="op">~</span><span class="kw">poly</span>(x,<span class="dv">2</span>), <span class="dt">color =</span> <span class="st">&quot;black&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">scale_color_discrete</span>(<span class="dt">name =</span> <span class="st">&quot;Location&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">&quot;8 Day Forecast: Maximum Daily Temperature vs. Daily Pressure&quot;</span>, <span class="dt">x =</span> <span class="st">&quot;Maximum Daily Temperature (C)&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Daily Pressure (millibars)&quot;</span>)</a></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<p>There seems to be a medium-strength, positive relationship between temperature and pressure. However, the data from the Turks and Caicos Islands appears to deviate slightly from the general trend, which is why I decided to fit a quadratic model. To fit a more accurate model, we may need to pull data from more locations from the API.</p>
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>Extracting data from an API follows a generally simple process, although different APIs have varying syntax for how to assemble the URL. Hopefully, this vignette was helpful in exemplifying how to access a typical API, clean the data, and perform a few basic analyses.</p>
+<p>To read my blog post about this project, visit <a href="http://atbiggie.github.io">http://atbiggie.github.io</a>.</p>
+
+</body>
+</html>
