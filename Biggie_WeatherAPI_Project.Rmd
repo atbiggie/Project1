@@ -25,12 +25,14 @@ In this document, we'll walk through how to connect to an API, using an example.
 
     + `tidyverse`  
     + `anytime`  
+    + `ggplot2`
 
 ```{r API packages, echo = FALSE, message=FALSE, warning=FALSE}
 library(httr)
 library(jsonlite)
 library(tidyverse)
 library(anytime)
+library(ggplot2)
 ```
 
 
@@ -154,7 +156,7 @@ Lastly, combine the nested `temp` dataframe with `Maine.day` to create a new dat
 
 
 ```{r}
-Maine.day1 <- data.frame(Maine.day, Maine.day$temp) %>% select(Year:moon_phase, pressure:wind_gust, clouds:rain, min, max) %>% rename(mintemp = min, maxtemp = max)
+Maine.day1 <- data.frame(Maine.day, Maine.day$temp) %>% select(Year:moon_phase, pressure:wind_gust, clouds, pop, min, max) %>% rename(mintemp = min, maxtemp = max)
 
 Maine.day1
 ```
@@ -182,7 +184,7 @@ Turks.day <- Turks.day %>% separate(moonrise, c("Date", "Moonrise"), sep = " ", 
 
 Turks.day <- Turks.day %>% separate(moonset, c("Date", "Moonset"), sep = " ", remove = TRUE) %>% subset(select = -Date)
 
-Turks.day1 <- data.frame(Turks.day, Turks.day$temp) %>% select(Year:moon_phase, pressure:wind_gust, clouds:rain, min, max) %>% rename(mintemp = min, maxtemp = max)
+Turks.day1 <- data.frame(Turks.day, Turks.day$temp) %>% select(Year:moon_phase, pressure:wind_gust, clouds, pop, min, max) %>% rename(mintemp = min, maxtemp = max)
 
 ```
 
@@ -207,7 +209,7 @@ Colombia.day <- Colombia.day %>% separate(moonrise, c("Date", "Moonrise"), sep =
 
 Colombia.day <- Colombia.day %>% separate(moonset, c("Date", "Moonset"), sep = " ", remove = TRUE) %>% subset(select = -Date)
 
-Colombia.day1 <- data.frame(Colombia.day, Colombia.day$temp) %>% select(Year:moon_phase, pressure:wind_gust, clouds:rain, min, max) %>% rename(mintemp = min, maxtemp = max)
+Colombia.day1 <- data.frame(Colombia.day, Colombia.day$temp) %>% select(Year:moon_phase, pressure:wind_gust, clouds, pop, min, max) %>% rename(mintemp = min, maxtemp = max)
 
 ```
 
@@ -233,7 +235,7 @@ Chile.day <- Chile.day %>% separate(moonrise, c("Date", "Moonrise"), sep = " ", 
 
 Chile.day <- Chile.day %>% separate(moonset, c("Date", "Moonset"), sep = " ", remove = TRUE) %>% subset(select = -Date)
 
-Chile.day1 <- data.frame(Chile.day, Chile.day$temp) %>% select(Year:moon_phase, pressure:wind_gust, clouds:uvi, min, max) %>% rename(mintemp = min, maxtemp = max)
+Chile.day1 <- data.frame(Chile.day, Chile.day$temp) %>% select(Year:moon_phase, pressure:wind_gust, clouds, pop, min, max) %>% rename(mintemp = min, maxtemp = max)
 
 ```
 
@@ -258,7 +260,7 @@ Argentina.day <- Argentina.day %>% separate(moonrise, c("Date", "Moonrise"), sep
 
 Argentina.day <- Argentina.day %>% separate(moonset, c("Date", "Moonset"), sep = " ", remove = TRUE) %>% subset(select = -Date)
 
-Argentina.day1 <- data.frame(Argentina.day, Argentina.day$temp) %>% select(Year:moon_phase, pressure:wind_gust, clouds:uvi, min, max) %>% rename(mintemp = min, maxtemp = max)
+Argentina.day1 <- data.frame(Argentina.day, Argentina.day$temp) %>% select(Year:moon_phase, pressure:wind_gust, clouds, pop, min, max) %>% rename(mintemp = min, maxtemp = max)
 
 ```
 
@@ -268,5 +270,102 @@ Colombia.day1
 Chile.day1
 Argentina.day1
 ```
+
+
+Now, let's combine all datasets into one called `weather`, creating a new variable called `location`.  
+
+```{r}
+Maine.day1 <- Maine.day1 %>% mutate(location = "Maine, US")
+Turks.day1 <- Turks.day1 %>% mutate(location = "Turks & Caicos")
+Colombia.day1 <- Colombia.day1 %>% mutate(location = "Colombia")
+Chile.day1 <- Chile.day1 %>% mutate(location = "Chile")
+Argentina.day1 <- Argentina.day1 %>% mutate(location = "Argentina")
+
+weather <- rbind(Maine.day1, Turks.day1, Colombia.day1, Chile.day1, Argentina.day1) %>% relocate(location, .before = Year)
+
+weather
+```
+
+
+### Create New Variables  
+
+I'm interested in converting `humidity` and `clouds` into categorical variables with different levels.  
+
+I'll begin with humidity. Lets say that if `humidity` $\le$ 60, there is low humidity, if 60 < `humidity` $\le$ 80, there is medium humidity, and if `humidity` > 80, there is high humidity.  
+
+```{r humidity status}
+weather <- weather %>% mutate(humidity.status = as.factor(ifelse(humidity > 80, "High", ifelse(humidity >60, "Medium", "Low"))))
+
+weather$humidity.status <- ordered(weather$humidity.status, levels = c("Low", "Medium", "High"))
+
+weather
+```
+
+
+Great! Now let's look at `clouds`. If `clouds` $\le$ 25, then cloud coverage is low. If `clouds` > 75 then cloud coverage is high, and anything in between is medium.  
+
+
+```{r cloud coverage}
+weather <- weather %>% mutate(cloud.coverage = as.factor(ifelse(clouds > 75, "High", ifelse(clouds > 25, "Medium", "Low"))))
+
+weather$cloud.coverage <- ordered(weather$cloud.coverage, levels = c("Low", "Medium", "High"))
+
+weather
+```
+
+
+### Contingency Tables  
+
+```{r}
+tabz1 <- table(weather$humidity.status, weather$cloud.coverage, deparse.level = 2)
+
+tabz1
+
+tabz2 <- table(weather$humidity.status, weather$cloud.coverage, weather$location, deparse.level = 2)
+
+tabz2
+```
+
+
+### Numerical Summaries  
+
+```{r}
+weather$location <- ordered(weather$location, levels = c("Argentina", "Chile", "Colombia", "Turks & Caicos", "Maine, US"))
+
+weather %>% group_by(location) %>% summarise(avghigh = mean(maxtemp), avglow = mean(mintemp), sdhigh = sd(maxtemp), sdlow = sd(mintemp), IQR = IQR(maxtemp))
+```
+
+
+```{r}
+weather %>% group_by(location) %>% summarise(avg_humidity = mean(humidity), sd.humidity = sd(humidity))
+```
+
+
+### Data Visualization  
+
+```{r}
+max.means <- weather %>% group_by(location) %>% summarise(average = mean(maxtemp)) 
+
+g <- ggplot(weather, aes(x = location, y = maxtemp))
+
+g + geom_boxplot(fill = "grey") + geom_point(max.means, mapping = aes(x = location, y = average), color = "purple") + geom_line(max.means, mapping = aes(x = location, y = average, group = 1), color = "purple") + labs(title = "8 Day Forecast: Maximum Daily Temperature",x = "Location (highest to lowest latitude)", y = "Maximum Daily Temperature (C)") + coord_flip()
+```
+
+
+```{r}
+min.means <- weather %>% group_by(location) %>% summarise(average = mean(mintemp))
+
+g1 <- ggplot(weather, aes(x = location, y = mintemp))
+
+g1 + geom_boxplot(fill = "grey") + geom_point(min.means, mapping = aes(x = location, y = average), color = "green") + geom_line(min.means, mapping = aes(x = location, y = average, group = 1), color = "green") + labs(title = "8 Day Forecast: Minimum Daily Temperature", x = "Location (highest to lowest latitude)", y = "Minimum Daily Temperature (C)") + coord_flip()
+```
+
+
+
+
+
+
+
+
 
 
