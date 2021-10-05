@@ -281,13 +281,6 @@ Argentina.day1 <- data.frame(Argentina.day, Argentina.day$temp) %>% select(Year:
 
 ```
 
-```{r return all datasets}
-Turks.day1
-Colombia.day1
-Chile.day1
-Argentina.day1
-```
-
 
 Now, let's combine all datasets into one called `weather`, creating a new variable called `location`.  
 
@@ -300,7 +293,6 @@ Argentina.day1 <- Argentina.day1 %>% mutate(location = "Argentina")
 
 weather <- rbind(Maine.day1, Turks.day1, Colombia.day1, Argentina.day1, Chile.day1) %>% relocate(location, .before = Year)
 
-weather
 ```
 
 
@@ -315,7 +307,6 @@ weather <- weather %>% mutate(humidity.status = as.factor(ifelse(humidity > 80, 
 
 weather$humidity.status <- ordered(weather$humidity.status, levels = c("Low", "Medium", "High"))
 
-weather
 ```
 
 
@@ -327,6 +318,11 @@ weather <- weather %>% mutate(cloud.coverage = as.factor(ifelse(clouds > 75, "Hi
 
 weather$cloud.coverage <- ordered(weather$cloud.coverage, levels = c("Low", "Medium", "High"))
 
+```
+
+
+Here's our cleaned dataset:  
+```{r final dataset}
 weather
 ```
 
