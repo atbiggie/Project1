@@ -1,3 +1,16 @@
+<head>
+  <script src="https://rstudio.github.io/leaflet/libs/jquery/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://rstudio.github.io/leaflet/libs/bootstrap/css/flatly.min.css" rel="stylesheet" />
+  
+  ...
+  <!--more libraries-->
+  ...
+  
+  <link     href="https://rstudio.github.io/leaflet/libs/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
+  <script src= "https://rstudio.github.io/leaflet/libs/leaflet-binding/leaflet.js"></script>
+</head>
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/atbiggie/Project1/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
