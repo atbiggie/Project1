@@ -127,8 +127,8 @@ analysis.
 I want to explore the weather data of five locations that lie roughly
 along the same line of longitude.
 
-<div id="htmlwidget-116c7f329340cd6e3486" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-116c7f329340cd6e3486">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"setView":[[0,-80],1,[]],"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[44.19,21.28,7.54,-55.05,-51.38],[-69.47,-71.08,-72.3,-67.05,-69.13],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["Augusta, Maine, US","Cockburn Town, Turks & Caicos Islands","Cucata, Colombia","Puerto Toro, Chile","Rio Gallegos, Argentina"],null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-55.05,44.19],"lng":[-72.3,-67.05]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-85167aa837883dbf967e" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-85167aa837883dbf967e">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"setView":[[0,-80],1,[]],"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[44.19,21.28,7.54,-55.05,-51.38],[-69.47,-71.08,-72.3,-67.05,-69.13],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["Augusta, Maine, US","Cockburn Town, Turks & Caicos Islands","Cucata, Colombia","Puerto Toro, Chile","Rio Gallegos, Argentina"],null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-55.05,44.19],"lng":[-72.3,-67.05]}},"evals":[],"jsHooks":[]}</script>
 
 Locations:
 
@@ -158,7 +158,7 @@ Maine.day
     ## 7 1633968000 1633949266 1633989660 1633972140 1634002920
     ## 8 1634054400 1634035740 1634075955 1634062320 1634093100
     ##   moon_phase temp.day temp.min temp.max temp.night temp.eve
-    ## 1       0.97    17.91     7.96    19.43      10.58    13.11
+    ## 1       0.97    17.91     7.96    19.43      10.37    13.11
     ## 2       0.00    20.26     8.60    21.52      11.16    15.22
     ## 3       0.05    20.83     9.90    21.79      11.91    15.33
     ## 4       0.08    20.83     9.99    21.93      12.22    19.40
@@ -167,7 +167,7 @@ Maine.day
     ## 7       0.20    18.76     9.66    21.78      15.50    18.94
     ## 8       0.25    23.38    14.01    23.38      14.01    20.06
     ##   temp.morn feels_like.day feels_like.night feels_like.eve
-    ## 1      8.29          17.17            10.10          12.57
+    ## 1      8.29          17.17             9.89          12.57
     ## 2      8.60          19.67            10.73          14.78
     ## 3      9.92          20.38            11.64          14.96
     ## 4     10.07          20.27            11.33          19.09
@@ -344,22 +344,22 @@ weather
     ## 22       Colombia 2021    10  10 06:36:12 18:35:43 10:35:00
     ## 23       Colombia 2021    10  11 06:36:08 18:35:16 11:39:00
     ## 24       Colombia 2021    10  12 06:36:05 18:34:48 12:40:00
-    ## 25      Argentina 2021    10   5 05:54:48 18:54:39 06:06:00
-    ## 26      Argentina 2021    10   6 05:52:32 18:56:19 06:23:00
-    ## 27      Argentina 2021    10   7 05:50:17 18:57:58 06:40:00
-    ## 28      Argentina 2021    10   8 05:48:02 18:59:38 06:59:00
-    ## 29      Argentina 2021    10   9 05:45:48 19:01:19 07:22:00
-    ## 30      Argentina 2021    10  10 05:43:34 19:03:00 07:54:00
-    ## 31      Argentina 2021    10  11 05:41:21 19:04:41 08:37:00
-    ## 32      Argentina 2021    10  12 05:39:09 19:06:23 09:34:00
-    ## 33          Chile 2021    10   5 05:42:28 18:50:21 06:01:00
-    ## 34          Chile 2021    10   6 05:39:55 18:52:17 06:13:00
-    ## 35          Chile 2021    10   7 05:37:23 18:54:14 06:25:00
-    ## 36          Chile 2021    10   8 05:34:51 18:56:11 06:40:00
-    ## 37          Chile 2021    10   9 05:32:20 18:58:09 06:58:00
-    ## 38          Chile 2021    10  10 05:29:49 19:00:07 07:24:00
-    ## 39          Chile 2021    10  11 05:27:18 19:02:06 08:02:00
-    ## 40          Chile 2021    10  12 05:24:49 19:04:05 08:57:00
+    ## 25      Argentina 2021    10   6 05:52:32 18:56:19 06:23:00
+    ## 26      Argentina 2021    10   7 05:50:17 18:57:58 06:40:00
+    ## 27      Argentina 2021    10   8 05:48:02 18:59:38 06:59:00
+    ## 28      Argentina 2021    10   9 05:45:48 19:01:19 07:22:00
+    ## 29      Argentina 2021    10  10 05:43:34 19:03:00 07:54:00
+    ## 30      Argentina 2021    10  11 05:41:21 19:04:41 08:37:00
+    ## 31      Argentina 2021    10  12 05:39:09 19:06:23 09:34:00
+    ## 32      Argentina 2021    10  13 05:36:57 19:08:05 10:44:00
+    ## 33          Chile 2021    10   6 05:39:55 18:52:17 06:13:00
+    ## 34          Chile 2021    10   7 05:37:23 18:54:14 06:25:00
+    ## 35          Chile 2021    10   8 05:34:51 18:56:11 06:40:00
+    ## 36          Chile 2021    10   9 05:32:20 18:58:09 06:58:00
+    ## 37          Chile 2021    10  10 05:29:49 19:00:07 07:24:00
+    ## 38          Chile 2021    10  11 05:27:18 19:02:06 08:02:00
+    ## 39          Chile 2021    10  12 05:24:49 19:04:05 08:57:00
+    ## 40          Chile 2021    10  13 05:22:19 19:06:05 10:09:00
     ##     Moonset moon_phase pressure humidity dew_point
     ## 1  18:12:00       0.97     1024       54      8.24
     ## 2  18:36:00       0.00     1027       51      9.69
@@ -385,22 +385,22 @@ weather
     ## 22 22:36:00       0.16     1015       66     14.73
     ## 23 23:38:00       0.20     1016       77     15.67
     ## 24 19:00:00       0.25     1016       73     15.98
-    ## 25 17:54:00       0.97     1021       45     -3.92
-    ## 26 19:19:00       0.00     1010       39     -4.04
-    ## 27 20:46:00       0.04     1014       59      1.03
-    ## 28 22:15:00       0.08     1000       43      2.19
-    ## 29 19:00:00       0.12      997       46      3.73
-    ## 30 23:43:00       0.16     1006       62      2.28
-    ## 31 01:07:00       0.19     1007       42     -2.38
-    ## 32 02:18:00       0.23      988       38     -1.03
-    ## 33 17:44:00       0.97     1017       66     -1.15
-    ## 34 19:14:00       0.00     1001       59      1.10
-    ## 35 20:47:00       0.04     1008       58     -0.61
-    ## 36 22:21:00       0.08      989       59      2.31
-    ## 37 19:00:00       0.12      988       85      3.47
-    ## 38 23:56:00       0.16     1000       61     -0.51
-    ## 39 01:23:00       0.19     1000       55     -0.98
-    ## 40 02:37:00       0.23      986       63      2.60
+    ## 25 19:19:00       0.00     1010       39     -4.04
+    ## 26 20:46:00       0.04     1014       59      1.03
+    ## 27 22:15:00       0.08     1000       43      2.19
+    ## 28 19:00:00       0.12      997       46      3.73
+    ## 29 23:43:00       0.16     1006       62      2.28
+    ## 30 01:07:00       0.19     1007       42     -2.38
+    ## 31 02:18:00       0.23      988       38     -1.03
+    ## 32 03:13:00       0.25      992       41     -4.98
+    ## 33 19:14:00       0.00     1001       59      1.10
+    ## 34 20:47:00       0.04     1008       58     -0.61
+    ## 35 22:21:00       0.08      989       59      2.31
+    ## 36 19:00:00       0.12      988       85      3.47
+    ## 37 23:56:00       0.16     1000       61     -0.51
+    ## 38 01:23:00       0.19     1000       55     -0.98
+    ## 39 02:37:00       0.23      986       63      2.60
+    ## 40 03:30:00       0.25      984       53     -3.25
     ##    wind_speed wind_deg wind_gust clouds  pop mintemp maxtemp
     ## 1        1.89       23      3.60     94 0.04    7.96   19.43
     ## 2        1.87      345      3.02      4 0.00    8.60   21.52
@@ -426,22 +426,22 @@ weather
     ## 22       1.83      111      2.81     43 1.00   12.73   20.25
     ## 23       1.97      109      3.03     94 1.00   12.55   19.68
     ## 24       2.15      106      2.98    100 1.00   14.04   20.23
-    ## 25      12.91      223     18.57     36 0.00    1.96    8.99
-    ## 26      14.48      241     20.62    100 0.20    1.34   12.61
-    ## 27      13.21      242     18.16     43 0.00    3.24    9.67
-    ## 28      13.13      230     16.16    100 0.00    6.48   14.69
-    ## 29      13.20      318     21.65    100 0.35    5.83   16.58
-    ## 30      10.85       25     13.41     12 0.89    3.94   12.20
-    ## 31       6.71       25      8.64     81 0.00    5.28   11.35
-    ## 32      11.42      332     15.32    100 0.01    6.66   14.54
-    ## 33      10.51      226     16.68     33 0.83    1.84    6.24
-    ## 34       7.10      244     13.10     96 0.90    1.85    9.94
-    ## 35       8.44      236     14.17     98 0.00    1.95    8.16
-    ## 36      10.15      257     19.04     99 0.60    4.42   10.65
-    ## 37       8.70      333     20.81    100 0.64    2.05    9.95
-    ## 38      10.79      322     21.31     17 0.13    2.07    8.73
-    ## 39       8.14      330     15.48     59 0.07    3.08    8.76
-    ## 40       5.21      359     10.83    100 0.00    3.99   11.44
+    ## 25      14.48      241     20.62    100 0.20    1.34   12.61
+    ## 26      13.21      242     18.16     43 0.00    3.24    9.67
+    ## 27      13.13      230     16.16    100 0.00    6.48   14.69
+    ## 28      13.20      318     21.65    100 0.35    5.83   16.58
+    ## 29      10.85       25     13.41     12 0.89    3.94   12.20
+    ## 30       6.71       25      8.64     81 0.00    5.28   11.35
+    ## 31      11.42      332     15.32    100 0.01    6.66   14.54
+    ## 32      12.41      251     16.71      5 0.39    3.21    8.22
+    ## 33       7.10      244     13.10     96 0.90    1.85    9.94
+    ## 34       8.44      236     14.17     98 0.00    1.95    8.16
+    ## 35      10.15      257     19.04     99 0.60    4.42   10.65
+    ## 36       8.70      333     20.81    100 0.64    2.05    9.95
+    ## 37      10.79      322     21.31     17 0.13    2.07    8.73
+    ## 38       8.14      330     15.48     59 0.07    3.08    8.76
+    ## 39       5.21      359     10.83    100 0.00    3.99   11.44
+    ## 40       7.81      320     13.95     96 0.84    1.52    6.84
     ##    humidity.status cloud.coverage
     ## 1              Low           High
     ## 2              Low            Low
@@ -467,22 +467,22 @@ weather
     ## 22          Medium         Medium
     ## 23          Medium           High
     ## 24          Medium           High
-    ## 25             Low         Medium
-    ## 26             Low           High
-    ## 27             Low         Medium
+    ## 25             Low           High
+    ## 26             Low         Medium
+    ## 27             Low           High
     ## 28             Low           High
-    ## 29             Low           High
-    ## 30          Medium            Low
+    ## 29          Medium            Low
+    ## 30             Low           High
     ## 31             Low           High
-    ## 32             Low           High
-    ## 33          Medium         Medium
+    ## 32             Low            Low
+    ## 33             Low           High
     ## 34             Low           High
     ## 35             Low           High
-    ## 36             Low           High
-    ## 37            High           High
-    ## 38          Medium            Low
-    ## 39             Low         Medium
-    ## 40          Medium           High
+    ## 36            High           High
+    ## 37          Medium            Low
+    ## 38             Low         Medium
+    ## 39          Medium           High
+    ## 40             Low           High
 
 ### Contingency Tables
 
@@ -498,8 +498,8 @@ tabz1
 
     ##                        weather$cloud.coverage
     ## weather$humidity.status Low Medium High
-    ##                  Low      3      4   11
-    ##                  Medium   7      3    9
+    ##                  Low      4      3   12
+    ##                  Medium   7      2    9
     ##                  High     0      0    3
 
 It looks like there were 10 forecast observations that predicted high
@@ -521,7 +521,7 @@ tabz2
     ## 
     ##                        weather$cloud.coverage
     ## weather$humidity.status Low Medium High
-    ##                  Low      0      2    5
+    ##                  Low      1      1    5
     ##                  Medium   1      0    0
     ##                  High     0      0    0
     ## 
@@ -529,8 +529,8 @@ tabz2
     ## 
     ##                        weather$cloud.coverage
     ## weather$humidity.status Low Medium High
-    ##                  Low      0      1    3
-    ##                  Medium   1      1    1
+    ##                  Low      0      1    4
+    ##                  Medium   1      0    1
     ##                  High     0      0    1
     ## 
     ## , , weather$location = Colombia
@@ -586,8 +586,8 @@ weather %>% group_by(location) %>% summarise(avghigh = mean(maxtemp), avglow = m
     ## # A tibble: 5 x 6
     ##   location       avghigh avglow sdhigh sdlow   IQR
     ##   <ord>            <dbl>  <dbl>  <dbl> <dbl> <dbl>
-    ## 1 Chile             9.23   2.66  1.62  1.04  1.54 
-    ## 2 Argentina        12.6    4.34  2.60  2.04  3.65 
+    ## 1 Chile             9.31   2.62  1.47  1.08  1.54 
+    ## 2 Argentina        12.5    4.50  2.76  1.87  3.65 
     ## 3 Colombia         20.4   12.9   1.12  0.607 0.565
     ## 4 Turks & Caicos   28.7   28.3   0.107 0.239 0.105
     ## 5 Maine, US        20.0    9.10  3.19  2.47  3.23
@@ -606,8 +606,8 @@ weather %>% group_by(location) %>% summarise(avg_humidity = mean(humidity), sd.h
     ## # A tibble: 5 x 3
     ##   location       avg_humidity sd.humidity
     ##   <ord>                 <dbl>       <dbl>
-    ## 1 Chile                  63.2        9.39
-    ## 2 Argentina              46.8        8.94
+    ## 1 Chile                  61.6        9.96
+    ## 2 Argentina              46.2        9.16
     ## 3 Colombia               70.4       11.3 
     ## 4 Turks & Caicos         75.5        1.41
     ## 5 Maine, US              57.6        6.78
@@ -741,22 +741,22 @@ weather
     ## 22       Colombia 2021    10  10  396.20 1115.72      635
     ## 23       Colombia 2021    10  11  396.13 1115.27      699
     ## 24       Colombia 2021    10  12  396.08 1114.80      760
-    ## 25      Argentina 2021    10   5  354.80 1134.65      366
-    ## 26      Argentina 2021    10   6  352.53 1136.32      383
-    ## 27      Argentina 2021    10   7  350.28 1137.97      400
-    ## 28      Argentina 2021    10   8  348.03 1139.63      419
-    ## 29      Argentina 2021    10   9  345.80 1141.32      442
-    ## 30      Argentina 2021    10  10  343.57 1143.00      474
-    ## 31      Argentina 2021    10  11  341.35 1144.68      517
-    ## 32      Argentina 2021    10  12  339.15 1146.38      574
-    ## 33          Chile 2021    10   5  342.47 1130.35      361
-    ## 34          Chile 2021    10   6  339.92 1132.28      373
-    ## 35          Chile 2021    10   7  337.38 1134.23      385
-    ## 36          Chile 2021    10   8  334.85 1136.18      400
-    ## 37          Chile 2021    10   9  332.33 1138.15      418
-    ## 38          Chile 2021    10  10  329.82 1140.12      444
-    ## 39          Chile 2021    10  11  327.30 1142.10      482
-    ## 40          Chile 2021    10  12  324.82 1144.08      537
+    ## 25      Argentina 2021    10   6  352.53 1136.32      383
+    ## 26      Argentina 2021    10   7  350.28 1137.97      400
+    ## 27      Argentina 2021    10   8  348.03 1139.63      419
+    ## 28      Argentina 2021    10   9  345.80 1141.32      442
+    ## 29      Argentina 2021    10  10  343.57 1143.00      474
+    ## 30      Argentina 2021    10  11  341.35 1144.68      517
+    ## 31      Argentina 2021    10  12  339.15 1146.38      574
+    ## 32      Argentina 2021    10  13  336.95 1148.08      644
+    ## 33          Chile 2021    10   6  339.92 1132.28      373
+    ## 34          Chile 2021    10   7  337.38 1134.23      385
+    ## 35          Chile 2021    10   8  334.85 1136.18      400
+    ## 36          Chile 2021    10   9  332.33 1138.15      418
+    ## 37          Chile 2021    10  10  329.82 1140.12      444
+    ## 38          Chile 2021    10  11  327.30 1142.10      482
+    ## 39          Chile 2021    10  12  324.82 1144.08      537
+    ## 40          Chile 2021    10  13  322.32 1146.08      609
     ##    Moonset moon_phase pressure humidity dew_point wind_speed
     ## 1     1092       0.97     1024       54      8.24       1.89
     ## 2     1116       0.00     1027       51      9.69       1.87
@@ -782,22 +782,22 @@ weather
     ## 22    1356       0.16     1015       66     14.73       1.83
     ## 23    1418       0.20     1016       77     15.67       1.97
     ## 24    1140       0.25     1016       73     15.98       2.15
-    ## 25    1074       0.97     1021       45     -3.92      12.91
-    ## 26    1159       0.00     1010       39     -4.04      14.48
-    ## 27    1246       0.04     1014       59      1.03      13.21
-    ## 28    1335       0.08     1000       43      2.19      13.13
-    ## 29    1140       0.12      997       46      3.73      13.20
-    ## 30    1423       0.16     1006       62      2.28      10.85
-    ## 31      67       0.19     1007       42     -2.38       6.71
-    ## 32     138       0.23      988       38     -1.03      11.42
-    ## 33    1064       0.97     1017       66     -1.15      10.51
-    ## 34    1154       0.00     1001       59      1.10       7.10
-    ## 35    1247       0.04     1008       58     -0.61       8.44
-    ## 36    1341       0.08      989       59      2.31      10.15
-    ## 37    1140       0.12      988       85      3.47       8.70
-    ## 38    1436       0.16     1000       61     -0.51      10.79
-    ## 39      83       0.19     1000       55     -0.98       8.14
-    ## 40     157       0.23      986       63      2.60       5.21
+    ## 25    1159       0.00     1010       39     -4.04      14.48
+    ## 26    1246       0.04     1014       59      1.03      13.21
+    ## 27    1335       0.08     1000       43      2.19      13.13
+    ## 28    1140       0.12      997       46      3.73      13.20
+    ## 29    1423       0.16     1006       62      2.28      10.85
+    ## 30      67       0.19     1007       42     -2.38       6.71
+    ## 31     138       0.23      988       38     -1.03      11.42
+    ## 32     193       0.25      992       41     -4.98      12.41
+    ## 33    1154       0.00     1001       59      1.10       7.10
+    ## 34    1247       0.04     1008       58     -0.61       8.44
+    ## 35    1341       0.08      989       59      2.31      10.15
+    ## 36    1140       0.12      988       85      3.47       8.70
+    ## 37    1436       0.16     1000       61     -0.51      10.79
+    ## 38      83       0.19     1000       55     -0.98       8.14
+    ## 39     157       0.23      986       63      2.60       5.21
+    ## 40     210       0.25      984       53     -3.25       7.81
     ##    wind_deg wind_gust clouds  pop mintemp maxtemp
     ## 1        23      3.60     94 0.04    7.96   19.43
     ## 2       345      3.02      4 0.00    8.60   21.52
@@ -823,22 +823,22 @@ weather
     ## 22      111      2.81     43 1.00   12.73   20.25
     ## 23      109      3.03     94 1.00   12.55   19.68
     ## 24      106      2.98    100 1.00   14.04   20.23
-    ## 25      223     18.57     36 0.00    1.96    8.99
-    ## 26      241     20.62    100 0.20    1.34   12.61
-    ## 27      242     18.16     43 0.00    3.24    9.67
-    ## 28      230     16.16    100 0.00    6.48   14.69
-    ## 29      318     21.65    100 0.35    5.83   16.58
-    ## 30       25     13.41     12 0.89    3.94   12.20
-    ## 31       25      8.64     81 0.00    5.28   11.35
-    ## 32      332     15.32    100 0.01    6.66   14.54
-    ## 33      226     16.68     33 0.83    1.84    6.24
-    ## 34      244     13.10     96 0.90    1.85    9.94
-    ## 35      236     14.17     98 0.00    1.95    8.16
-    ## 36      257     19.04     99 0.60    4.42   10.65
-    ## 37      333     20.81    100 0.64    2.05    9.95
-    ## 38      322     21.31     17 0.13    2.07    8.73
-    ## 39      330     15.48     59 0.07    3.08    8.76
-    ## 40      359     10.83    100 0.00    3.99   11.44
+    ## 25      241     20.62    100 0.20    1.34   12.61
+    ## 26      242     18.16     43 0.00    3.24    9.67
+    ## 27      230     16.16    100 0.00    6.48   14.69
+    ## 28      318     21.65    100 0.35    5.83   16.58
+    ## 29       25     13.41     12 0.89    3.94   12.20
+    ## 30       25      8.64     81 0.00    5.28   11.35
+    ## 31      332     15.32    100 0.01    6.66   14.54
+    ## 32      251     16.71      5 0.39    3.21    8.22
+    ## 33      244     13.10     96 0.90    1.85    9.94
+    ## 34      236     14.17     98 0.00    1.95    8.16
+    ## 35      257     19.04     99 0.60    4.42   10.65
+    ## 36      333     20.81    100 0.64    2.05    9.95
+    ## 37      322     21.31     17 0.13    2.07    8.73
+    ## 38      330     15.48     59 0.07    3.08    8.76
+    ## 39      359     10.83    100 0.00    3.99   11.44
+    ## 40      320     13.95     96 0.84    1.52    6.84
     ##    humidity.status cloud.coverage
     ## 1              Low           High
     ## 2              Low            Low
@@ -864,22 +864,22 @@ weather
     ## 22          Medium         Medium
     ## 23          Medium           High
     ## 24          Medium           High
-    ## 25             Low         Medium
-    ## 26             Low           High
-    ## 27             Low         Medium
+    ## 25             Low           High
+    ## 26             Low         Medium
+    ## 27             Low           High
     ## 28             Low           High
-    ## 29             Low           High
-    ## 30          Medium            Low
+    ## 29          Medium            Low
+    ## 30             Low           High
     ## 31             Low           High
-    ## 32             Low           High
-    ## 33          Medium         Medium
+    ## 32             Low            Low
+    ## 33             Low           High
     ## 34             Low           High
     ## 35             Low           High
-    ## 36             Low           High
-    ## 37            High           High
-    ## 38          Medium            Low
-    ## 39             Low         Medium
-    ## 40          Medium           High
+    ## 36            High           High
+    ## 37          Medium            Low
+    ## 38             Low         Medium
+    ## 39          Medium           High
+    ## 40             Low           High
 
 The scatterplot below allows us to look at how sunrise time changes over
 the course of 8 days in each location.
