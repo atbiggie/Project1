@@ -5,9 +5,6 @@ date: "10/3/2021"
 output: 
   github_document:
     html_preview: FALSE
-    includes:
-      in_header: header.html
-always_allow_html: TRUE
 ---
 
 ```{r setup, include=FALSE}
@@ -114,18 +111,18 @@ Now that we can easily access the API, let's do some exploratory data analysis.
 
 I want to explore the weather data of five locations that lie roughly along the same line of longitude.   
 
-```{r map, echo=FALSE}
-leaflet() %>% setView(lng = -80, lat = 0, zoom = 1) %>% addTiles() %>% addMarkers(c(-69.47, -71.08, -72.3, -67.05, -69.13), c(44.19, 21.28, 7.54, -55.05, -51.38), popup = c("Augusta, Maine, US", "Cockburn Town, Turks & Caicos Islands", "Cucata, Colombia", "Puerto Toro, Chile", "Rio Gallegos, Argentina"))
-```
- 
-
 Locations:  
 
 * 44.19'N, 69.47'W (Augusta, Maine, US)  
 * 21.28'N, 71.08'W (Cockburn Town, Turks & Caicos Islands, UK)  
 * 7.54'N, 72.3'W (Cucata, Colombia)  
 * 51.38'S, 69.13'W (Rio Gallegos, Argentina) 
-* 55.05'S, 67.05'W (Puerto Toro, Chile)  
+* 55.05'S, 67.05'W (Puerto Williams, Chile)  
+
+```{r location map, echo=FALSE}
+knitr::include_graphics("locationmap.jpg")
+```
+
 
 ```{r Maine API display, eval=FALSE, echo=TRUE}
 Maine <- weather.api(latitude = "44.19", longitude = "-69.47", api.id = "input_your_key", exclude = "current, minutely, hourly")

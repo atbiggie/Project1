@@ -3,20 +3,6 @@ How to Access an API with an Example
 Autumn Biggie
 10/3/2021
 
-<head>
- <script src="https://rstudio.github.io/leaflet/assets/jquery-1.11.1/jquery.min.js"></script>
- <meta name="viewport" content="width=device-width, initial-scale=1" /> 
- <link href="https://rstudio.github.io/leaflet/assets/bootstrap-3.3.1/css/bootstrap.min.css" rel="stylesheet" />
- <script src="https://rstudio.github.io/leaflet/assets/bootstrap-3.3.1/js/bootstrap.min.js"></script>
- <script src="https://rstudio.github.io/leaflet/assets/bootstrap-3.3.1/shim/html5shiv.min.js"></script>
- <script src="https://rstudio.github.io/leaflet/assets/bootstrap-3.3.1/shim/respond.min.js"></script>
- <script src="https://rstudio.github.io/leaflet/assets/htmlwidgets-0.5/htmlwidgets.js"></script>
- <link href="https://rstudio.github.io/leaflet/assets/leaflet-0.7.3/leaflet.css" rel="stylesheet" />
- <script src="https://rstudio.github.io/leaflet/assets/leaflet-0.7.3/leaflet.js"></script>
- <link href="https://rstudio.github.io/leaflet/assets/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
- <script src="https://rstudio.github.io/leaflet/assets/leaflet-binding-1.0.1/leaflet.js"></script>
-</head>
-
   - [Preliminary Steps](#preliminary-steps)
   - [Function to Access API](#function-to-access-api)
   - [Exploratory Data Analysis](#exploratory-data-analysis)
@@ -127,18 +113,15 @@ analysis.
 I want to explore the weather data of five locations that lie roughly
 along the same line of longitude.
 
-<div id="htmlwidget-1b59564acd4f1467b790" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1b59564acd4f1467b790">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"setView":[[0,-80],1,[]],"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[44.19,21.28,7.54,-55.05,-51.38],[-69.47,-71.08,-72.3,-67.05,-69.13],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["Augusta, Maine, US","Cockburn Town, Turks & Caicos Islands","Cucata, Colombia","Puerto Toro, Chile","Rio Gallegos, Argentina"],null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-55.05,44.19],"lng":[-72.3,-67.05]}},"evals":[],"jsHooks":[]}</script>
-
 Locations:
 
   - 44.19’N, 69.47’W (Augusta, Maine, US)  
   - 21.28’N, 71.08’W (Cockburn Town, Turks & Caicos Islands, UK)  
   - 7.54’N, 72.3’W (Cucata, Colombia)  
   - 51.38’S, 69.13’W (Rio Gallegos, Argentina)
-  - 55.05’S, 67.05’W (Puerto Toro, Chile)
+  - 55.05’S, 67.05’W (Puerto Williams, Chile)
 
-<!-- end list -->
+![](locationmap.jpg)<!-- -->
 
 ``` r
 Maine <- weather.api(latitude = "44.19", longitude = "-69.47", api.id = "input_your_key", exclude = "current, minutely, hourly")
@@ -158,7 +141,7 @@ Maine.day
     ## 7 1634054400 1634035740 1634075955 1634062320 1634093100
     ## 8 1634140800 1634122215 1634162251 1634151780 1634183700
     ##   moon_phase temp.day temp.min temp.max temp.night temp.eve
-    ## 1       0.00    20.74     8.15    21.46      11.39    17.83
+    ## 1       0.00    20.49     8.15    21.43      11.39    18.97
     ## 2       0.05    20.74    10.10    21.70      11.85    15.33
     ## 3       0.08    20.94    10.19    21.51      12.06    13.24
     ## 4       0.12    13.13     5.57    14.29       5.95    11.59
@@ -167,7 +150,7 @@ Maine.day
     ## 7       0.25    18.57    11.40    20.13      14.01    17.54
     ## 8       0.27    21.71    14.65    23.80      16.05    19.63
     ##   temp.morn feels_like.day feels_like.night feels_like.eve
-    ## 1      8.15          20.36            10.99          17.57
+    ## 1      8.15          20.00            10.99          18.78
     ## 2     10.20          20.36            11.57          15.16
     ## 3     10.19          20.50            11.04          12.71
     ## 4      6.05          11.99             5.95          10.50
@@ -176,7 +159,7 @@ Maine.day
     ## 7     11.40          18.36            14.00          17.52
     ## 8     14.67          21.97            16.24          20.00
     ##   feels_like.morn pressure humidity dew_point wind_speed
-    ## 1            7.17     1027       57     11.92       1.86
+    ## 1            7.17     1027       54     10.87       1.86
     ## 2            9.73     1024       57     11.81       1.96
     ## 3            9.64     1022       54     10.99       5.14
     ## 4            4.52     1032       57      4.50       3.30
@@ -253,7 +236,7 @@ Maine.day1
     ## 7 2021    10  12 06:49:00 17:59:15 14:12:00 22:45:00
     ## 8 2021    10  13 06:50:15 17:57:31 15:03:00 23:55:00
     ##   moon_phase pressure humidity dew_point wind_speed wind_deg
-    ## 1       0.00     1027       57     11.92       1.86      352
+    ## 1       0.00     1027       54     10.87       1.86      352
     ## 2       0.05     1024       57     11.81       1.96      208
     ## 3       0.08     1022       54     10.99       5.14      104
     ## 4       0.12     1032       57      4.50       3.30      129
@@ -262,7 +245,7 @@ Maine.day1
     ## 7       0.25     1015       72     13.16       2.62      205
     ## 8       0.27     1011       78     17.61       4.02       60
     ##   wind_gust clouds  pop mintemp maxtemp
-    ## 1      3.00      2 0.00    8.15   21.46
+    ## 1      3.00      2 0.00    8.15   21.43
     ## 2      2.82     30 0.00   10.10   21.70
     ## 3      9.81      7 0.00   10.19   21.51
     ## 4      6.77     33 0.00    5.57   14.29
@@ -361,7 +344,7 @@ weather
     ## 39          Chile 2021    10  12 05:24:49 19:04:05 08:57:00
     ## 40          Chile 2021    10  13 05:22:19 19:06:05 10:09:00
     ##     Moonset moon_phase pressure humidity dew_point
-    ## 1  18:36:00       0.00     1027       57     11.92
+    ## 1  18:36:00       0.00     1027       54     10.87
     ## 2  19:01:00       0.05     1024       57     11.81
     ## 3  19:31:00       0.08     1022       54     10.99
     ## 4  20:05:00       0.12     1032       57      4.50
@@ -369,7 +352,7 @@ weather
     ## 6  21:42:00       0.20     1019       69     10.99
     ## 7  22:45:00       0.25     1015       72     13.16
     ## 8  23:55:00       0.27     1011       78     17.61
-    ## 9  18:54:00       0.00     1017       70     23.12
+    ## 9  18:54:00       0.00     1017       73     23.53
     ## 10 19:35:00       0.05     1016       74     23.45
     ## 11 20:19:00       0.08     1014       76     23.71
     ## 12 21:09:00       0.12     1014       77     23.92
@@ -377,7 +360,7 @@ weather
     ## 14 23:02:00       0.20     1014       75     23.63
     ## 15 19:00:00       0.25     1014       79     23.59
     ## 16 00:04:00       0.27     1011       75     22.53
-    ## 17 19:04:00       0.00     1014       83     15.78
+    ## 17 19:04:00       0.00     1015       85     14.89
     ## 18 19:52:00       0.05     1014       60     13.56
     ## 19 20:43:00       0.08     1014       67     14.77
     ## 20 21:38:00       0.12     1016       67     12.93
@@ -385,7 +368,7 @@ weather
     ## 22 23:38:00       0.20     1016       88     16.64
     ## 23 19:00:00       0.25     1017       81     16.46
     ## 24 00:38:00       0.27     1016       72     15.28
-    ## 25 19:19:00       0.00     1009       42     -0.47
+    ## 25 19:19:00       0.00     1009       42     -1.36
     ## 26 20:46:00       0.04     1014       56      0.50
     ## 27 22:15:00       0.08     1002       44      1.88
     ## 28 19:00:00       0.12     1001       49      3.76
@@ -393,7 +376,7 @@ weather
     ## 30 01:07:00       0.19     1012       47     -1.25
     ## 31 02:18:00       0.23      997       39     -1.98
     ## 32 03:13:00       0.25      993       40     -3.44
-    ## 33 19:14:00       0.00     1000       64      3.08
+    ## 33 19:14:00       0.00     1000       64      2.27
     ## 34 20:47:00       0.04     1007       55     -1.42
     ## 35 22:21:00       0.08      991       76      2.59
     ## 36 19:00:00       0.12      994       77      1.95
@@ -402,7 +385,7 @@ weather
     ## 39 02:37:00       0.23      997       66      2.48
     ## 40 03:30:00       0.25      986       96      1.86
     ##    wind_speed wind_deg wind_gust clouds  pop mintemp maxtemp
-    ## 1        1.86      352      3.00      2 0.00    8.15   21.46
+    ## 1        1.86      352      3.00      2 0.00    8.15   21.43
     ## 2        1.96      208      2.82     30 0.00   10.10   21.70
     ## 3        5.14      104      9.81      7 0.00   10.19   21.51
     ## 4        3.30      129      6.77     33 0.00    5.57   14.29
@@ -410,7 +393,7 @@ weather
     ## 6        2.81      185      5.03     76 0.00    7.84   19.05
     ## 7        2.62      205      5.55    100 0.09   11.40   20.13
     ## 8        4.02       60     10.16     12 0.82   14.65   23.80
-    ## 9       11.24      100     12.72     21 0.51   28.27   30.01
+    ## 9       11.24      100     12.72     15 0.51   28.27   30.01
     ## 10      10.16       85     11.01      4 0.80   27.88   28.65
     ## 11       7.82       85      8.31      3 0.64   27.95   28.48
     ## 12       8.31      113      8.67     10 0.88   27.89   28.59
@@ -418,7 +401,7 @@ weather
     ## 14       8.79      124      8.83     92 0.61   28.31   28.70
     ## 15      10.10      105     10.70     83 1.00   26.78   28.26
     ## 16       6.08       96      5.92     89 0.40   26.85   27.85
-    ## 17       2.47      127      4.56     97 0.78   12.91   22.57
+    ## 17       2.47      127      4.56     98 0.78   12.91   22.57
     ## 18       3.00      102      4.96     67 0.93   12.47   22.48
     ## 19       2.29      114      3.13     92 1.00   12.72   20.31
     ## 20       2.26       84      2.48     99 1.00   13.01   21.82
@@ -590,7 +573,7 @@ weather %>% group_by(location) %>% summarise(avghigh = mean(maxtemp), avglow = m
     ## 2 Argentina        12.9    4.59  2.41  1.03  3.24 
     ## 3 Colombia         20.7   13.2   1.35  0.511 2.25 
     ## 4 Turks & Caicos   28.7   27.8   0.619 0.628 0.287
-    ## 5 Maine, US        19.7    9.22  3.19  3.01  3.28
+    ## 5 Maine, US        19.7    9.22  3.18  3.01  3.28
 
 It’s clear that the average high and average low peak near the middle of
 the globe, with greater variation near the poles. These numbers could
@@ -608,9 +591,9 @@ weather %>% group_by(location) %>% summarise(avg_humidity = mean(humidity), sd.h
     ##   <ord>                 <dbl>       <dbl>
     ## 1 Chile                  69.4       13.8 
     ## 2 Argentina              45.4        5.50
-    ## 3 Colombia               74.1        9.45
-    ## 4 Turks & Caicos         75.1        2.59
-    ## 5 Maine, US              63.5        8.70
+    ## 3 Colombia               74.4        9.74
+    ## 4 Turks & Caicos         75.5        1.85
+    ## 5 Maine, US              63.1        9.08
 
 Here we see a clear relationship between location (organized by
 latitude) and humidity. The locations nearest to the poles generally
@@ -758,7 +741,7 @@ weather
     ## 39          Chile 2021    10  12  324.82 1144.08      537
     ## 40          Chile 2021    10  13  322.32 1146.08      609
     ##    Moonset moon_phase pressure humidity dew_point wind_speed
-    ## 1     1116       0.00     1027       57     11.92       1.86
+    ## 1     1116       0.00     1027       54     10.87       1.86
     ## 2     1141       0.05     1024       57     11.81       1.96
     ## 3     1171       0.08     1022       54     10.99       5.14
     ## 4     1205       0.12     1032       57      4.50       3.30
@@ -766,7 +749,7 @@ weather
     ## 6     1302       0.20     1019       69     10.99       2.81
     ## 7     1365       0.25     1015       72     13.16       2.62
     ## 8     1435       0.27     1011       78     17.61       4.02
-    ## 9     1134       0.00     1017       70     23.12      11.24
+    ## 9     1134       0.00     1017       73     23.53      11.24
     ## 10    1175       0.05     1016       74     23.45      10.16
     ## 11    1219       0.08     1014       76     23.71       7.82
     ## 12    1269       0.12     1014       77     23.92       8.31
@@ -774,7 +757,7 @@ weather
     ## 14    1382       0.20     1014       75     23.63       8.79
     ## 15    1140       0.25     1014       79     23.59      10.10
     ## 16       4       0.27     1011       75     22.53       6.08
-    ## 17    1144       0.00     1014       83     15.78       2.47
+    ## 17    1144       0.00     1015       85     14.89       2.47
     ## 18    1192       0.05     1014       60     13.56       3.00
     ## 19    1243       0.08     1014       67     14.77       2.29
     ## 20    1298       0.12     1016       67     12.93       2.26
@@ -782,7 +765,7 @@ weather
     ## 22    1418       0.20     1016       88     16.64       2.11
     ## 23    1140       0.25     1017       81     16.46       2.06
     ## 24      38       0.27     1016       72     15.28       1.98
-    ## 25    1159       0.00     1009       42     -0.47      16.45
+    ## 25    1159       0.00     1009       42     -1.36      16.45
     ## 26    1246       0.04     1014       56      0.50      12.70
     ## 27    1335       0.08     1002       44      1.88      14.31
     ## 28    1140       0.12     1001       49      3.76      13.66
@@ -790,7 +773,7 @@ weather
     ## 30      67       0.19     1012       47     -1.25      12.02
     ## 31     138       0.23      997       39     -1.98       9.01
     ## 32     193       0.25      993       40     -3.44      16.02
-    ## 33    1154       0.00     1000       64      3.08       9.95
+    ## 33    1154       0.00     1000       64      2.27       9.95
     ## 34    1247       0.04     1007       55     -1.42       8.17
     ## 35    1341       0.08      991       76      2.59      12.10
     ## 36    1140       0.12      994       77      1.95      11.04
@@ -799,7 +782,7 @@ weather
     ## 39     157       0.23      997       66      2.48       5.78
     ## 40     210       0.25      986       96      1.86       8.74
     ##    wind_deg wind_gust clouds  pop mintemp maxtemp
-    ## 1       352      3.00      2 0.00    8.15   21.46
+    ## 1       352      3.00      2 0.00    8.15   21.43
     ## 2       208      2.82     30 0.00   10.10   21.70
     ## 3       104      9.81      7 0.00   10.19   21.51
     ## 4       129      6.77     33 0.00    5.57   14.29
@@ -807,7 +790,7 @@ weather
     ## 6       185      5.03     76 0.00    7.84   19.05
     ## 7       205      5.55    100 0.09   11.40   20.13
     ## 8        60     10.16     12 0.82   14.65   23.80
-    ## 9       100     12.72     21 0.51   28.27   30.01
+    ## 9       100     12.72     15 0.51   28.27   30.01
     ## 10       85     11.01      4 0.80   27.88   28.65
     ## 11       85      8.31      3 0.64   27.95   28.48
     ## 12      113      8.67     10 0.88   27.89   28.59
@@ -815,7 +798,7 @@ weather
     ## 14      124      8.83     92 0.61   28.31   28.70
     ## 15      105     10.70     83 1.00   26.78   28.26
     ## 16       96      5.92     89 0.40   26.85   27.85
-    ## 17      127      4.56     97 0.78   12.91   22.57
+    ## 17      127      4.56     98 0.78   12.91   22.57
     ## 18      102      4.96     67 0.93   12.47   22.48
     ## 19      114      3.13     92 1.00   12.72   20.31
     ## 20       84      2.48     99 1.00   13.01   21.82
