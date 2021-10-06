@@ -4,17 +4,17 @@ Autumn Biggie
 10/3/2021
 
 <head>
- <script src="https://rstudio.github.io/leaflet/libs/jquery-1.11.1/jquery.min.js"></script>
+ <script src="https://rstudio.github.io/leaflet/assets/jquery-1.11.1/jquery.min.js"></script>
  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
- <link href="https://rstudio.github.io/leaflet/libs/bootstrap-3.3.1/css/bootstrap.min.css" rel="stylesheet" />
- <script src="https://rstudio.github.io/leaflet/libs/bootstrap-3.3.1/js/bootstrap.min.js"></script>
- <script src="https://rstudio.github.io/leaflet/libs/bootstrap-3.3.1/shim/html5shiv.min.js"></script>
- <script src="https://rstudio.github.io/leaflet/libs/bootstrap-3.3.1/shim/respond.min.js"></script>
- <script src="https://rstudio.github.io/leaflet/libs/htmlwidgets-0.5/htmlwidgets.js"></script>
- <link href="https://rstudio.github.io/leaflet/libs/leaflet-0.7.3/leaflet.css" rel="stylesheet" />
- <script src="https://rstudio.github.io/leaflet/libs/leaflet-0.7.3/leaflet.js"></script>
- <link href="https://rstudio.github.io/leaflet/libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
- <script src="https://rstudio.github.io/leaflet/libs/leaflet-binding-1.0.1/leaflet.js"></script>
+ <link href="https://rstudio.github.io/leaflet/assets/bootstrap-3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+ <script src="https://rstudio.github.io/leaflet/assets/bootstrap-3.3.1/js/bootstrap.min.js"></script>
+ <script src="https://rstudio.github.io/leaflet/assets/bootstrap-3.3.1/shim/html5shiv.min.js"></script>
+ <script src="https://rstudio.github.io/leaflet/assets/bootstrap-3.3.1/shim/respond.min.js"></script>
+ <script src="https://rstudio.github.io/leaflet/assets/htmlwidgets-0.5/htmlwidgets.js"></script>
+ <link href="https://rstudio.github.io/leaflet/assets/leaflet-0.7.3/leaflet.css" rel="stylesheet" />
+ <script src="https://rstudio.github.io/leaflet/assets/leaflet-0.7.3/leaflet.js"></script>
+ <link href="https://rstudio.github.io/leaflet/assets/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+ <script src="https://rstudio.github.io/leaflet/assets/leaflet-binding-1.0.1/leaflet.js"></script>
 </head>
 
   - [Preliminary Steps](#preliminary-steps)
@@ -127,8 +127,8 @@ analysis.
 I want to explore the weather data of five locations that lie roughly
 along the same line of longitude.
 
-<div id="htmlwidget-85167aa837883dbf967e" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-85167aa837883dbf967e">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"setView":[[0,-80],1,[]],"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[44.19,21.28,7.54,-55.05,-51.38],[-69.47,-71.08,-72.3,-67.05,-69.13],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["Augusta, Maine, US","Cockburn Town, Turks & Caicos Islands","Cucata, Colombia","Puerto Toro, Chile","Rio Gallegos, Argentina"],null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-55.05,44.19],"lng":[-72.3,-67.05]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-b199b43ad3e121ac6e9f" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b199b43ad3e121ac6e9f">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"setView":[[0,-80],1,[]],"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[44.19,21.28,7.54,-55.05,-51.38],[-69.47,-71.08,-72.3,-67.05,-69.13],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["Augusta, Maine, US","Cockburn Town, Turks & Caicos Islands","Cucata, Colombia","Puerto Toro, Chile","Rio Gallegos, Argentina"],null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-55.05,44.19],"lng":[-72.3,-67.05]}},"evals":[],"jsHooks":[]}</script>
 
 Locations:
 
@@ -158,7 +158,7 @@ Maine.day
     ## 7 1633968000 1633949266 1633989660 1633972140 1634002920
     ## 8 1634054400 1634035740 1634075955 1634062320 1634093100
     ##   moon_phase temp.day temp.min temp.max temp.night temp.eve
-    ## 1       0.97    17.91     7.96    19.43      10.37    13.11
+    ## 1       0.97    17.91     7.96    19.43      10.15    13.11
     ## 2       0.00    20.26     8.60    21.52      11.16    15.22
     ## 3       0.05    20.83     9.90    21.79      11.91    15.33
     ## 4       0.08    20.83     9.99    21.93      12.22    19.40
@@ -167,7 +167,7 @@ Maine.day
     ## 7       0.20    18.76     9.66    21.78      15.50    18.94
     ## 8       0.25    23.38    14.01    23.38      14.01    20.06
     ##   temp.morn feels_like.day feels_like.night feels_like.eve
-    ## 1      8.29          17.17             9.89          12.57
+    ## 1      8.29          17.17             9.62          12.57
     ## 2      8.60          19.67            10.73          14.78
     ## 3      9.92          20.38            11.64          14.96
     ## 4     10.07          20.27            11.33          19.09
@@ -411,7 +411,7 @@ weather
     ## 7        2.34      201      5.02     98 0.00    9.66   21.78
     ## 8        4.35      319      9.96     15 0.39   14.01   23.38
     ## 9       11.38       96     12.72     98 0.97   28.42   28.76
-    ## 10      11.38      100     12.80      3 0.46   28.54   28.76
+    ## 10      11.38      100     12.80      3 0.46   28.52   28.76
     ## 11       9.85       88     10.70      3 0.69   28.09   28.64
     ## 12       8.10       89      8.54      2 0.64   27.88   28.54
     ## 13       8.69      110      9.06      5 0.66   28.11   28.76
@@ -434,7 +434,7 @@ weather
     ## 30       6.71       25      8.64     81 0.00    5.28   11.35
     ## 31      11.42      332     15.32    100 0.01    6.66   14.54
     ## 32      12.41      251     16.71      5 0.39    3.21    8.22
-    ## 33       7.10      244     13.10     96 0.90    1.85    9.94
+    ## 33       7.10      244     13.10     96 0.90    1.72    9.94
     ## 34       8.44      236     14.17     98 0.00    1.95    8.16
     ## 35      10.15      257     19.04     99 0.60    4.42   10.65
     ## 36       8.70      333     20.81    100 0.64    2.05    9.95
@@ -586,10 +586,10 @@ weather %>% group_by(location) %>% summarise(avghigh = mean(maxtemp), avglow = m
     ## # A tibble: 5 x 6
     ##   location       avghigh avglow sdhigh sdlow   IQR
     ##   <ord>            <dbl>  <dbl>  <dbl> <dbl> <dbl>
-    ## 1 Chile             9.31   2.62  1.47  1.08  1.54 
+    ## 1 Chile             9.31   2.6   1.47  1.10  1.54 
     ## 2 Argentina        12.5    4.50  2.76  1.87  3.65 
     ## 3 Colombia         20.4   12.9   1.12  0.607 0.565
-    ## 4 Turks & Caicos   28.7   28.3   0.107 0.239 0.105
+    ## 4 Turks & Caicos   28.7   28.3   0.107 0.236 0.105
     ## 5 Maine, US        20.0    9.10  3.19  2.47  3.23
 
 It’s clear that the average high and average low peak near the middle of
@@ -808,7 +808,7 @@ weather
     ## 7       201      5.02     98 0.00    9.66   21.78
     ## 8       319      9.96     15 0.39   14.01   23.38
     ## 9        96     12.72     98 0.97   28.42   28.76
-    ## 10      100     12.80      3 0.46   28.54   28.76
+    ## 10      100     12.80      3 0.46   28.52   28.76
     ## 11       88     10.70      3 0.69   28.09   28.64
     ## 12       89      8.54      2 0.64   27.88   28.54
     ## 13      110      9.06      5 0.66   28.11   28.76
@@ -831,7 +831,7 @@ weather
     ## 30       25      8.64     81 0.00    5.28   11.35
     ## 31      332     15.32    100 0.01    6.66   14.54
     ## 32      251     16.71      5 0.39    3.21    8.22
-    ## 33      244     13.10     96 0.90    1.85    9.94
+    ## 33      244     13.10     96 0.90    1.72    9.94
     ## 34      236     14.17     98 0.00    1.95    8.16
     ## 35      257     19.04     99 0.60    4.42   10.65
     ## 36      333     20.81    100 0.64    2.05    9.95
