@@ -2,7 +2,10 @@
 title: "How to Access an API with an Example"
 author: "Autumn Biggie"
 date: "10/3/2021"
-output: github_document
+output: 
+  github_document:
+    includes:
+      in_header: header.html
 always_allow_html: TRUE
 ---
 
