@@ -1,4 +1,4 @@
-How to Access an API with an Example
+How to Access an API with RStudio
 ================
 Autumn Biggie
 10/3/2021
@@ -141,7 +141,7 @@ Maine.day
     ## 7 1634054400 1634035740 1634075955 1634062320 1634093100
     ## 8 1634140800 1634122215 1634162251 1634151780 1634183700
     ##   moon_phase temp.day temp.min temp.max temp.night temp.eve
-    ## 1       0.00    20.28     8.15    20.97      11.39    19.08
+    ## 1       0.00    20.28     8.15    21.21      11.39    17.64
     ## 2       0.05    20.74    10.10    21.70      11.85    15.33
     ## 3       0.08    20.94    10.19    21.51      12.06    13.24
     ## 4       0.12    13.13     5.57    14.29       5.95    11.59
@@ -150,7 +150,7 @@ Maine.day
     ## 7       0.25    18.57    11.40    20.13      14.01    17.54
     ## 8       0.27    21.71    14.65    23.80      16.05    19.63
     ##   temp.morn feels_like.day feels_like.night feels_like.eve
-    ## 1      8.15          19.72            10.99          18.98
+    ## 1      8.15          19.72            10.99          17.50
     ## 2     10.20          20.36            11.57          15.16
     ## 3     10.19          20.50            11.04          12.71
     ## 4      6.05          11.99             5.95          10.50
@@ -245,7 +245,7 @@ Maine.day1
     ## 7       0.25     1015       72     13.16       2.62      205
     ## 8       0.27     1011       78     17.61       4.02       60
     ##   wind_gust clouds  pop mintemp maxtemp
-    ## 1      3.00      3 0.00    8.15   20.97
+    ## 1      3.00      3 0.00    8.15   21.21
     ## 2      2.82     30 0.00   10.10   21.70
     ## 3      9.81      7 0.00   10.19   21.51
     ## 4      6.77     33 0.00    5.57   14.29
@@ -385,7 +385,7 @@ weather
     ## 39 02:37:00       0.23      997       66      2.48
     ## 40 03:30:00       0.25      986       96      1.86
     ##    wind_speed wind_deg wind_gust clouds  pop mintemp maxtemp
-    ## 1        1.86      352      3.00      3 0.00    8.15   20.97
+    ## 1        1.86      352      3.00      3 0.00    8.15   21.21
     ## 2        1.96      208      2.82     30 0.00   10.10   21.70
     ## 3        5.14      104      9.81      7 0.00   10.19   21.51
     ## 4        3.30      129      6.77     33 0.00    5.57   14.29
@@ -393,7 +393,7 @@ weather
     ## 6        2.81      185      5.03     76 0.00    7.84   19.05
     ## 7        2.62      205      5.55    100 0.09   11.40   20.13
     ## 8        4.02       60     10.16     12 0.82   14.65   23.80
-    ## 9       11.24      100     12.72      9 0.51   28.27   30.01
+    ## 9       11.24      100     12.72      9 0.51   28.27   28.63
     ## 10      10.16       85     11.01      4 0.80   27.88   28.65
     ## 11       7.82       85      8.31      3 0.64   27.95   28.48
     ## 12       8.31      113      8.67     10 0.88   27.89   28.59
@@ -401,7 +401,7 @@ weather
     ## 14       8.79      124      8.83     92 0.61   28.31   28.70
     ## 15      10.10      105     10.70     83 1.00   26.78   28.26
     ## 16       6.08       96      5.92     89 0.40   26.85   27.85
-    ## 17       2.47      127      4.56    100 0.78   12.91   21.57
+    ## 17       2.47      127      4.56    100 0.78   12.91   20.57
     ## 18       3.00      102      4.96     67 0.93   12.47   22.48
     ## 19       2.29      114      3.13     92 1.00   12.72   20.31
     ## 20       2.26       84      2.48     99 1.00   13.01   21.82
@@ -409,7 +409,7 @@ weather
     ## 22       2.11      103      3.20     91 1.00   13.36   19.30
     ## 23       2.06      106      2.67     96 1.00   14.09   19.83
     ## 24       1.98      107      2.79     75 1.00   13.39   20.15
-    ## 25      16.45      245     22.74    100 0.20    4.26   15.34
+    ## 25      16.45      245     22.74    100 0.20    4.26   12.34
     ## 26      12.70      241     18.69     99 0.00    2.57   11.16
     ## 27      14.31      237     19.03    100 0.00    5.28   13.86
     ## 28      13.66      318     21.25    100 0.00    4.39   16.83
@@ -417,7 +417,7 @@ weather
     ## 30      12.02       28     19.76     22 0.00    4.52   10.44
     ## 31       9.01       17     14.61     99 0.00    6.21   13.86
     ## 32      16.02      249     17.73      3 0.04    4.90   10.48
-    ## 33       9.95      241     16.42    100 0.68    2.04   11.11
+    ## 33       9.95      241     16.42    100 0.68    2.04    9.24
     ## 34       8.17      227     15.51    100 0.60    1.87    8.55
     ## 35      12.10      255     21.18     87 0.48    3.84    9.42
     ## 36      11.04      349     25.69    100 0.50    1.60    9.51
@@ -569,11 +569,11 @@ weather %>% group_by(location) %>% summarise(avghigh = mean(maxtemp), avglow = m
     ## # A tibble: 5 x 6
     ##   location       avghigh avglow sdhigh sdlow   IQR
     ##   <ord>            <dbl>  <dbl>  <dbl> <dbl> <dbl>
-    ## 1 Chile             9.14   2.78  1.77  1.66  1.30 
-    ## 2 Argentina        12.9    4.59  2.41  1.03  3.24 
-    ## 3 Colombia         20.6   13.2   1.19  0.511 1.90 
-    ## 4 Turks & Caicos   28.7   27.8   0.619 0.628 0.287
-    ## 5 Maine, US        19.7    9.22  3.15  3.01  3.28
+    ## 1 Chile             8.91   2.78  1.58  1.66  0.928
+    ## 2 Argentina        12.5    4.59  2.20  1.03  2.87 
+    ## 3 Colombia         20.5   13.2   1.12  0.511 1.15 
+    ## 4 Turks & Caicos   28.5   27.8   0.300 0.628 0.237
+    ## 5 Maine, US        19.7    9.22  3.17  3.01  3.28
 
 It’s clear that the average high and average low peak near the middle of
 the globe, with greater variation near the poles. These numbers could
@@ -782,7 +782,7 @@ weather
     ## 39     157       0.23      997       66      2.48       5.78
     ## 40     210       0.25      986       96      1.86       8.74
     ##    wind_deg wind_gust clouds  pop mintemp maxtemp
-    ## 1       352      3.00      3 0.00    8.15   20.97
+    ## 1       352      3.00      3 0.00    8.15   21.21
     ## 2       208      2.82     30 0.00   10.10   21.70
     ## 3       104      9.81      7 0.00   10.19   21.51
     ## 4       129      6.77     33 0.00    5.57   14.29
@@ -790,7 +790,7 @@ weather
     ## 6       185      5.03     76 0.00    7.84   19.05
     ## 7       205      5.55    100 0.09   11.40   20.13
     ## 8        60     10.16     12 0.82   14.65   23.80
-    ## 9       100     12.72      9 0.51   28.27   30.01
+    ## 9       100     12.72      9 0.51   28.27   28.63
     ## 10       85     11.01      4 0.80   27.88   28.65
     ## 11       85      8.31      3 0.64   27.95   28.48
     ## 12      113      8.67     10 0.88   27.89   28.59
@@ -798,7 +798,7 @@ weather
     ## 14      124      8.83     92 0.61   28.31   28.70
     ## 15      105     10.70     83 1.00   26.78   28.26
     ## 16       96      5.92     89 0.40   26.85   27.85
-    ## 17      127      4.56    100 0.78   12.91   21.57
+    ## 17      127      4.56    100 0.78   12.91   20.57
     ## 18      102      4.96     67 0.93   12.47   22.48
     ## 19      114      3.13     92 1.00   12.72   20.31
     ## 20       84      2.48     99 1.00   13.01   21.82
@@ -806,7 +806,7 @@ weather
     ## 22      103      3.20     91 1.00   13.36   19.30
     ## 23      106      2.67     96 1.00   14.09   19.83
     ## 24      107      2.79     75 1.00   13.39   20.15
-    ## 25      245     22.74    100 0.20    4.26   15.34
+    ## 25      245     22.74    100 0.20    4.26   12.34
     ## 26      241     18.69     99 0.00    2.57   11.16
     ## 27      237     19.03    100 0.00    5.28   13.86
     ## 28      318     21.25    100 0.00    4.39   16.83
@@ -814,7 +814,7 @@ weather
     ## 30       28     19.76     22 0.00    4.52   10.44
     ## 31       17     14.61     99 0.00    6.21   13.86
     ## 32      249     17.73      3 0.04    4.90   10.48
-    ## 33      241     16.42    100 0.68    2.04   11.11
+    ## 33      241     16.42    100 0.68    2.04    9.24
     ## 34      227     15.51    100 0.60    1.87    8.55
     ## 35      255     21.18     87 0.48    3.84    9.42
     ## 36      349     25.69    100 0.50    1.60    9.51
@@ -870,7 +870,7 @@ the course of 8 days in each location.
 ``` r
 g4 <- ggplot(weather, aes(x = Day, y = Sunrise))
 
-g4 + geom_point(aes(color = location)) + scale_color_discrete(name = "Location") + labs(title = "8 Day Forecast for Sunrise Time by Location", x = "Day of the Month", y = "Sunrise Time (minutes after 12am)")
+g4 + geom_point(aes(color = location, size = 1.5)) + scale_color_discrete(name = "Location") + labs(title = "8 Day Forecast for Sunrise Time by Location", x = "Day of the Month", y = "Sunrise Time (minutes after 12am)")
 ```
 
 ![](README_files/figure-gfm/sunrise%20scatterplot-1.png)<!-- -->
@@ -887,16 +887,16 @@ and daily pressure in the scatterplot below.
 ``` r
 g5 <- ggplot(weather, aes(x = maxtemp, y = pressure))
 
-g5 + geom_point(aes(color = location)) + geom_smooth(method = lm, formula = y~poly(x,2), color = "black") + scale_color_discrete(name = "Location") + labs(title = "8 Day Forecast: Maximum Daily Temperature vs. Daily Pressure", x = "Maximum Daily Temperature (C)", y = "Daily Pressure (millibars)")
+g5 + geom_point(aes(color = location, size = 1.5)) + geom_smooth(method = lm, formula = y~poly(x,2), color = "black") + scale_color_discrete(name = "Location") + labs(title = "8 Day Forecast: Maximum Daily Temperature vs. Daily Pressure", x = "Maximum Daily Temperature (C)", y = "Daily Pressure (millibars)")
 ```
 
 ![](README_files/figure-gfm/maxtemp%20vs%20pressure%20scatterplot-1.png)<!-- -->
 
-There seems to be a medium-strength, positive relationship between
-temperature and pressure. However, the data from the Turks and Caicos
-Islands appears to deviate slightly from the general trend, which is why
-I decided to fit a quadratic model. To fit a more accurate model, we may
-need to pull data from more locations from the API.
+There seems to be a weak positive relationship between temperature and
+pressure. However, the data from the Turks and Caicos Islands appears to
+deviate slightly from the general trend, which is why I decided to fit a
+quadratic model. To fit a more accurate model, we may need to pull data
+from more locations from the API.
 
 ## Final Thoughts
 
