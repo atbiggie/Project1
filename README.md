@@ -141,7 +141,7 @@ Maine.day
     ## 7 1634054400 1634035740 1634075955 1634062320 1634093100
     ## 8 1634140800 1634122215 1634162251 1634151780 1634183700
     ##   moon_phase temp.day temp.min temp.max temp.night temp.eve
-    ## 1       0.00    20.43     8.15    21.25      11.39    18.79
+    ## 1       0.00    20.28     8.15    20.97      11.39    19.08
     ## 2       0.05    20.74    10.10    21.70      11.85    15.33
     ## 3       0.08    20.94    10.19    21.51      12.06    13.24
     ## 4       0.12    13.13     5.57    14.29       5.95    11.59
@@ -150,7 +150,7 @@ Maine.day
     ## 7       0.25    18.57    11.40    20.13      14.01    17.54
     ## 8       0.27    21.71    14.65    23.80      16.05    19.63
     ##   temp.morn feels_like.day feels_like.night feels_like.eve
-    ## 1      8.15          19.94            10.99          18.58
+    ## 1      8.15          19.72            10.99          18.98
     ## 2     10.20          20.36            11.57          15.16
     ## 3     10.19          20.50            11.04          12.71
     ## 4      6.05          11.99             5.95          10.50
@@ -159,7 +159,7 @@ Maine.day
     ## 7     11.40          18.36            14.00          17.52
     ## 8     14.67          21.97            16.24          20.00
     ##   feels_like.morn pressure humidity dew_point wind_speed
-    ## 1            7.17     1027       54     10.82       1.86
+    ## 1            7.17     1027       52      9.91       1.86
     ## 2            9.73     1024       57     11.81       1.96
     ## 3            9.64     1022       54     10.99       5.14
     ## 4            4.52     1032       57      4.50       3.30
@@ -177,7 +177,7 @@ Maine.day
     ## 7      205      5.55  804, Clouds, overcast clouds, 04d
     ## 8       60     10.16      501, Rain, moderate rain, 10d
     ##   clouds  pop  uvi rain
-    ## 1      2 0.00 4.19   NA
+    ## 1      3 0.00 4.19   NA
     ## 2     30 0.00 3.85   NA
     ## 3      7 0.00 3.83   NA
     ## 4     33 0.00 3.60   NA
@@ -236,7 +236,7 @@ Maine.day1
     ## 7 2021    10  12 06:49:00 17:59:15 14:12:00 22:45:00
     ## 8 2021    10  13 06:50:15 17:57:31 15:03:00 23:55:00
     ##   moon_phase pressure humidity dew_point wind_speed wind_deg
-    ## 1       0.00     1027       54     10.82       1.86      352
+    ## 1       0.00     1027       52      9.91       1.86      352
     ## 2       0.05     1024       57     11.81       1.96      208
     ## 3       0.08     1022       54     10.99       5.14      104
     ## 4       0.12     1032       57      4.50       3.30      129
@@ -245,7 +245,7 @@ Maine.day1
     ## 7       0.25     1015       72     13.16       2.62      205
     ## 8       0.27     1011       78     17.61       4.02       60
     ##   wind_gust clouds  pop mintemp maxtemp
-    ## 1      3.00      2 0.00    8.15   21.25
+    ## 1      3.00      3 0.00    8.15   20.97
     ## 2      2.82     30 0.00   10.10   21.70
     ## 3      9.81      7 0.00   10.19   21.51
     ## 4      6.77     33 0.00    5.57   14.29
@@ -344,7 +344,7 @@ weather
     ## 39          Chile 2021    10  12 05:24:49 19:04:05 08:57:00
     ## 40          Chile 2021    10  13 05:22:19 19:06:05 10:09:00
     ##     Moonset moon_phase pressure humidity dew_point
-    ## 1  18:36:00       0.00     1027       54     10.82
+    ## 1  18:36:00       0.00     1027       52      9.91
     ## 2  19:01:00       0.05     1024       57     11.81
     ## 3  19:31:00       0.08     1022       54     10.99
     ## 4  20:05:00       0.12     1032       57      4.50
@@ -352,7 +352,7 @@ weather
     ## 6  21:42:00       0.20     1019       69     10.99
     ## 7  22:45:00       0.25     1015       72     13.16
     ## 8  23:55:00       0.27     1011       78     17.61
-    ## 9  18:54:00       0.00     1017       74     23.76
+    ## 9  18:54:00       0.00     1017       75     23.73
     ## 10 19:35:00       0.05     1016       74     23.45
     ## 11 20:19:00       0.08     1014       76     23.71
     ## 12 21:09:00       0.12     1014       77     23.92
@@ -360,7 +360,7 @@ weather
     ## 14 23:02:00       0.20     1014       75     23.63
     ## 15 19:00:00       0.25     1014       79     23.59
     ## 16 00:04:00       0.27     1011       75     22.53
-    ## 17 19:04:00       0.00     1015       85     14.70
+    ## 17 19:04:00       0.00     1016       88     15.17
     ## 18 19:52:00       0.05     1014       60     13.56
     ## 19 20:43:00       0.08     1014       67     14.77
     ## 20 21:38:00       0.12     1016       67     12.93
@@ -368,7 +368,7 @@ weather
     ## 22 23:38:00       0.20     1016       88     16.64
     ## 23 19:00:00       0.25     1017       81     16.46
     ## 24 00:38:00       0.27     1016       72     15.28
-    ## 25 19:19:00       0.00     1009       42     -1.36
+    ## 25 19:19:00       0.00     1010       42     -2.48
     ## 26 20:46:00       0.04     1014       56      0.50
     ## 27 22:15:00       0.08     1002       44      1.88
     ## 28 19:00:00       0.12     1001       49      3.76
@@ -376,7 +376,7 @@ weather
     ## 30 01:07:00       0.19     1012       47     -1.25
     ## 31 02:18:00       0.23      997       39     -1.98
     ## 32 03:13:00       0.25      993       40     -3.44
-    ## 33 19:14:00       0.00     1000       64      2.08
+    ## 33 19:14:00       0.00     1001       64      0.94
     ## 34 20:47:00       0.04     1007       55     -1.42
     ## 35 22:21:00       0.08      991       76      2.59
     ## 36 19:00:00       0.12      994       77      1.95
@@ -385,7 +385,7 @@ weather
     ## 39 02:37:00       0.23      997       66      2.48
     ## 40 03:30:00       0.25      986       96      1.86
     ##    wind_speed wind_deg wind_gust clouds  pop mintemp maxtemp
-    ## 1        1.86      352      3.00      2 0.00    8.15   21.25
+    ## 1        1.86      352      3.00      3 0.00    8.15   20.97
     ## 2        1.96      208      2.82     30 0.00   10.10   21.70
     ## 3        5.14      104      9.81      7 0.00   10.19   21.51
     ## 4        3.30      129      6.77     33 0.00    5.57   14.29
@@ -393,7 +393,7 @@ weather
     ## 6        2.81      185      5.03     76 0.00    7.84   19.05
     ## 7        2.62      205      5.55    100 0.09   11.40   20.13
     ## 8        4.02       60     10.16     12 0.82   14.65   23.80
-    ## 9       11.24      100     12.72     15 0.51   28.27   30.01
+    ## 9       11.24      100     12.72      9 0.51   28.27   30.01
     ## 10      10.16       85     11.01      4 0.80   27.88   28.65
     ## 11       7.82       85      8.31      3 0.64   27.95   28.48
     ## 12       8.31      113      8.67     10 0.88   27.89   28.59
@@ -401,7 +401,7 @@ weather
     ## 14       8.79      124      8.83     92 0.61   28.31   28.70
     ## 15      10.10      105     10.70     83 1.00   26.78   28.26
     ## 16       6.08       96      5.92     89 0.40   26.85   27.85
-    ## 17       2.47      127      4.56     98 0.78   12.91   21.57
+    ## 17       2.47      127      4.56    100 0.78   12.91   21.57
     ## 18       3.00      102      4.96     67 0.93   12.47   22.48
     ## 19       2.29      114      3.13     92 1.00   12.72   20.31
     ## 20       2.26       84      2.48     99 1.00   13.01   21.82
@@ -573,7 +573,7 @@ weather %>% group_by(location) %>% summarise(avghigh = mean(maxtemp), avglow = m
     ## 2 Argentina        12.9    4.59  2.41  1.03  3.24 
     ## 3 Colombia         20.6   13.2   1.19  0.511 1.90 
     ## 4 Turks & Caicos   28.7   27.8   0.619 0.628 0.287
-    ## 5 Maine, US        19.7    9.22  3.17  3.01  3.28
+    ## 5 Maine, US        19.7    9.22  3.15  3.01  3.28
 
 It’s clear that the average high and average low peak near the middle of
 the globe, with greater variation near the poles. These numbers could
@@ -591,9 +591,9 @@ weather %>% group_by(location) %>% summarise(avg_humidity = mean(humidity), sd.h
     ##   <ord>                 <dbl>       <dbl>
     ## 1 Chile                  69.4       13.8 
     ## 2 Argentina              45.4        5.50
-    ## 3 Colombia               74.4        9.74
-    ## 4 Turks & Caicos         75.6        1.69
-    ## 5 Maine, US              63.1        9.08
+    ## 3 Colombia               74.8       10.3 
+    ## 4 Turks & Caicos         75.8        1.58
+    ## 5 Maine, US              62.9        9.39
 
 Here we see a clear relationship between location (organized by
 latitude) and humidity. The locations nearest to the poles generally
@@ -618,7 +618,7 @@ g6 <- ggplot(sum.tab, aes(x = humidity.status, y = count))
 g6 + geom_bar(aes(fill = cloud.coverage), stat = "identity", position = "dodge") + facet_wrap(~ location) + labs(title = "8 Day Forecast: Humidity Status vs. Cloud Coverage by Location", x = "Humidity Status") + scale_fill_discrete(name = "Cloud Coverage") + theme(axis.text.x = element_text(angle = 45, vjust = .8, hjust = 1))
 ```
 
-![](C:\\Users\\autum\\DOCUME~1\\ST558~1\\Project1\\README~1/figure-gfm/bar%20graph-1.png)<!-- -->
+![](README_files/figure-gfm/bar%20graph-1.png)<!-- -->
 
 Here we can see the observation we made earlier about Maine and
 Argentina having low humidity, but most often low or high cloud
@@ -638,7 +638,7 @@ g <- ggplot(weather, aes(x = location, y = maxtemp))
 g + geom_boxplot(fill = "grey") + geom_point(max.means, mapping = aes(x = location, y = average), color = "purple") + geom_line(max.means, mapping = aes(x = location, y = average, group = 1), color = "purple") + labs(title = "8 Day Forecast: Maximum Daily Temperature",x = "Location (highest to lowest latitude)", y = "Maximum Daily Temperature (C)") + coord_flip()
 ```
 
-![](C:\\Users\\autum\\DOCUME~1\\ST558~1\\Project1\\README~1/figure-gfm/maxtemp%20boxplot-1.png)<!-- -->
+![](README_files/figure-gfm/maxtemp%20boxplot-1.png)<!-- -->
 
 ``` r
 min.means <- weather %>% group_by(location) %>% summarise(average = mean(mintemp))
@@ -648,7 +648,7 @@ g1 <- ggplot(weather, aes(x = location, y = mintemp))
 g1 + geom_boxplot(fill = "grey") + geom_point(min.means, mapping = aes(x = location, y = average), color = "green") + geom_line(min.means, mapping = aes(x = location, y = average, group = 1), color = "green") + labs(title = "8 Day Forecast: Minimum Daily Temperature", x = "Location (highest to lowest latitude)", y = "Minimum Daily Temperature (C)") + coord_flip()
 ```
 
-![](C:\\Users\\autum\\DOCUME~1\\ST558~1\\Project1\\README~1/figure-gfm/mintemp%20boxplot-1.png)<!-- -->
+![](README_files/figure-gfm/mintemp%20boxplot-1.png)<!-- -->
 
 Both boxplots are fairly consistent with each other, showing Turks and
 Caicos as having the highest minimum and maximum temperature, and
@@ -667,7 +667,7 @@ g2 <- ggplot(weather, aes(x = humidity))
 g2 + geom_histogram(bins = 20, aes(y = ..density..)) + geom_density(color = "aquamarine", fill = "aquamarine") + facet_wrap(~location) + labs(title = "8 Day Forecast: Histogram of Humidity by Location", x = "Humidity (%)")
 ```
 
-![](C:\\Users\\autum\\DOCUME~1\\ST558~1\\Project1\\README~1/figure-gfm/humidity%20hist%20and%20density%20plot-1.png)<!-- -->
+![](README_files/figure-gfm/humidity%20hist%20and%20density%20plot-1.png)<!-- -->
 
 ``` r
 hum.means <- weather %>% group_by(location) %>% summarise(average = mean(humidity))
@@ -677,7 +677,7 @@ g3 <- ggplot(weather, aes(x = location, y = humidity))
 g3 + geom_boxplot(fill = "grey") + geom_point(hum.means, mapping = aes(x = location, y = average), color = "red") + geom_line(hum.means, mapping = aes(x = location, y = average, group = 1), color = "red") + labs(title = "8 Day Forecast: Average Daily Humidity by Location", x = "Location (highest to lowest latitude)", y = "Average Daily Humidity (C)") + coord_flip()
 ```
 
-![](C:\\Users\\autum\\DOCUME~1\\ST558~1\\Project1\\README~1/figure-gfm/humidity%20boxplot-1.png)<!-- -->
+![](README_files/figure-gfm/humidity%20boxplot-1.png)<!-- -->
 
 This histogram and boxplot are very helpful in displaying how humidity
 varies by location. While Argentina and Maine consistently show lower
@@ -741,7 +741,7 @@ weather
     ## 39          Chile 2021    10  12  324.82 1144.08      537
     ## 40          Chile 2021    10  13  322.32 1146.08      609
     ##    Moonset moon_phase pressure humidity dew_point wind_speed
-    ## 1     1116       0.00     1027       54     10.82       1.86
+    ## 1     1116       0.00     1027       52      9.91       1.86
     ## 2     1141       0.05     1024       57     11.81       1.96
     ## 3     1171       0.08     1022       54     10.99       5.14
     ## 4     1205       0.12     1032       57      4.50       3.30
@@ -749,7 +749,7 @@ weather
     ## 6     1302       0.20     1019       69     10.99       2.81
     ## 7     1365       0.25     1015       72     13.16       2.62
     ## 8     1435       0.27     1011       78     17.61       4.02
-    ## 9     1134       0.00     1017       74     23.76      11.24
+    ## 9     1134       0.00     1017       75     23.73      11.24
     ## 10    1175       0.05     1016       74     23.45      10.16
     ## 11    1219       0.08     1014       76     23.71       7.82
     ## 12    1269       0.12     1014       77     23.92       8.31
@@ -757,7 +757,7 @@ weather
     ## 14    1382       0.20     1014       75     23.63       8.79
     ## 15    1140       0.25     1014       79     23.59      10.10
     ## 16       4       0.27     1011       75     22.53       6.08
-    ## 17    1144       0.00     1015       85     14.70       2.47
+    ## 17    1144       0.00     1016       88     15.17       2.47
     ## 18    1192       0.05     1014       60     13.56       3.00
     ## 19    1243       0.08     1014       67     14.77       2.29
     ## 20    1298       0.12     1016       67     12.93       2.26
@@ -765,7 +765,7 @@ weather
     ## 22    1418       0.20     1016       88     16.64       2.11
     ## 23    1140       0.25     1017       81     16.46       2.06
     ## 24      38       0.27     1016       72     15.28       1.98
-    ## 25    1159       0.00     1009       42     -1.36      16.45
+    ## 25    1159       0.00     1010       42     -2.48      16.45
     ## 26    1246       0.04     1014       56      0.50      12.70
     ## 27    1335       0.08     1002       44      1.88      14.31
     ## 28    1140       0.12     1001       49      3.76      13.66
@@ -773,7 +773,7 @@ weather
     ## 30      67       0.19     1012       47     -1.25      12.02
     ## 31     138       0.23      997       39     -1.98       9.01
     ## 32     193       0.25      993       40     -3.44      16.02
-    ## 33    1154       0.00     1000       64      2.08       9.95
+    ## 33    1154       0.00     1001       64      0.94       9.95
     ## 34    1247       0.04     1007       55     -1.42       8.17
     ## 35    1341       0.08      991       76      2.59      12.10
     ## 36    1140       0.12      994       77      1.95      11.04
@@ -782,7 +782,7 @@ weather
     ## 39     157       0.23      997       66      2.48       5.78
     ## 40     210       0.25      986       96      1.86       8.74
     ##    wind_deg wind_gust clouds  pop mintemp maxtemp
-    ## 1       352      3.00      2 0.00    8.15   21.25
+    ## 1       352      3.00      3 0.00    8.15   20.97
     ## 2       208      2.82     30 0.00   10.10   21.70
     ## 3       104      9.81      7 0.00   10.19   21.51
     ## 4       129      6.77     33 0.00    5.57   14.29
@@ -790,7 +790,7 @@ weather
     ## 6       185      5.03     76 0.00    7.84   19.05
     ## 7       205      5.55    100 0.09   11.40   20.13
     ## 8        60     10.16     12 0.82   14.65   23.80
-    ## 9       100     12.72     15 0.51   28.27   30.01
+    ## 9       100     12.72      9 0.51   28.27   30.01
     ## 10       85     11.01      4 0.80   27.88   28.65
     ## 11       85      8.31      3 0.64   27.95   28.48
     ## 12      113      8.67     10 0.88   27.89   28.59
@@ -798,7 +798,7 @@ weather
     ## 14      124      8.83     92 0.61   28.31   28.70
     ## 15      105     10.70     83 1.00   26.78   28.26
     ## 16       96      5.92     89 0.40   26.85   27.85
-    ## 17      127      4.56     98 0.78   12.91   21.57
+    ## 17      127      4.56    100 0.78   12.91   21.57
     ## 18      102      4.96     67 0.93   12.47   22.48
     ## 19      114      3.13     92 1.00   12.72   20.31
     ## 20       84      2.48     99 1.00   13.01   21.82
@@ -873,7 +873,7 @@ g4 <- ggplot(weather, aes(x = Day, y = Sunrise))
 g4 + geom_point(aes(color = location)) + scale_color_discrete(name = "Location") + labs(title = "8 Day Forecast for Sunrise Time by Location", x = "Day of the Month", y = "Sunrise Time (minutes after 12am)")
 ```
 
-![](C:\\Users\\autum\\DOCUME~1\\ST558~1\\Project1\\README~1/figure-gfm/sunrise%20scatterplot-1.png)<!-- -->
+![](README_files/figure-gfm/sunrise%20scatterplot-1.png)<!-- -->
 
 I think this plot is especially cool to look at, since one can clearly
 distinguish which locations are in the southern hemisphere, and which
@@ -890,7 +890,7 @@ g5 <- ggplot(weather, aes(x = maxtemp, y = pressure))
 g5 + geom_point(aes(color = location)) + geom_smooth(method = lm, formula = y~poly(x,2), color = "black") + scale_color_discrete(name = "Location") + labs(title = "8 Day Forecast: Maximum Daily Temperature vs. Daily Pressure", x = "Maximum Daily Temperature (C)", y = "Daily Pressure (millibars)")
 ```
 
-![](C:\\Users\\autum\\DOCUME~1\\ST558~1\\Project1\\README~1/figure-gfm/maxtemp%20vs%20pressure%20scatterplot-1.png)<!-- -->
+![](README_files/figure-gfm/maxtemp%20vs%20pressure%20scatterplot-1.png)<!-- -->
 
 There seems to be a medium-strength, positive relationship between
 temperature and pressure. However, the data from the Turks and Caicos
