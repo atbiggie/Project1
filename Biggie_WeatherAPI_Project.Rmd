@@ -2,7 +2,10 @@
 title: "How to Access an API with an Example"
 author: "Autumn Biggie"
 date: "10/3/2021"
-
+output:
+  github_document:
+    includes:
+      in_header: header.html
 always_allow_html: TRUE
 ---
 
@@ -300,7 +303,7 @@ weather <- rbind(Maine.day1, Turks.day1, Colombia.day1, Argentina.day1, Chile.da
 
 I'm interested in converting `humidity` and `clouds` into categorical variables with different levels.  
 
-I'll begin with humidity. Lets say that if $humidity \le 60$, there is low humidity, if $60 < humidity \le 80$, there is medium humidity, and if $humidity > 80$, there is high humidity.  
+I'll begin with humidity. Lets say that if humidity is less than or equal to 60, there is low humidity, if 60 < humidity is less than or equal to 80, there is medium humidity, and if humidity > 80, there is high humidity.  
 
 ```{r humidity status}
 weather <- weather %>% mutate(humidity.status = as.factor(ifelse(humidity > 80, "High", ifelse(humidity >60, "Medium", "Low"))))
@@ -310,7 +313,7 @@ weather$humidity.status <- ordered(weather$humidity.status, levels = c("Low", "M
 ```
 
 
-Great! Now let's look at `clouds`. If $clouds \le 25$, then cloud coverage is low. If $clouds > 75$ then cloud coverage is high, and anything in between is medium.  
+Great! Now let's look at `clouds`. If clouds is less than or equal to 25, then cloud coverage is low. If clouds > 75 then cloud coverage is high, and anything in between is medium.  
 
 
 ```{r cloud coverage}
