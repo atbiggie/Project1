@@ -2,6 +2,8 @@
 title: "How to Access an API with an Example"
 author: "Autumn Biggie"
 date: "10/3/2021"
+header_img: "https://github.com/atbiggie/Project1/blob/0b8562fa65cdbf1997e53425b893b226ba17ede7/Biggie_WeatherAPI_Project_files/figure-gfm/weathermap.jpg"
+leafletmap: TRUE
 output:
   github_document:
     includes:
