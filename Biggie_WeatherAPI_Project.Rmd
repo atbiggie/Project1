@@ -4,7 +4,10 @@ author: "Autumn Biggie"
 date: "10/3/2021"
 output: 
   github_document:
+    includes:
+      in_header: header.html
     html_preview: FALSE
+always_allow_html: TRUE
 ---
 
 ```{r setup, include=FALSE}
@@ -29,7 +32,6 @@ In this document, we'll walk through how to connect to an API, using an example.
     + `anytime`  
     + `ggplot2`
     + `chron`
-    + `leaflet`
 
 ```{r API packages, echo = FALSE, message=FALSE, warning=FALSE}
 library(httr)
@@ -38,9 +40,14 @@ library(tidyverse)
 library(anytime)
 library(ggplot2)
 library(chron)
-library(leaflet)
 library(knitr)
+library(leaflet)
 ```
+
+```{r}
+leaflet()
+```
+
 
 
 ## Function to Access API  
@@ -339,7 +346,7 @@ tabz1 <- table(weather$humidity.status, weather$cloud.coverage, deparse.level = 
 tabz1
 ```
 
-It looks like there were 10 forecast observations that predicted high cloud coverage and low humidity, and 12 observations that predicted high cloud coverage and medium humidity. There weren't many observations that predicted high humidity, but it appears that when high humidity was predicted, it was most often coupled with high cloud coverage.  
+It looks like there were 8 forecast observations that predicted high cloud coverage and low humidity, and 16 observations that predicted high cloud coverage and medium humidity. There weren't many observations that predicted high humidity, but it appears that when high humidity was predicted, it was most often coupled with high cloud coverage.  
 
 
 `tabz2` will show the counts of days within each level combination of `cloud.coverage` and `humidity.status`, separated by `location`.  
@@ -351,7 +358,7 @@ tabz2 <- table(weather$humidity.status, weather$cloud.coverage, weather$location
 tabz2
 ```
 
-This table gives us an idea of how the relationship between humidity status and cloud coverage can change based on location. An observation to note is that Maine and Argentina, locations close to the poles, most often have low humidity in this dataset. However, the low humidity is more frequently coupled with high cloud coverage in Argentina and low cloud coverage in Maine. I'd be interested to find out why this is the case, or if the data only appears this way because we're not working with many observations. Also, it's interesting that Chile, the location closest to the south pole, has a range of humidity although it's close to the Argentina location.  
+This table gives us an idea of how the relationship between humidity status and cloud coverage can change based on location. An observation to note is that the locations in Chile and Argentina, which are close to the south pole, most often have medium humidity and high cloud coverage or low humidity and high cloud coverage, respectively. I'd be interested to find out why this is the case, or if the data only appears this way because we're not working with many observations. It makes sense that Puerto Williams, Chile would have higher humidity than the Argentina location because it is a costal city.    
 
 
 ### Numerical Summaries  
@@ -394,7 +401,7 @@ g6 <- ggplot(sum.tab, aes(x = humidity.status, y = count))
 g6 + geom_bar(aes(fill = cloud.coverage), stat = "identity", position = "dodge") + facet_wrap(~ location) + labs(title = "8 Day Forecast: Humidity Status vs. Cloud Coverage by Location", x = "Humidity Status") + scale_fill_discrete(name = "Cloud Coverage") + theme(axis.text.x = element_text(angle = 45, vjust = .8, hjust = 1))
 ```
 
-Here we can see the observation we made earlier about Maine and Argentina having low humidity, but most often low or high cloud coverage, respectively. In addition, it's also easier to see that the forecast for Chile is mostly medium humidity and high cloud coverage. A puzzling observation is that Turks and Caicos always has medium humidity, but either low or high cloud coverage.  
+Here we can see the observation we made earlier about Chile and Argentina having high cloud coverage, but most often medium or low humidity, respectively. In addition, it's also easier to see that the forecast for Colombia most often includes medium humidity and high cloud coverage. A puzzling observation is that Turks and Caicos always has medium humidity, but either low or high cloud coverage.  
 
 Next, I'll look at how location affects minimum and maximum daily temperature using boxplots.  
 
@@ -437,7 +444,7 @@ g3 <- ggplot(weather, aes(x = location, y = humidity))
 g3 + geom_boxplot(fill = "grey") + geom_point(hum.means, mapping = aes(x = location, y = average), color = "red") + geom_line(hum.means, mapping = aes(x = location, y = average, group = 1), color = "red") + labs(title = "8 Day Forecast: Average Daily Humidity by Location", x = "Location (highest to lowest latitude)", y = "Average Daily Humidity (C)") + coord_flip()
 ```
 
-This histogram and boxplot are very helpful in displaying how humidity varies by location. While Argentina and Maine consistently show lower humidity levels, Turks and Caicos is vary consistent in showing high humidity, while Colombia and Chile's humidities are less consistent.
+This histogram and boxplot are very helpful in displaying how humidity varies by location. Generally, it looks like humidity follows a similar trend to temperature, varying with latitude. However, it's clear that the cities closest to the ocean (Turks & Caicos and Puerto Williams, Chile) display higher humidity levels than expected if `humidity.status` only depended on latitude.  
 
 
 To prepare for the next plot, I'll convert all variables with timestamps to numeric variables of time since 00:00:00, calculated in minutes.  
