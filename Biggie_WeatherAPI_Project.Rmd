@@ -4,10 +4,7 @@ author: "Autumn Biggie"
 date: "10/3/2021"
 output: 
   github_document:
-    includes:
-      in_header: header.html
     html_preview: FALSE
-always_allow_html: TRUE
 ---
 
 ```{r setup, include=FALSE}
@@ -41,11 +38,6 @@ library(anytime)
 library(ggplot2)
 library(chron)
 library(knitr)
-library(leaflet)
-```
-
-```{r}
-leaflet()
 ```
 
 

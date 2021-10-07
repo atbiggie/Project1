@@ -3,20 +3,6 @@ How to Access an API with RStudio
 Autumn Biggie
 10/3/2021
 
-<head>
- <script src="https://rstudio.github.io/leaflet/assets/jquery-1.11.1/jquery.min.js"></script>
- <meta name="viewport" content="width=device-width, initial-scale=1" /> 
- <link href="https://rstudio.github.io/leaflet/assets/bootstrap-3.3.1/css/bootstrap.min.css" rel="stylesheet" />
- <script src="https://rstudio.github.io/leaflet/assets/bootstrap-3.3.1/js/bootstrap.min.js"></script>
- <script src="https://rstudio.github.io/leaflet/assets/bootstrap-3.3.1/shim/html5shiv.min.js"></script>
- <script src="https://rstudio.github.io/leaflet/assets/bootstrap-3.3.1/shim/respond.min.js"></script>
- <script src="https://rstudio.github.io/leaflet/assets/htmlwidgets-0.5/htmlwidgets.js"></script>
- <link href="https://rstudio.github.io/leaflet/assets/leaflet-0.7.3/leaflet.css" rel="stylesheet" />
- <script src="https://rstudio.github.io/leaflet/assets/leaflet-0.7.3/leaflet.js"></script>
- <link href="https://rstudio.github.io/leaflet/assets/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
- <script src="https://rstudio.github.io/leaflet/assets/leaflet-binding-1.0.1/leaflet.js"></script>
-</head>
-
   - [Preliminary Steps](#preliminary-steps)
   - [Function to Access API](#function-to-access-api)
   - [Exploratory Data Analysis](#exploratory-data-analysis)
@@ -53,15 +39,6 @@ many APIs that openweathermap.org offers.
       - `anytime`  
       - `ggplot2`
       - `chron`
-
-<!-- end list -->
-
-``` r
-leaflet()
-```
-
-<div id="htmlwidget-8e82320006cae6f5c739" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-8e82320006cae6f5c739">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}}},"evals":[],"jsHooks":[]}</script>
 
 ## Function to Access API
 
@@ -163,7 +140,7 @@ Maine.day
     ## 7 1634140800 1634122215 1634162251 1634151780 1634183700
     ## 8 1634227200 1634208690 1634248548 1634240580          0
     ##   moon_phase temp.day temp.min temp.max temp.night temp.eve
-    ## 1       0.05    19.45     9.91    21.19      11.54    15.25
+    ## 1       0.05    19.31     9.91    21.15      11.54    15.25
     ## 2       0.08    20.61    10.44    20.79      11.58    13.63
     ## 3       0.12    14.25     6.20    14.53       6.52     8.87
     ## 4       0.16    15.19     6.52    16.03      10.83    14.10
@@ -172,7 +149,7 @@ Maine.day
     ## 7       0.27    19.30    16.09    21.40      16.09    20.18
     ## 8       0.30    20.70    14.49    23.48      15.45    20.08
     ##   temp.morn feels_like.day feels_like.night feels_like.eve
-    ## 1      9.91          19.17            11.20          15.00
+    ## 1      9.91          19.05            11.20          15.00
     ## 2     10.44          20.16            10.36          13.06
     ## 3      6.32          13.11             6.52           7.87
     ## 4      6.74          14.41            10.53          13.60
@@ -181,7 +158,7 @@ Maine.day
     ## 7     16.83          19.77            16.29          20.60
     ## 8     14.49          20.71            15.37          20.18
     ##   feels_like.morn pressure humidity dew_point wind_speed
-    ## 1            9.05     1025       66     12.94       2.13
+    ## 1            9.05     1025       67     13.04       2.13
     ## 2            9.84     1023       55     11.03       5.02
     ## 3            5.00     1031       53      4.48       3.10
     ## 4            6.74     1029       63      7.99       3.41
@@ -258,7 +235,7 @@ Maine.day1
     ## 7 2021    10  13 06:50:15 17:57:31 15:03:00 23:55:00
     ## 8 2021    10  14 06:51:30 17:55:48 15:43:00 19:00:00
     ##   moon_phase pressure humidity dew_point wind_speed wind_deg
-    ## 1       0.05     1025       66     12.94       2.13      195
+    ## 1       0.05     1025       67     13.04       2.13      195
     ## 2       0.08     1023       55     11.03       5.02      112
     ## 3       0.12     1031       53      4.48       3.10      153
     ## 4       0.16     1029       63      7.99       3.41      204
@@ -267,7 +244,7 @@ Maine.day1
     ## 7       0.27     1014       95     18.19       1.97      343
     ## 8       0.30     1015       72     15.29       2.12      358
     ##   wind_gust clouds  pop mintemp maxtemp
-    ## 1      3.03      5 0.00    9.91   21.19
+    ## 1      3.03      5 0.00    9.91   21.15
     ## 2      9.01     93 0.00   10.44   20.79
     ## 3      7.03     18 0.00    6.20   14.53
     ## 4      7.59    100 0.00    6.52   16.03
@@ -366,7 +343,7 @@ weather
     ## 39          Chile 2021    10  13 05:22:19 19:06:05 10:09:00
     ## 40          Chile 2021    10  14 05:19:51 19:08:05 11:31:00
     ##     Moonset moon_phase pressure humidity dew_point
-    ## 1  19:01:00       0.05     1025       66     12.94
+    ## 1  19:01:00       0.05     1025       67     13.04
     ## 2  19:31:00       0.08     1023       55     11.03
     ## 3  20:05:00       0.12     1031       53      4.48
     ## 4  20:48:00       0.16     1029       63      7.99
@@ -407,7 +384,7 @@ weather
     ## 39 03:30:00       0.25      981       65      1.20
     ## 40 04:06:00       0.30      982       72     -1.37
     ##    wind_speed wind_deg wind_gust clouds  pop mintemp maxtemp
-    ## 1        2.13      195      3.03      5 0.00    9.91   21.19
+    ## 1        2.13      195      3.03      5 0.00    9.91   21.15
     ## 2        5.02      112      9.01     93 0.00   10.44   20.79
     ## 3        3.10      153      7.03     18 0.00    6.20   14.53
     ## 4        3.41      204      7.59    100 0.00    6.52   16.03
@@ -594,7 +571,7 @@ weather %>% group_by(location) %>% summarise(avghigh = mean(maxtemp), avglow = m
     ## 2 Argentina        12.2    4.74  2.82  1.49  1.98 
     ## 3 Colombia         20.5   13.1   1.34  0.574 0.465
     ## 4 Turks & Caicos   28.3   27.3   0.589 1.06  0.532
-    ## 5 Maine, US        20.2   11.1   3.16  3.64  2.09
+    ## 5 Maine, US        20.2   11.1   3.15  3.64  2.09
 
 It’s clear that the average high and average low peak near the middle of
 the globe, with greater variation near the poles. These numbers could
@@ -614,7 +591,7 @@ weather %>% group_by(location) %>% summarise(avg_humidity = mean(humidity), sd.h
     ## 2 Argentina              45.4        7.60
     ## 3 Colombia               68.4        7.11
     ## 4 Turks & Caicos         76.9        3.31
-    ## 5 Maine, US              68.6       13.2
+    ## 5 Maine, US              68.8       13.2
 
 Here we see a clear relationship between location (organized by
 latitude) and humidity. The locations nearest to the poles generally
@@ -764,7 +741,7 @@ weather
     ## 39          Chile 2021    10  13  322.32 1146.08      609
     ## 40          Chile 2021    10  14  319.85 1148.08      691
     ##    Moonset moon_phase pressure humidity dew_point wind_speed
-    ## 1     1141       0.05     1025       66     12.94       2.13
+    ## 1     1141       0.05     1025       67     13.04       2.13
     ## 2     1171       0.08     1023       55     11.03       5.02
     ## 3     1205       0.12     1031       53      4.48       3.10
     ## 4     1248       0.16     1029       63      7.99       3.41
@@ -805,7 +782,7 @@ weather
     ## 39     210       0.25      981       65      1.20      10.27
     ## 40     246       0.30      982       72     -1.37       6.27
     ##    wind_deg wind_gust clouds  pop mintemp maxtemp
-    ## 1       195      3.03      5 0.00    9.91   21.19
+    ## 1       195      3.03      5 0.00    9.91   21.15
     ## 2       112      9.01     93 0.00   10.44   20.79
     ## 3       153      7.03     18 0.00    6.20   14.53
     ## 4       204      7.59    100 0.00    6.52   16.03
