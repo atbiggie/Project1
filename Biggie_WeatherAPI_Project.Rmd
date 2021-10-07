@@ -460,7 +460,7 @@ The scatterplot below allows us to look at how sunrise time changes over the cou
 ```{r sunrise scatterplot}
 g4 <- ggplot(weather, aes(x = Day, y = Sunrise))
 
-g4 + geom_point(aes(color = location, size = 1.5)) + scale_color_discrete(name = "Location") + labs(title = "8 Day Forecast for Sunrise Time by Location", x = "Day of the Month", y = "Sunrise Time (minutes after 12am)")
+g4 + geom_point(aes(color = location), size = 2) + scale_color_discrete(name = "Location") + labs(title = "8 Day Forecast for Sunrise Time by Location", x = "Day of the Month", y = "Sunrise Time (minutes after 12am)")
 ```
 
 I think this plot is especially cool to look at, since one can clearly distinguish which locations are in the southern hemisphere, and which are in the northern hemisphere. While the sun is rising increasingly later in the northern hemisphere, it's rising increasingly earlier in the southern hemisphere.  
@@ -472,10 +472,10 @@ Lastly, we'll explore the relationship between maximum daily temperature and dai
 ```{r maxtemp vs pressure scatterplot}
 g5 <- ggplot(weather, aes(x = maxtemp, y = pressure))
 
-g5 + geom_point(aes(color = location, size = 1.5)) + geom_smooth(method = lm, formula = y~poly(x,2), color = "black") + scale_color_discrete(name = "Location") + labs(title = "8 Day Forecast: Maximum Daily Temperature vs. Daily Pressure", x = "Maximum Daily Temperature (C)", y = "Daily Pressure (millibars)")
+g5 + geom_point(aes(color = location), size = 2) + geom_smooth(method = lm, formula = y~poly(x,2), color = "black") + scale_color_discrete(name = "Location") + labs(title = "8 Day Forecast: Maximum Daily Temperature vs. Daily Pressure", x = "Maximum Daily Temperature (C)", y = "Daily Pressure (millibars)") + scale_size_continuous()
 ```
 
-There seems to be a weak positive relationship between temperature and pressure. However, the data from the Turks and Caicos Islands appears to deviate slightly from the general trend, which is why I decided to fit a quadratic model. To fit a more accurate model, we may need to pull data from more locations from the API.  
+There seems to be a medium-strength positive relationship between temperature and pressure. However, the data from the Turks and Caicos Islands appears to deviate slightly from the general trend, which is why I decided to fit a quadratic model. To fit a more accurate model, we may need to pull data from more locations from the API.  
 
 
 ## Final Thoughts  
